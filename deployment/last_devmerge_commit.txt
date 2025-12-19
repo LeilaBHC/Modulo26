@@ -1,0 +1,10 @@
+# This file shows the last commit on dev that has
+# been merged into master. This does not mean that
+# no other commit from dev lives on master as they
+# can have been cherry-picked during the fasttrack
+# process to be quick to publish small changes.
+
+defe8a74 2025-08-14 15:08:19 +0200 Jean-Philippe Pellet Merge branch 'dev' of https://github.com/edunumsec2/book into dev
+
+
+File updated on 2025-08-14T15:34:56+02:00 by Jean-Philippe Pellet <jppellet@gmail.com>
