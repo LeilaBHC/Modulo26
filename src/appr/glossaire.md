@@ -1,6 +1,0 @@
-Glossaire
-==========
-````{htmlonly}
-```{glossaire}
-```
-````

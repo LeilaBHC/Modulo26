@@ -1,0 +1,857 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Portes logiques" href="portes_logiques.html" /><link rel="prev" title="Simulation d’épidémie" href="epidemie.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Catch the fruit - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/js1.html">9. Introduction à JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/rappels.html">1. Rappels de programmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/intro_pygame.html">2. Introduction à Pygame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner_new.html">3. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">4. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">5. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="catch-the-fruit">
+<span id="divers-catch-the-fruit"></span><h1>Catch the fruit<a class="headerlink" href="#catch-the-fruit" title="Lien permanent vers ce titre">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans ce TP, nous allons programmer un petit jeu sur <code class="docutils literal notranslate"><span class="pre">micro:bit</span></code>. Le micro:bit est un ordinateur minimaliste qui prend la forme d’une carte sur laquelle on trouve, entre autres, un écran de diodes lumineuses et deux boutons.</p>
+<p><img alt="img" src="../_images/microbit.jpg"/></p>
+<p>Le but de l’activité est de programmer un jeu appelé <code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">the</span> <span class="pre">fruit</span></code>.</p>
+<p>L’idée est d’utiliser la matrice de 25 leds du micro:bit comme écran sur lequel un fruit représenté par 1 led va tomber du haut de l’écran et qu’il faudra rattraper dans un panier. Le panier sera déplaçable à l’aide des boutons A et B.</p>
+<p><img alt="img" src="../_images/microbit.gif"/></p>
+</section>
+<section id="mise-en-place">
+<h2>Mise en place<a class="headerlink" href="#mise-en-place" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="etapes-a-programmer">
+<h2>Etapes à programmer<a class="headerlink" href="#etapes-a-programmer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici les différentes étapes que nous allons suivre afin de programmer le jeu:</p>
+<ol class="simple">
+<li><p>Faire tomber un fruit du haut de l’écran</p></li>
+<li><p>Déplacer le panier à l’aide des boutons</p></li>
+<li><p>Détecter lorsqu’un fruit est attrapé (i.e. collision fruit-panier)</p></li>
+<li><p>Gestion des échecs (i.e. fruit n’est pas attrapé)</p></li>
+<li><p>Fin du jeu et affichage du score</p></li>
+</ol>
+</section>
+<section id="etape-1-faire-tomber-un-fruit">
+<h2>Étape 1 - Faire tomber un fruit<a class="headerlink" href="#etape-1-faire-tomber-un-fruit" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.<br/>
+Sur l’interface de programmation, vous voyez 2 blocs déjà présents:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>: les blocs posés dans ce bloc ne s’effectuent <strong>qu’une seule fois</strong> au démarrage du programme.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toujours</span></code>: les blocs posés dans ce bloc s’effectuent <strong>en boucle</strong> tant que le programme tourne.</p></li>
+</ul>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.<br/>
+Nous allons commencer par faire tomber le fruit sur la colonne en <code class="docutils literal notranslate"><span class="pre">x=1</span></code>, c’est à dire la 2ème colonne en partant de la gauche.</p>
+<p>Ajoutez 5 blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code> pour allumer tous les blocs de la colonne en <code class="docutils literal notranslate"><span class="pre">x=1</span></code>.<br/>
+Ajoutez aussi un bloc <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.</p>
+<p><img alt="img" src="../_images/m1.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/tomberfruit0.png"/></p>
+</div>
+</details></section>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ajoutez à présent 5 blocs <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre successivement toutes les leds de la colonne du haut vers le bas.</p>
+<p><img alt="img" src="../_images/m2.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/tomberfruit1.png"/></p>
+</div>
+</details></section>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code>. Chaque bloc est répété 5 fois.<br/>
+Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur qui fasse le travail ! On utilise alors des <strong>boucles</strong>.</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Dans votre code, quelle est l’unique valeur qui change à chaque répétition des 3 blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>La durée de la pause</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>La coordonnée horizontale x</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>La coordonnée verticale y</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Aucune idée</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La coordonnée verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> est la seule à changer entre chaque répétition. C’est le cas car le fruit tombe du haut vers le bas, et donc la coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> est augmentée de 1 à chaque tour.</p>
+</div>
+</div>
+</form></div><p>L’idée est donc d’utiliser <strong>une boucle</strong> qui va répéter les instructions tout en augmentant <code class="docutils literal notranslate"><span class="pre">y</span></code> de 1 à chaque tour afin de faire tomber le fruit.</p>
+<p>Utilisez le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> qui va créer une <strong>boucle</strong> dans laquelle <code class="docutils literal notranslate"><span class="pre">index</span></code> va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu’il nous faut pour les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code>.<br/>
+<code class="docutils literal notranslate"><span class="pre">index</span></code> est ici ce que l’on appelle une <code class="docutils literal notranslate"><span class="pre">variable</span></code>. Sa valeur va <strong>varier</strong> de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code> par <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+<div class="note admonition">
+<p class="admonition-title">Pas de changement visuel</p>
+<p>Visuellement, le résultat doit être le même que précédemment, mais le code est plus court et plus lisible.
+<img alt="img" src="../_images/m2.gif"/></p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>, gardez une seule répétition des blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code>. Supprimez les autres blocs.</p></li>
+<li><p class="card-text">Insérez le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> autour des blocs restants.</p></li>
+<li><p class="card-text">Remplacez la valeur de <code class="docutils literal notranslate"><span class="pre">y</span></code> par la variable <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/tomberfruit2.png"/></p>
+</div>
+</details></section>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le fruit tombe toujours dans la même colonne, on veut changer aléatoirement de colonne pour chaque fruit.</p>
+<p>Pour choisir un nombre au hasard, on peut utiliser le bloc <code class="docutils literal notranslate"><span class="pre">choisir</span> <span class="pre">au</span> <span class="pre">hasard</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">10</span></code> du menu <code class="docutils literal notranslate"><span class="pre">Maths</span></code>.<br/>
+Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4 pour les 5 colonnes possibles.</p>
+<p>Il faut donc tirer un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.<br/>
+Dès l’instant où on veut stocker de l’information pour pouvoir la réutiliser, la solution est d’utiliser une <code class="docutils literal notranslate"><span class="pre">variable</span></code>.</p>
+<p>Utilisez le menu <code class="docutils literal notranslate"><span class="pre">Variables</span></code> pour créer une variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> et lui donner une valeur aléatoire avant la chute de chaque fruit.</p>
+<p><img alt="img" src="../_images/m3.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Dans la catégorie de blocs <code class="docutils literal notranslate"><span class="pre">Variables</span></code>, choisissez <code class="docutils literal notranslate"><span class="pre">Créer</span> <span class="pre">une</span> <span class="pre">variable</span></code> et donnez lui le nom <code class="docutils literal notranslate"><span class="pre">colonne</span></code>. Cette variable aura pour objectif de stocker le numéro aléatoire de la colonne dans laquelle va tomber le fruit.</p></li>
+<li><p class="card-text">Ajoutez ensuite le bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">colonne</span> <span class="pre">à</span></code> pour donner une valeur aléatoire à la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code>. Ce bloc doit être ajouté juste avant le début de la chute du fruit.</p></li>
+<li><p class="card-text">Remplacez les coordonnées de <code class="docutils literal notranslate"><span class="pre">x</span></code> par la valeur de la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code>.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/tomberfruit3.png"/></p>
+</div>
+</details><p>Fin de l’étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement !</p>
+</section>
+</section>
+<section id="etape-2-deplacer-le-panier">
+<h2>Étape 2 - Déplacer le panier<a class="headerlink" href="#etape-2-deplacer-le-panier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons programmer le panier qui se déplace de droite à gauche à l’aide des boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour commencer il faut choisir comment sera représenté le panier. Nous utiliserons 1 seule led sur la ligne tout en bas (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à 4).</p>
+<ul class="simple">
+<li><p>La position du panier va changer au cours du jeu, comment faire pour stocker de l’information qui varie ? (utiliser une variable)</p></li>
+<li><p>Que doit-on représenter avec cette variable ? (la position en <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier)</p></li>
+</ul>
+<p>Définissez une variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour la coordonnée horizontale du panier qui va varier et initiez-la à 0 au début du programme.
+N’oubliez pas d’allumer les leds correspondantes, sinon on ne verra pas le panier !</p>
+<p><img alt="img" src="../_images/m4.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Créez une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">panier</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">panier</span> <span class="pre">à</span> <span class="pre">0</span></code> pour définir la position initiale du panier à 0 (tout à gauche).</p></li>
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span></code> afin d’allumer la led à la position du panier.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/panier1.png"/></p>
+</div>
+</details></section>
+<section id="exercice-6">
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le panier est fixe, il faut le faire bouger.<br/>
+Nous allons utiliser les boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code> pour les déplacements gauche et droite, respectivement.</p>
+<ul class="simple">
+<li><p>Que signifie déplacer le panier à gauche en termes de positions ? (diminuer la valeur de sa coordonnée en <code class="docutils literal notranslate"><span class="pre">x</span></code> de 1)</p></li>
+<li><p>Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)</p></li>
+</ul>
+<p>Utilisez les blocs <code class="docutils literal notranslate"><span class="pre">lorsque</span> <span class="pre">le</span> <span class="pre">bouton</span> <span class="pre">...</span> <span class="pre">est</span> <span class="pre">pressé</span></code> et ajoutez-y les blocs permettant de déplacer le panier. Le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">panier</span> <span class="pre">de</span> <span class="pre">1</span></code> permet d’augmenter la valeur de la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> de 1. Changez le 1 en -1 pour diminuer sa valeur.</p>
+<p><img alt="img" src="../_images/m5.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">lorsque</span> <span class="pre">le</span> <span class="pre">bouton</span> <span class="pre">A</span> <span class="pre">est</span> <span class="pre">pressé</span></code>.</p></li>
+<li><p class="card-text">A l’intérieur, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour éteindre la led du panier.</p></li>
+<li><p class="card-text">Modifiez la valeur de la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour la diminuer de 1. Pour cela, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">panier</span> <span class="pre">de</span> <span class="pre">-1</span></code>.</p></li>
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span></code> pour allumer la led correspondant au nouvel emplacement du panier.</p></li>
+<li><p class="card-text">Faites la même chose pour le bouton <code class="docutils literal notranslate"><span class="pre">B</span></code> qui doit permettre de déplacer le panier vers la droite.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/panier2.png"/></p>
+</div>
+</details></section>
+<section id="exercice-7">
+<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> ou <code class="docutils literal notranslate"><span class="pre">B</span></code>, le panier disparait, il sort de l’écran !<br/>
+On doit empêcher le panier d’aller plus loin que les bords de l’écran.</p>
+<ul class="simple">
+<li><p>Pourquoi est-ce que le panier sort de l’écran ? (la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> continue d’être modifiée pour finalement allumer des leds à des coordonnées qui n’existent pas)</p></li>
+<li><p>Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &gt; 0)</p></li>
+<li><p>Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &lt; 4)</p></li>
+</ul>
+<p>On introduit ici la structure de contrôle conditionnelle <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> et les tests de comparaison qui se trouvent dans le menu <code class="docutils literal notranslate"><span class="pre">Logique</span></code>.<br/>
+Dans notre cas, <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">le</span> <span class="pre">panier</span> <span class="pre">ne</span> <span class="pre">va</span> <span class="pre">pas</span> <span class="pre">sortir</span> <span class="pre">de</span> <span class="pre">l'écran,</span> <span class="pre">alors</span> <span class="pre">il</span> <span class="pre">bouge</span></code>.</p>
+<p><img alt="img" src="../_images/logique_microbit.png"/></p>
+<p><img alt="img" src="../_images/m6.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">vrai</span> <span class="pre">alors</span></code> <strong>autour</strong> des instructions permettant de déplacer le panier vers la gauche (bouton <code class="docutils literal notranslate"><span class="pre">A</span></code>).</p></li>
+<li><p class="card-text">Remplacez <code class="docutils literal notranslate"><span class="pre">vrai</span></code> par le <strong>test de comparaison</strong> qui permet de contrôler que la position du panier est &gt; 0. Les blocs de comparaison de trouve dans le menu <code class="docutils literal notranslate"><span class="pre">Logique</span></code>.</p></li>
+<li><p class="card-text">Faites la même chose pour le déplacement vers la droite (en ajustant le test de comparaison).</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/panier3.png"/></p>
+</div>
+</details><p>Fin de l’étape 2, on a un panier déplaçable à l’aide des boutons !</p>
+</section>
+</section>
+<section id="etape-3-detecter-lorsquun-fruit-est-attrape">
+<h2>Étape 3 - Détecter lorsqu’un fruit est attrapé<a class="headerlink" href="#etape-3-detecter-lorsquun-fruit-est-attrape" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-8">
+<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier.</p>
+<p>Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme <strong>le micro:bit ne <em>voit</em> pas</strong>, il faut trouver un moyen pour qu’il puisse vérifier s’il y a collision ou non.</p>
+<ul class="simple">
+<li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque le fruit est en bas de l’écran et que sa colonne est la même que celle du panier)</p></li>
+<li><p>Quelles sont les coordonnées en <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier et du fruit ? (comme elles changent, elles sont dans des variables: <code class="docutils literal notranslate"><span class="pre">colonne</span></code> pour le fruit et <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour le panier)</p></li>
+</ul>
+<p>On va donc tester si la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> est égale à la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> et on va faire ce test juste après que le fruit soit tombé en bas de l’écran (i.e. à la fin de la boucle <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code>).</p>
+<p>Utilisez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> pour faire le test de collision et afficher une icône si le fruit est attrapé avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>. Ajoutez aussi un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour enlever l’icône.</p>
+<p><img alt="img" src="../_images/m7.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> juste après la boucle <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">si</span></code>, ajoutez un test de comparaison pour vérifier si <code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span></code>.</p></li>
+<li><p class="card-text">Si la condition est respectée, affichez une icône avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
+<li><p class="card-text">Si la condition est respectée, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour effacer l’icône.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/collision1.png"/></p>
+</div>
+</details><div class="note admonition">
+<p class="admonition-title">Disparition du panier</p>
+<p>Vous remarquerez que nous avons ajouté un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span> <span class="pre">x</span> <span class="pre">panier</span></code> au début du bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>. Sans ce bloc, le panier disparaît lorsqu’il entre en collision avec un fruit.<br/>
+L’ajout de ce bloc permet de rallumer la led associée au panier avant la chute d’un fruit.</p>
+</div>
+</section>
+<section id="exercice-9">
+<h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On aimerait maintenant compter le nombre de fruits attrapés, c’est-à-dire le <code class="docutils literal notranslate"><span class="pre">score</span></code> du joueur !</p>
+<ul class="simple">
+<li><p>Que doit-il se passer lorsqu’on attrape un fruit ? (on augmente le score de 1)</p></li>
+<li><p>Comment faire pour tenir le score à jour ? (il faut utiliser une variable)</p></li>
+</ul>
+<p>Vous devez donc créer une nouvelle variable pour le <code class="docutils literal notranslate"><span class="pre">score</span></code> que vous allez initialiser à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.<br/>
+Lorsqu’une collision a lieu, augmentez le score de 1. On s’occupera de l’affichage du score plus tard quand on fera le game over, <strong>il n’y a donc pas de nouveau visuel à cette étape</strong>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Créez une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">score</span></code> et définissez-la à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p></li>
+<li><p class="card-text">Si la condition de collision est respectée, augmentez le <code class="docutils literal notranslate"><span class="pre">score</span></code> de 1 avec le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">score</span> <span class="pre">de</span> <span class="pre">1</span></code>.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/collision2.png"/></p>
+</div>
+</details><p>Fin de l’étape 3, le jeu détecte la collision entre le panier et le fruit et compte le score !</p>
+</section>
+</section>
+<section id="etape-4-detecter-lorsquun-fruit-est-rate">
+<h2>Étape 4 - Détecter lorsqu’un fruit est raté<a class="headerlink" href="#etape-4-detecter-lorsquun-fruit-est-rate" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-10">
+<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur perd une vie. On peut commencer par définir une variable <code class="docutils literal notranslate"><span class="pre">vie</span></code> initialisée à 3 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p>
+<p>L’échec se produit lorsque le test de collision échoue donc quand la condition de collision n’est pas respectée.</p>
+<p>Cliquez sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> de la collision pour faire apparaître un bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>. Ce bloc est exécuté si la condition de collision n’est pas respectée, c’est-à-dire si le fruit est arrivé en bas de l’écran mais n’est pas dans le panier.</p>
+<p>Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, ajoutez les blocs permettant de diminuer le nombre de vies de 1 et d’afficher une icône (par exemple un crâne) pour signaler que le fruit n’a pas été attrapé. N’oubliez pas d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour enlever l’icône.</p>
+<p><img alt="img" src="../_images/m8.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Créez une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">vie</span></code> et définissez-la à 3 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p></li>
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code> au bloc <code class="docutils literal notranslate"><span class="pre">si</span></code> de la collision en cliquant sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, diminuez la variable <code class="docutils literal notranslate"><span class="pre">vie</span></code> de 1 avec le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">vie</span> <span class="pre">de</span> <span class="pre">-1</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, affichez une icône (par exemple un crâne) avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour effacer l’icône.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/echec1.png"/></p>
+</div>
+</details><p>Fin de l’étape 4, le jeu détecte quand le joueur rate un fruit et le joueur perd une vie !</p>
+</section>
+</section>
+<section id="etape-5-fin-du-jeu">
+<h2>Étape 5 - Fin du jeu<a class="headerlink" href="#etape-5-fin-du-jeu" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-11">
+<h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le jeu est maintenant fonctionnel, on marque des points lorsqu’un fruit est attrapé et on perd une vie quand on le rate ! Cependant, le jeu ne s’arrête pas même si on a perdu plus de vies qu’on en avait au départ.</p>
+<p>Nous allons donc faire s’arrêter le jeu selon une condition à déterminer, puis nous afficherons le score du joueur.</p>
+<ul class="simple">
+<li><p>Quand est-ce que le jeu doit s’arrêter ? (lorsqu’on a plus de vies)</p></li>
+<li><p>Quelle est la condition qui permet de continuer à jouer ? (si le nombre de vies &gt; 0)</p></li>
+<li><p>Quelle partie du jeu suffit-il d’empêcher pour que le jeu s’arrête ? (la chute des fruits)</p></li>
+<li><p>Que doit-on faire lorsque le jeu est fini ? (afficher le score)</p></li>
+</ul>
+<p>L’arrêt du jeu s’implémente simplement en conditionnant la chute des fruits au fait d’avoir au moins une vie, l’alternative (sinon) étant la fin de partie avec affichage du score.</p>
+<p><img alt="img" src="../_images/m9.gif"/></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> <strong>autour</strong> de tout votre code (tout le contenu du bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>).</p></li>
+<li><p class="card-text">Remplacez <code class="docutils literal notranslate"><span class="pre">vrai</span></code> par le <strong>test de comparaison</strong> qui permet de contrôler que le nombre de vies est &gt; 0.</p></li>
+<li><p class="card-text">Cliquez sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> pour faire apparaître un bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, affichez le score avec le bloc <code class="docutils literal notranslate"><span class="pre">afficher</span> <span class="pre">le</span> <span class="pre">nombre</span></code> (onglet BASE).</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir la solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/game_over1.png"/></p>
+</div>
+</details><p>Ceci termine l’implémentation de base de ce jeu sur micro:bit.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code final<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><img alt="img" src="../_images/microbit_final.png"/></p>
+</div>
+</details><p>Une version du jeu complet est disponible <a class="reference download internal" download="" href="../_downloads/bbe90f5830a2bf348f33adb8457710e5/microbit-catch-the-fruit.hex"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a>, il suffit de télélcharger et déposer le fichier dans la fenêtre Makecode ouverte dans votre navigateur (mais attention, il remplacera votre code).</p>
+</section>
+</section>
+<section id="pour-aller-plus-loin">
+<h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour rendre le jeu plus intéressant, voici une liste de suggestions:</p>
+<ul class="simple">
+<li><p>Augmenter la vitesse de chute des fruits après un certain nombre de points</p></li>
+<li><p>Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité des leds pour faire la distinction)</p></li>
+<li><p>Faire déplacer le panier en inclinant la carte micro:bit au lieu des boutons A et B</p></li>
+<li><p>Faire tomber plusieurs fruits en même temps</p></li>
+<li><p>Faire tomber certains fruits légèrement en diagonal</p></li>
+<li><p>Elargir le panier à 2 leds</p></li>
+<li><p>Etc…</p></li>
+</ul>
+<p>Nous n’avons fait que gratouiller la surface de ce qu’il est possible de programmer sur un micro:bit. Rendez-vous <a class="reference external" href="https://makecode.microbit.org/">ici</a> pour explorer les différents projets.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="portes_logiques.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Portes logiques</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="epidemie.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Simulation d’épidémie</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/divers/catch_the_fruit.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Catch the fruit</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#mise-en-place">Mise en place</a></li>
+<li><a class="reference internal" href="#etapes-a-programmer">Etapes à programmer</a></li>
+<li><a class="reference internal" href="#etape-1-faire-tomber-un-fruit">Étape 1 - Faire tomber un fruit</a><ul>
+<li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
+<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
+<li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
+<li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-2-deplacer-le-panier">Étape 2 - Déplacer le panier</a><ul>
+<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
+<li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
+<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-3-detecter-lorsquun-fruit-est-attrape">Étape 3 - Détecter lorsqu’un fruit est attrapé</a><ul>
+<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
+<li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-4-detecter-lorsquun-fruit-est-rate">Étape 4 - Détecter lorsqu’un fruit est raté</a><ul>
+<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-5-fin-du-jeu">Étape 5 - Fin du jeu</a><ul>
+<li><a class="reference internal" href="#exercice-11">Exercice 11</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-aller-plus-loin">Pour aller plus loin</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

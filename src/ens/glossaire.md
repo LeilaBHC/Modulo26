@@ -1,5 +1,0 @@
-Glossaire
-==========
-
-```{glossaire}
-```

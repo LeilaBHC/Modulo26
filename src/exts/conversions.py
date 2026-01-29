@@ -1,31 +1,21 @@
-import sys
-import os
-# from svglib.svglib import svg2rlg
-# from reportlab.graphics import renderPDF
-
-if sys.platform != 'darwin':
-    import cairosvg 
-
-
-
-from PIL import Image
+from __future__ import annotations
 
 def svg2pdf(svg_file, pdf_file):
-    #drawing = svg2rlg(svg_file)
-    #renderPDF.drawToFile(drawing, pdf_file)
-    ## version 3
-    if sys.platform == 'darwin':
-        os.system('/Applications/Inkscape.app/Contents/MacOS/inkscape ' +svg_file + ' --export-area-drawing --export-filename ' + pdf_file)
-    elif sys.platform == 'linux':
-        os.system('inkscape ' +svg_file + ' --export-area-drawing --export-filename ' + pdf_file)
-    else:
-        cairosvg.svg2pdf(url=svg_file,write_to=pdf_file) ## not tested  
+    from svglib.svglib import svg2rlg
+    from reportlab.graphics import renderPDF
+
+    drawing = svg2rlg(svg_file)
+    renderPDF.drawToFile(drawing, pdf_file)
 
 def gif2pdf(gif_file, pdf_file):
+    from PIL import Image
+
     img = Image.open(gif_file)
     img.save(pdf_file, "PDF", resolution=100.0)
 
 def webp2pdf(webp_file, pdf_file):
+    from PIL import Image
+
     img = Image.open(webp_file)
     img.save(pdf_file, "PDF", resolution=100.0)
 
@@ -35,6 +25,17 @@ def convert_images_to_pdfs(app):
     # Check if building LaTeX
     if app.builder.format != 'latex':
         return
+
+    # Optional deps are only needed for LaTeX builds.
+    # Keep HTML builds working even if svglib/reportlab aren't installed.
+    try:
+        import svglib  # noqa: F401
+        import reportlab  # noqa: F401
+    except ModuleNotFoundError as exc:
+        raise ModuleNotFoundError(
+            "La construction LaTeX requiert 'svglib' et 'reportlab' pour convertir les images. "
+            "Installe les dépendances manquantes ou retire l'extension 'conversions' de conf.py."
+        ) from exc
 
     # Get the path to the build directory
     build_dir = app.outdir

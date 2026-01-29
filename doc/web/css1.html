@@ -1,0 +1,710 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="6. Plus de propriétés" href="css2.html" /><link rel="prev" title="4. Plus sur les images" href="html4.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>5. Introduction au CSS - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="js1.html">9. Introduction à JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/rappels.html">1. Rappels de programmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/intro_pygame.html">2. Introduction à Pygame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner_new.html">3. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">4. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">5. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit.html">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="introduction-au-css">
+<span id="web-css1"></span><h1>5. Introduction au CSS<a class="headerlink" href="#introduction-au-css" title="Lien permanent vers ce titre">¶</a></h1>
+<p>On ne va pas se mentir. Jusqu’ici, nos sites étaient plutôt moches.<br/>
+A partir de ce chapitre, nous allons pouvoir <strong>styliser nos pages</strong> grâce à un second langage fondateur du web: le CSS.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/andreessen.jpg"/>
+<div class="card-header docutils">
+<p class="card-text">Mark Andreessen</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><em><strong>Né en 1971</strong></em></p>
+<p class="card-text">L’informaticien américain <a class="reference external" href="https://fr.wikipedia.org/wiki/Marc_Andreessen"><strong>Mark Andreessen</strong></a> est l’un des créateurs du premier navigateur web (Mosaic) en 1993 ainsi que le fondateur de Netscape, la 1ère entreprise entièrement tournée vers Internet. Il n’est pas à proprement parler le créateur du CSS mais ses nombreuses innovations vont pousser d’autres ingénieurs à travailler dessus, notamment <a class="reference external" href="https://fr.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie"><strong>Håkon Wium Lie</strong></a> qui sera le premier à proposer l’idée même du CSS.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/css.svg"/><div class="card-header docutils">
+<p class="card-text">CSS3</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><em><strong>Créé en 1996</strong></em></p>
+<p class="card-text">Le <a class="reference external" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade">CSS</a> (Cascading Style Sheets, aussi appelées feuilles de style) a pour rôle de gérer l’apparence de la page web (agencement, positionnement, décoration, couleurs, taille du texte…). Ce langage est venu compléter le HTML en 1996, et il est toujours au fondement même du style du Web de nos jours.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">L’art CSS</p>
+<p>Certaines personnes se pasionnent à faire de l’art en pur CSS, vous pouvez jeter un oeil à <a href="https://www.cssartist.com/" target="_blank">cette artiste</a> par exemple.<br/>
+Ce visage de Mario a été fait en pur CSS ! C’est inutile mais plutôt impressionnant…</p>
+<img alt="../_images/mario_css.png" src="../_images/mario_css.png"/>
+</div>
+<section id="ou-ecrire-le-css">
+<h2>Où écrire le CSS ?<a class="headerlink" href="#ou-ecrire-le-css" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est possible d’écrire du code CSS directement dans des fichiers <code class="docutils literal notranslate"><span class="pre">.html</span></code> grâce aux balises <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;</span> <span class="pre">&lt;/style&gt;</span></code>. Cependant, cela rend le code difficile à lire et ce n’est pas la méthode que nous allons utiliser ici.</p>
+<p>Nous allons écrire tout notre code CSS dans un fichier <code class="docutils literal notranslate"><span class="pre">.css</span></code> puis le lier aux différentes pages <code class="docutils literal notranslate"><span class="pre">.html</span></code> de notre site.</p>
+<div class="note admonition">
+<p class="admonition-title">Comment faire ?</p>
+<p>Pour lier les fichiers <code class="docutils literal notranslate"><span class="pre">.css</span></code> et <code class="docutils literal notranslate"><span class="pre">.html</span></code>, vous allez rajouter une ligne dans le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> pour indiquer au navigateur d’aller chercher la feuille de style associée.</p>
+<p>Cette ligne s’ouvre avec la balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> et on la place à l’intérieur de la balise <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span> <span class="c">&lt;!-- Nouvelle ligne --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">CodePen</p>
+<p>Le site web <a href="https://codepen.io/pen/" target="_blank">CodePen</a> est un éditeur en ligne permettant de tester très facilement du code HTML et CSS (et JS).</p>
+</div>
+</section>
+<section id="appliquer-une-propriete-css-a-une-balise-html">
+<h2>Appliquer une propriété CSS à une balise HTML<a class="headerlink" href="#appliquer-une-propriete-css-a-une-balise-html" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici à quoi ressemble un bout de code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Rendez-vous sur <a href="https://codepen.io/Vincent-Guertler/pen/GRwQPNY" target="_blank">CodePen</a>. Vous devriez y voir un code HTML déjà tout prêt.</p>
+<p>Dans la partie CSS, copiez-y le bout de code donné ci-dessus.</p>
+<p>Pouvez-vous dire ce que fait le code CSS du fichier <code class="docutils literal notranslate"><span class="pre">style.css</span></code> ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le code CSS signifie en français: “Je veux que tous les paragraphes soient écrits en bleu”.</p>
+</div>
+</details></div>
+<p>Le CSS fonctionne avec 3 éléments différents:</p>
+<ol class="simple">
+<li><p><strong>Le sélecteur</strong>: ici on écrit les noms des balises HTML dont on veut modifier l’apparence. Par exemple, si je veux modifier l’apparence de tous les paragraphes  <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, je dois écrire <code class="docutils literal notranslate"><span class="pre">p</span></code> (sans les chevrons).</p></li>
+<li><p><strong>La ou les propriétés CSS</strong>: les effets de style sont listés via des propriétés. Par exemple, <code class="docutils literal notranslate"><span class="pre">color</span></code> permet d’indiquer la couleur du texte, <code class="docutils literal notranslate"><span class="pre">font-size</span></code>  permet d’indiquer la taille du texte, etc. Il existe <strong>BEAUCOUP</strong> de propriétés CSS ! Mais rassurez-vous, vous n’avez pas besoin de les connaître toutes par cœur.</p></li>
+<li><p><strong>…et leurs valeurs</strong>: pour chaque propriété CSS, on doit indiquer une valeur. Par exemple, pour la propriété <code class="docutils literal notranslate"><span class="pre">color</span></code>, il faut indiquer le nom de la couleur. Pour font-size, il faut indiquer quelle taille on veut, etc.</p></li>
+</ol>
+<img alt="../_images/structure_css.jpg" src="../_images/structure_css.jpg"/>
+<div class="admonition-accolades-sur-le-clavier admonition">
+<p class="admonition-title">Accolades sur le clavier</p>
+<p>Sur mac, vous utilisez:</p>
+<ul class="simple">
+<li><p>les touches <code class="docutils literal notranslate"><span class="pre">option</span> <span class="pre">⌥</span></code> + <code class="docutils literal notranslate"><span class="pre">(</span></code> pour faire l’accolade ouvrante;</p></li>
+<li><p>et les touches <code class="docutils literal notranslate"><span class="pre">option</span> <span class="pre">⌥</span></code> + <code class="docutils literal notranslate"><span class="pre">)</span></code> pour faire l’accolade fermante;</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>Modifiez le code CSS de l’exercice précédent (pizza) pour changer tous les titres principaux (<code class="docutils literal notranslate"><span class="pre">h1</span></code>) en rouge et tous les éléments de liste (<code class="docutils literal notranslate"><span class="pre">li</span></code>) en vert.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section id="appliquer-une-propriete-css-a-plusieurs-balises-html">
+<h2>Appliquer une propriété CSS à plusieurs balises HTML<a class="headerlink" href="#appliquer-une-propriete-css-a-plusieurs-balises-html" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Et si je veux appliquer la couleur bleue aux paragraphes et aux titres ?<br/>
+Il suffit de donner la liste des balises qui seront affectées par ce changement de propriété (séparées par des <code class="docutils literal notranslate"><span class="pre">,</span></code>):</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="o">,</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<img alt="../_images/css_bleu.png" src="../_images/css_bleu.png"/>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Faire dans la nuance</p>
+<div class="question-content docutils">
+<p>D’accord maintenant TOUS les paragraphes du site sont bleus. Est-il quand même possible de changer la couleur de quelques paragraphes ? Si oui, comment d’après vous ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>Non, c’est impossible. Ils resteront bleus.</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Oui c’est possible, en ajoutant une autre couleur dans la propriété CSS.</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Oui c’est possible, en ajoutant un attribut aux paragraphes que l’on veut d’une autre couleur.</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Oui c’est possible, par magie ?</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Eh oui c’est possible ! Et heureusement ! Vous allez voir que les attributs <code class="docutils literal notranslate"><span class="pre">class</span></code> et <code class="docutils literal notranslate"><span class="pre">id</span></code> permettent d’appliquer des propriétés CSS de manière plus précise qu’en ciblant directement des balises.</p>
+</div>
+</div>
+</form></div></section>
+<section id="appliquer-un-style-a-une-classe-delements">
+<h2>Appliquer un style à une classe d’éléments<a class="headerlink" href="#appliquer-un-style-a-une-classe-delements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Imaginez que vous voulez appliquer la couleur violette à certains éléments de votre page, indépendemment de leur type (titre, paragraphe, liens, etc).</p>
+<p>Pour ce faire, vous allez commencer par créer une classe CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">ma-classe</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">purple</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ce code définit une classe nommée <code class="docutils literal notranslate"><span class="pre">ma-classe</span></code> et demande à ce que tous les éléments qui en font partie soient écrits en violet (purple en anglais). Notez qu’il faut mettre un <code class="docutils literal notranslate"><span class="pre">.</span></code> avant le nom de la classe.</p>
+<p>Maintenant, il faut spécifier quels éléments HTML doivent faire partie de <code class="docutils literal notranslate"><span class="pre">ma-classe</span></code>. Cela se fait en spécifiant l’attribut <code class="docutils literal notranslate"><span class="pre">class</span></code> d’un élément HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"ma-classe"</span><span class="p">&gt;</span>Ceci est un titre qui fait partie de ma-classe<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"ma-classe"</span><span class="p">&gt;</span>Ceci est un paragraphe qui fait partie de ma-classe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est un second paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Testez par vous-même</p>
+<p>N’hésitez pas à tester ces exemples dans <a href="https://codepen.io/pen/" target="_blank">CodePen</a>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 3</p>
+<p>Modifiez le code CSS de l’exercice précédent (pizza) pour mettre les éléments de la liste d’ingrédients qui contiennent de la tomate (1er et 3ème) en rouge.</p>
+<p>Pour ce faire, créez une classe CSS et ajoutez les attributs HTML correspondants.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici le code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">classe-rouge</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="card-text">Et voici la liste HTML modifiée:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"classe-rouge"</span><span class="p">&gt;</span>Tomates fraîches<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Mozarella di buffala<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"classe-rouge"</span><span class="p">&gt;</span>Coulis de tomate<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Roquette<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <!-- Code secret: X-MAS --><div class="note admonition">
+<p class="admonition-title">A retenir</p>
+<p>Les propriétés CSS définies avec des classes ont la priorité sur les propriétés plus générales définies au niveau des balises.</p>
+</div>
+</section>
+<section id="les-balises-universelles-span-et-div">
+<h2>Les balises universelles <code class="docutils literal notranslate"><span class="pre">span</span></code> et <code class="docutils literal notranslate"><span class="pre">div</span></code><a class="headerlink" href="#les-balises-universelles-span-et-div" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Tout ça c’est très bien mais comment appliquer un style à un mot particulier qui n’est pas entouré par une balise ?<br/>
+Par exemple, comment écrire en rouge <code class="docutils literal notranslate"><span class="pre">automatique</span></code> et <code class="docutils literal notranslate"><span class="pre">information</span></code> dans le paragraphe suivant:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>L'informatique est la science du traitement automatique de l'information !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Cela serait facile si ces deux mots étaient entourés par des balises… Eh bien on a inventé des balises qui ne servent à rien, exactement dans ce but ! Il s’agit de:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code></p></li>
+<li><p>et <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code></p></li>
+</ul>
+<p>Leur unique utilité est de regrouper du contenu HTML afin de pouvoir appliquer un style CSS.</p>
+<div class="note admonition">
+<p class="admonition-title">Inline ou block</p>
+<p>Petite différence entre ces deux balises: <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> est une balise qui ne provoque pas de retour à la ligne (comme les balises <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span> <span class="pre">&lt;/a&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span> <span class="pre">&lt;/strong&gt;</span></code>, etc). On dit que ce sont des balises de type <strong>inline</strong>.</p>
+<p>De l’autre côté, <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> provoque un retour à la ligne (comme <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">&lt;/p&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">&lt;/h1&gt;</span></code>, etc). On dit que ce sont des balises de type <strong>block</strong>.</p>
+</div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Pour mettre en couleur <code class="docutils literal notranslate"><span class="pre">automatique</span></code> et <code class="docutils literal notranslate"><span class="pre">information</span></code> dans le paragraphe ci-dessus. Utiliseriez-vous plutôt <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> ou <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> ?</p>
+<ul class="simple">
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;span&gt; &lt;/span&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;div&gt; &lt;/div&gt;</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Il vaut mieux utiliser <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour éviter de créer un retour à la ligne après chacun des mots. La balise <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> sert plutôt à définir <strong>un bloc</strong> et est beaucoup utilisée dans la construction de la mise en page (nous verrons ça bientôt).</p>
+</div>
+</div>
+</form></div><p>Voici donc comment mettre les mots <code class="docutils literal notranslate"><span class="pre">automatique</span></code> et <code class="docutils literal notranslate"><span class="pre">information</span></code> en rouge dans le paragraphe donné en début de section.<br/>
+Il vous faut définir une classe CSS et l’appliquer à vos balises <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code>.</p>
+<p>Code HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>L'informatique est la science du traitement <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"classe-rouge"</span><span class="p">&gt;</span>automatique<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> de l'<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"classe-rouge"</span><span class="p">&gt;</span>information<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">classe-rouge</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition-refaire-la-face-de-mario admonition">
+<p class="admonition-title">Refaire la face de Mario</p>
+<p>Vous vous souvenez du Mario du début de chapitre ?<br/>
+Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n’hésitez pas à essayer de modifier la couleur de sa moustache si vous vous en sentez capable !).</p>
+</div>
+</section>
+<section id="resume-des-elements-de-ce-chapitre">
+<h2>Résumé des éléments de ce chapitre<a class="headerlink" href="#resume-des-elements-de-ce-chapitre" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p><em>Lier un fichier CSS à un fichier HTML</em>:
+<code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">href="style.css"</span> <span class="pre">rel="stylesheet"&gt;</span></code> (à placer dans la balise <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code>)</p></li>
+<li><p><em>Créer une règle CSS pour une balise</em>:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">nom_de_la_balise</span> <span class="p">{</span>
+    <span class="n">propriete</span><span class="p">:</span> <span class="n">valeur</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Couleur du texte</em>: <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">nom_de_la_couleur;</span></code> (ex: <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">blue;</span></code>)</p></li>
+<li><p><em>Couleur de fond</em>: <code class="docutils literal notranslate"><span class="pre">background-color:</span> <span class="pre">nom_de_la_couleur;</span></code> (ex: <code class="docutils literal notranslate"><span class="pre">background-color:</span> <span class="pre">yellow;</span></code>)</p></li>
+<li><p><em>Créer une règle CSS pour une classe</em>:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">nom_de_la_classe</span> <span class="p">{</span>
+    <span class="n">propriete</span><span class="p">:</span> <span class="n">valeur</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Appliquer une classe à un élément HTML</em>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"nom_de_la_classe"</span><span class="p">&gt;</span>Paragraphe à styliser<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Balises universelles</em>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour regrouper du contenu sans provoquer de retour à la ligne;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> pour regrouper du contenu en provoquant un retour à la ligne (utile pour créer des blocs).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="exercice-recapitulatif-5">
+<h2>Exercice récapitulatif 5<a class="headerlink" href="#exercice-recapitulatif-5" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Exercice récapitulatif 5</p>
+<p>Il est temps d’ajouter un peu de style à votre site d’artiste <code class="docutils literal notranslate"><span class="pre">ArtGallerie</span></code> !
+Reprenez votre dossier <code class="docutils literal notranslate"><span class="pre">ArtGallerie</span></code> des exercices récapitulatifs précédents.</p>
+<p>Créez-y un fichier <code class="docutils literal notranslate"><span class="pre">style.css</span></code>, puis, dans chacun de vos fichiers <code class="docutils literal notranslate"><span class="pre">.html</span></code>, ajoutez le lien vers la feuille de style <code class="docutils literal notranslate"><span class="pre">style.css</span></code> comme expliqué au début de ce chapitre.</p>
+<p>Faites les améliorations suivantes:</p>
+<ul class="simple">
+<li><p>Appliquez la couleur noire (black) à tous vos liens (balise <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>).</p></li>
+<li><p>Appliquez une couleur et une couleur de fond à vos titres.</p></li>
+<li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots <strong>séparés</strong> (pas côte-à-côte) de votre paragraphe auto-biographique. Pour ce faire, vous pouvez utiliser des balises <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour entourer chacun des mots choisis puis leur donner une classe. Il ne reste alors plus qu’à appliquer la couleur à cette classe en CSS.</p></li>
+<li><p>Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toutes vos photos. Il vous faut donc créer un bloc <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour de toutes vos images et appliquer un style CSS à ce bloc (idéalement à l’aide d’une classe).</p></li>
+</ul>
+<p>Déposez votre dossier compressé (<code class="docutils literal notranslate"><span class="pre">ArtGallerie.zip</span></code>) sur Moodle à l’endroit prévu.</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="css2.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">6. Plus de propriétés</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="html4.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">4. Plus sur les images</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/web/css1.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">5. Introduction au CSS</a><ul>
+<li><a class="reference internal" href="#ou-ecrire-le-css">Où écrire le CSS ?</a></li>
+<li><a class="reference internal" href="#appliquer-une-propriete-css-a-une-balise-html">Appliquer une propriété CSS à une balise HTML</a></li>
+<li><a class="reference internal" href="#appliquer-une-propriete-css-a-plusieurs-balises-html">Appliquer une propriété CSS à plusieurs balises HTML</a></li>
+<li><a class="reference internal" href="#appliquer-un-style-a-une-classe-delements">Appliquer un style à une classe d’éléments</a></li>
+<li><a class="reference internal" href="#les-balises-universelles-span-et-div">Les balises universelles <code class="docutils literal notranslate"><span class="pre">span</span></code> et <code class="docutils literal notranslate"><span class="pre">div</span></code></a></li>
+<li><a class="reference internal" href="#resume-des-elements-de-ce-chapitre">Résumé des éléments de ce chapitre</a></li>
+<li><a class="reference internal" href="#exercice-recapitulatif-5">Exercice récapitulatif 5</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

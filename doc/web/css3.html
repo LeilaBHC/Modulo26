@@ -1,0 +1,659 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="8. Aligner ses blocs avec Flexbox" href="css4.html" /><link rel="prev" title="6. Plus de propriétés" href="css2.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>7. Structurer sa page en blocs - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="js1.html">9. Introduction à JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/rappels.html">1. Rappels de programmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/intro_pygame.html">2. Introduction à Pygame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner_new.html">3. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">4. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">5. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit.html">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="structurer-sa-page-en-blocs">
+<span id="web-css3"></span><h1>7. Structurer sa page en blocs<a class="headerlink" href="#structurer-sa-page-en-blocs" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Il est grand temps d’apprendre à structurer un peu sa page. Pour l’instant, nous sommes uniquement capable d’empiler des blocs d’éléments les uns sur les autres.</p>
+<p>Pourtant, une page web ça ressemble plutôt à ça !</p>
+<img alt="../_images/structure_page_web.jpg" src="../_images/structure_page_web.jpg"/>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>Les balises <code class="docutils literal notranslate"><span class="pre">&lt;header&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;nav&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;main&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;section&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;aside&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;footer&gt;</span></code> servent à spéficier la structure de votre page pour le navigateur et les robots qui parcourent le web !</p>
+<p><strong>Elles n’ont aucun impact visuel !</strong> Il est recommendé de les utiliser pour donner une structure à votre page mais vous pouvez obtenir le même résultat visuel sans elles.</p>
+</div>
+<section id="un-modele-de-blocs">
+<h2>Un modèle de blocs<a class="headerlink" href="#un-modele-de-blocs" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Rappel</p>
+<p>En HTML, la plupart des balises peuvent se ranger dans l’une ou l’autre de ces deux catégories:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">block</span></code>: ce type de balise crée automatiquement un retour à la ligne avant et après (ex: <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inline</span></code>: ce type ne crée aucun retour à la ligne (ex: <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>).</p></li>
+</ul>
+<img alt="../_images/block_inline.jpg" src="../_images/block_inline.jpg"/>
+<p>Les blocs peuvent aussi être imbriqués. La balise <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> crée en réalité un bloc qui constitue toute votre page et dans lequel vous allez mettre d’autres blocs !</p>
+</div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Couleur de fond du site</p>
+<div class="question-content docutils">
+<p>Quelle balise que nous avons vue permet de simplement créer un nouveau bloc sans rôle particulier ?</p>
+<ul class="simple">
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;div&gt; &lt;/div&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;span&gt; &lt;/span&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;p&gt; &lt;/p&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;img&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;bloc&gt; &lt;/bloc&gt;</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>En englobant une partie de vos éléments dans une balise <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code>, vous créez un nouveau bloc que vous allez pouvoir modifier facilement grâce au CSS.</p>
+<p>Même si la balise <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">&lt;/p&gt;</span></code> est aussi une balise de type <code class="docutils literal notranslate"><span class="pre">block</span></code>, elle a un rôle bien particulier: celui de créer un paragraphe. Il ne serait donc pas judicieux de l’utiliser pour créer un bloc qui contient d’autres paragraphes par exemple.</p>
+</div>
+</div>
+</form></div><div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/XWyqOaa" target="_blank">CodePen</a> pour voir un site sur les flamants roses.</p>
+<p>Créez un nouveau bloc englobant les 2 premiers paragraphes de l’introduction. Ce nouveau bloc doit avoir les propriétés suivantes:</p>
+<ul class="simple">
+<li><p>Couleur du texte: bleu</p></li>
+<li><p>Couleur de fond: #f3d5f5</p></li>
+<li><p>Bordure: pointillée et rouge</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Code HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"bloc-rose"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        Les flamants roses sont des oiseaux qui se trouvent dans des parties de l'Afrique, de l'Asie, des Amériques et de l'Europe. 
+        Ils sont connus pour leur plumage rose vif et leur long cou courbé.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        Il existe quatre espèces principales de flamants roses, chacune ayant des variations dans la couleur et la taille.
+        Leurs pattes sont particulièrement longues, ce qui leur permet de parcourir les eaux peu profondes où ils trouvent leur nourriture.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p class="card-text">Code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">bloc-rose</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f3d5f5</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="kc">dashed</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">Important</p>
+<p>Seuls les balises de type <code class="docutils literal notranslate"><span class="pre">block</span></code> peuvent être redimensionnés ou déplacés sur une page. Il ne serait pas logique de vouloir déplacer un mot dans un paragraphe.</p>
+<p>(Il existe en réalité un 3ème type: <code class="docutils literal notranslate"><span class="pre">inline-block</span></code>. La balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> est en réalité de ce type. Les images ne créent pas de retour à la ligne mais peuvent être déplacées et redimensionnées (heureusement !))</p>
+</div>
+</section>
+<section id="redimensionner-ses-blocs-avec-width-et-height">
+<h2>Redimensionner ses blocs avec <code class="docutils literal notranslate"><span class="pre">width</span></code> et <code class="docutils literal notranslate"><span class="pre">height</span></code><a class="headerlink" href="#redimensionner-ses-blocs-avec-width-et-height" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Par défaut, un bloc prend toujours <strong>toute la largeur disponible</strong> de la page et <strong>seulement la hauteur dont il a besoin</strong> pour son contenu.</p>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">width</span></code> va nous permettre de régler la largeur de nos blocs:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>  
+    <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ce qui donnera:</p>
+<img alt="../_images/css_width.jpg" src="../_images/css_width.jpg"/>
+<p>Donner les valeurs en <code class="docutils literal notranslate"><span class="pre">%</span></code> permet de s’adapter à l’écran mais il est également possible de donner des valeurs absolues en pixels (ex: <code class="docutils literal notranslate"><span class="pre">250px</span></code>).</p>
+</section>
+<section id="ajouter-des-marges-a-ses-blocs-avec-margin-et-padding">
+<h2>Ajouter des marges à ses blocs avec <code class="docutils literal notranslate"><span class="pre">margin</span></code> et <code class="docutils literal notranslate"><span class="pre">padding</span></code><a class="headerlink" href="#ajouter-des-marges-a-ses-blocs-avec-margin-et-padding" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Tous les blocs possèdent des marges intérieures et extérieures:</p>
+<img alt="../_images/margin_padding.jpg" src="../_images/margin_padding.jpg"/>
+<p>Pour les modifier, on utilise les propriétés suivantes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">margin</span></code> pour les marges <strong>extérieures</strong> (ex: <code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">10px</span></code>). Cette marge ajoute de l’espace <strong>autour</strong> du bloc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">padding</span></code> pour les marges <strong>intérieures</strong> (ex: <code class="docutils literal notranslate"><span class="pre">padding:</span> <span class="pre">10px</span></code>). Cette marge ajoute de l’espace à l’<strong>intérieur</strong> du bloc, comme si on le faisait <strong>enfler</strong>.</p></li>
+</ul>
+<p>Voici ce que cela donne sur des blocs de textes (paragraphes avec balise <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>):</p>
+<img alt="../_images/exemple_marges.png" src="../_images/exemple_marges.png"/>
+<p>Testez différentes marges sur ce <a href="https://codepen.io/Vincent-Guertler/pen/gOQKmJj" target="_blank">CodePen</a>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Être plus précis avec les marges ?<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Par défaut, <code class="docutils literal notranslate"><span class="pre">margin</span></code> et <code class="docutils literal notranslate"><span class="pre">padding</span></code> modifient les marges tout autour du bloc (dans toutes les directions en même temps).</p>
+<p class="card-text">Il est possible de définir des marges intérieures et extérieures plus précisément en indiquant les directions voulues avec les propriétés suivantes:</p>
+<img alt="../_images/margin_padding_directions.jpg" src="../_images/margin_padding_directions.jpg"/>
+</div>
+</details><div class="note admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>Reprenez le site sur les flamants roses après vos modifications de l’exercice 1.</p>
+<p>Faites les modifications suivantes:</p>
+<ol class="simple">
+<li><p>Changez la largeur du bloc précédemment créé dans l’exercice 1 à <code class="docutils literal notranslate"><span class="pre">50%</span></code>.</p></li>
+<li><p>Ajoutez une marge intérieure de 10 pixels au bloc.</p></li>
+<li><p>Justifiez le texte qui se trouve dans le bloc.</p></li>
+<li><p>Aéréz les éléments de la liste à puces en leur ajoutant une marge extérieure de 10 pixels.</p></li>
+<li><p>Ajoutez la couleur de fond suivante pour la page: #FAF0E6.</p></li>
+<li><p>Centrez le titre sur la page.</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Aucun changement dans le code HTML.<br/>
+Code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">bloc-rose</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f3d5f5</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="kc">dashed</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">justify</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#FAF0E6</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span> <span class="p">{</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section id="centrer-ses-blocs-avec-margin-auto">
+<h2>Centrer ses blocs avec <code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">auto</span></code><a class="headerlink" href="#centrer-ses-blocs-avec-margin-auto" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour centrer un bloc qui ne prend pas toute la largeur de la page, il faut respecter les règles suivantes:</p>
+<ol class="simple">
+<li><p>donner une largeur au bloc avec la propriété <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p></li>
+<li><p>indiquer <code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">auto;</span></code> ce qui va automatiquement remplir les marges extérieurs pour centrer horizontalement le bloc.</p></li>
+</ol>
+<p>Ce code permet de centrer tous les paragraphes de la page avec 50% de la largeur de la page:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>  
+    <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 3</p>
+<p>Reprenez le site sur les flamants roses et centrez sur la page tout le bloc sur l’alimentation de ce magnifique animal.</p>
+<p>Ce bloc qui englobe le sous-titre et les deux paragraphes n’existe pas, il faut donc commencer par le créer avec une balise <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>.</p>
+<ul class="simple">
+<li><p>Le bloc doit prendre <code class="docutils literal notranslate"><span class="pre">75%</span></code> de la largeur de la page.</p></li>
+<li><p>(Challenge): Le sous-titre du bloc “Alimentation” doit être centré dans le bloc.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Code HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"centre"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sous-titre: Alimentation<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        Les flamants roses se nourrissent principalement d'algues, de crevettes et de petits insectes.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        Ils filtrent ces aliments de l'eau avec un bec spécialisé qui est conçu pour séparer l'eau et la boue de la nourriture qu'ils consomment. 
+        C'est un comportement d'alimentation unique que l'on appelle la "filtration".
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p class="card-text">Code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">centre</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">75</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Challenge */</span>
+<span class="p">.</span><span class="nc">centre</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="card-text">Pour centrer uniquement le sous-titre <code class="docutils literal notranslate"><span class="pre">h2</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">centre</span></code> et pas tous les sous-titres de la page, nous avons défini la propriété pour <code class="docutils literal notranslate"><span class="pre">.centre</span> <span class="pre">h2</span></code> qui signifie en français: “Toutes les balises <code class="docutils literal notranslate"><span class="pre">h2</span></code> incluses dans le bloc <code class="docutils literal notranslate"><span class="pre">centre</span></code>”.</p>
+<p class="card-text">A ne pas confondre avec <code class="docutils literal notranslate"><span class="pre">.centre,</span> <span class="pre">h2</span></code> qui inclurait le bloc <code class="docutils literal notranslate"><span class="pre">centre</span></code> ET tous les sous-titres <code class="docutils literal notranslate"><span class="pre">h2</span></code>.</p>
+</div>
+</details></div>
+</section>
+<section id="exercice-recapitulatif-6">
+<h2>Exercice récapitulatif 6<a class="headerlink" href="#exercice-recapitulatif-6" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Exercice récapitulatif 6</p>
+<p>Voici le code HTML d’une page présentant un restaurant pour le moins douteux.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Restaurant en boîtes<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Restaurant en boîtes <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"boite1"</span><span class="p">&gt;</span>
+      Voici les menus proposés dans mon restaurant:
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"boite2"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pâtes au beurre<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Paquet de chips avec thé froid de la migros<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Saucisses grillées<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Sandwich au jambon<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Salade du chef<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"boite1"</span><span class="p">&gt;</span>
+      Voici un lien vers l'image de mon restaurant:
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"boite2"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">'https://espacescontemporains.ch/wp-content/uploads/2020/07/01_header_skyloungemainoverall2.jpg'</span><span class="p">&gt;</span>Mon magnifique resto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>En utilisant la structure en blocs vue dans ce chapitre, écrivez le fichier <code class="docutils literal notranslate"><span class="pre">style.css</span></code> permettant d’obtenir un résultat aussi proche que possible de l’image ci-dessous.<br/>
+Vous pouvez faire l’exercice directement sur <a href="https://codepen.io/pen/" target="_blank">CodePen</a> si vous le souhaitez.</p>
+<img alt="../_images/restaurant_boites_css.png" src="../_images/restaurant_boites_css.png"/>
+<p>Déposez votre fichier CSS sur Moodle à l’endroit prévu.</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="css4.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">8. Aligner ses blocs avec Flexbox</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="css2.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">6. Plus de propriétés</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/web/css3.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">7. Structurer sa page en blocs</a><ul>
+<li><a class="reference internal" href="#un-modele-de-blocs">Un modèle de blocs</a></li>
+<li><a class="reference internal" href="#redimensionner-ses-blocs-avec-width-et-height">Redimensionner ses blocs avec <code class="docutils literal notranslate"><span class="pre">width</span></code> et <code class="docutils literal notranslate"><span class="pre">height</span></code></a></li>
+<li><a class="reference internal" href="#ajouter-des-marges-a-ses-blocs-avec-margin-et-padding">Ajouter des marges à ses blocs avec <code class="docutils literal notranslate"><span class="pre">margin</span></code> et <code class="docutils literal notranslate"><span class="pre">padding</span></code></a></li>
+<li><a class="reference internal" href="#centrer-ses-blocs-avec-margin-auto">Centrer ses blocs avec <code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">auto</span></code></a></li>
+<li><a class="reference internal" href="#exercice-recapitulatif-6">Exercice récapitulatif 6</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

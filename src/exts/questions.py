@@ -3,7 +3,6 @@ import os
 import sys
 
 from docutils import nodes
-from docutils.nodes import Node  # type: ignore
 from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
 
@@ -16,12 +15,10 @@ class correct_answer(answer):
 class incorrect_answer(answer):
     is_correct = False
 
-class question(nodes.admonition):
+class question(nodes.Element, nodes.General):
     correct = []
     counter = 0
-    def __init__(self, rawsource="", *children, **attributes):
-        super().__init__(rawsource, *children, **attributes)
-        self["classes"].append("question")
+
 
 class check_buttons(nodes.Element, nodes.General):
     pass
@@ -42,7 +39,6 @@ def depart_answer_html(self, node):
     self.body.append("</label>")
 
 def visit_question_html(self, node):
-    self.visit_admonition(node)
     classes = ["question"]
     if node["multi"]:
         classes.append("multi")
@@ -54,13 +50,12 @@ def visit_question_html(self, node):
 def depart_question_html(self, node):
     self.body.append("</form>")
     self.body.append("</div>")
-    self.depart_admonition(node)
 
 def visit_check_buttons_html(self, node):
     tag = self.starttag(node, "div", CLASS="controls")
     self.body.append(tag.strip())
     self.body.append("<button type=\"button\" class=\"reset btn btn-secondary\"><i class=\"fa fa-repeat\"></i> Effacer</button>")
-    self.body.append("<button type=\"button\" class=\"show btn btn-secondary\"><i class=\"fa fa-eye\"></i> Montrer</button>")
+    self.body.append("<button type=\"button\" class=\"show btn btn-secondary\"><i class=\"fa fa-eye\"></i> Montrer l'explication</button>")
     self.body.append("<button type=\"button\" class=\"check btn btn-primary\"><i class=\"fa fa-question\"></i> Vérifier</button>")
 
 def depart_check_buttons_html(self, node):
@@ -81,33 +76,18 @@ def visit_answer_latex(self, node):
 def depart_answer_latex(self, node):
     pass
 
-
-def visit_question_latex(self, node: Node):
+def visit_question_latex(self, node):
     classes = ["question"]
     if node["multi"]:
         classes.append("multi")
     question.correct = []
     question.counter = 0
-   
-    self.body.append('\n\\begin{question}')
-
-    def convert_itemize(node: Node):
-        """Recursively convert all bullet lists to enumerated lists.
-        We want this because we refer to answers by number."""
-        if isinstance(node, nodes.bullet_list):
-            node.__class__ = nodes.enumerated_list
-        else:
-            for child in node.children:
-                convert_itemize(child)
-
-    convert_itemize(node)
-
-    
+    self.body.append(r"\smallbreak") #break before question if possible
 
 
     
 def depart_question_latex(self, node):
-     self.body.append('\n\\end{question}\n')
+    pass
    
 def visit_check_buttons_latex(self, node):
     responses = [str(i+1) for i in question.correct]
@@ -130,13 +110,12 @@ class Question(SphinxDirective):
     def run(self):
         self.assert_has_content()
 
-        admonition = question("", multi="multi" in self.options)
-        
+        container = question("", multi="multi" in self.options)
+        self.set_source_info(container)
+
+        admonition = nodes.admonition("")
 
         title = self.arguments[0] if len(self.arguments) > 0 else "Question"
-        #title ="Question"
-        #if len(self.arguments) > 0: 
-        #    title += " – " + self.arguments[0]
 
         textnodes, _ = self.state.inline_text(title, self.lineno)
         label = nodes.title(title, *textnodes)
@@ -170,9 +149,10 @@ class Question(SphinxDirective):
             feedback = nodes.container("", is_div=True, classes=["question-feedback"])
             self.state.nested_parse(feedback_content, self.content_offset, feedback)
             admonition += feedback
-    
-        return [admonition]
-    
+
+        container += admonition
+
+        return [container]
 ## todo: update Micha
 def setup(app):
     app.add_directive("question", Question)

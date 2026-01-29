@@ -1,0 +1,766 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="7. Structurer sa page en blocs" href="css3.html" /><link rel="prev" title="5. Introduction au CSS" href="css1.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>6. Plus de propriétés - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="js1.html">9. Introduction à JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/rappels.html">1. Rappels de programmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/intro_pygame.html">2. Introduction à Pygame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner_new.html">3. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">4. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">5. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit.html">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="plus-de-proprietes">
+<span id="web-css2"></span><h1>6. Plus de propriétés<a class="headerlink" href="#plus-de-proprietes" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Jusqu’ici, nous n’avons vu que des propriétés CSS associées aux couleurs: <code class="docutils literal notranslate"><span class="pre">color</span></code> et <code class="docutils literal notranslate"><span class="pre">background-color</span></code>. Il est temps d’élargir un peu notre vocabulaire !</p>
+<section id="plus-de-couleurs">
+<h2>Plus de couleurs<a class="headerlink" href="#plus-de-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avant d’aller plus loin, vous devez savoir que s’il est possible de donner une couleur en toutes lettres (par exemple: <code class="docutils literal notranslate"><span class="pre">blue</span></code>), les propriétés CSS acceptent aussi des codes hexadécimaux (<code class="docutils literal notranslate"><span class="pre">#FFC8D3</span></code>) et RGB (<code class="docutils literal notranslate"><span class="pre">rgb(250,</span> <span class="pre">25,</span> <span class="pre">118)</span></code>).</p>
+<p>Ainsi, les codes suivants sont équivalents:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">color</span><span class="o">:</span> <span class="nt">blue</span><span class="o">;</span>
+<span class="nt">color</span><span class="o">:</span> <span class="p">#</span><span class="nn">0000ff</span><span class="o">;</span>
+<span class="nt">color</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">255</span><span class="o">);</span>
+</pre></div>
+</div>
+<p><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Color picker</a> vous permet de facilement faire votre choix parmi toutes les couleurs possibles.</p>
+<section id="appliquez-une-couleur-de-fond-avec-background-color">
+<h3>Appliquez une couleur de fond avec <code class="docutils literal notranslate"><span class="pre">background-color</span></code><a class="headerlink" href="#appliquez-une-couleur-de-fond-avec-background-color" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous avons rapidement vu la propriété <code class="docutils literal notranslate"><span class="pre">background-color</span></code> afin de mettre une couleur de fond à du texte. Mais elle permet de mettre une couleur de fond à n’importe quoi !</p>
+<p>Et pourquoi pas à toute la page ?</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Couleur de fond du site</p>
+<div class="question-content docutils">
+<p>D’après vous, à quelle balise faudrait-il appliquer la propriété <code class="docutils literal notranslate"><span class="pre">background-color</span></code> afin de changer la couleur de fond de toute la page ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;head&gt; &lt;/head&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;title&gt; &lt;/title&gt;</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;body&gt; &lt;/body&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Toutes les balises &lt;p&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>La 1ère balise &lt;h1&gt;</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> englobe la totalité du contenu de notre page. En changeant une proprité de <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code>, nous changeons le style de tous les éléments qu’elle contient.</p>
+</div>
+</div>
+</form></div><div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Prenez le <a href="https://codepen.io/Vincent-Guertler/pen/GRwQPNY" target="_blank">site sur la pizza</a> et faites les changements suivants pour toute la page:</p>
+<ul class="simple">
+<li><p>Couleur de fond noire</p></li>
+<li><p>Texte en blanc</p></li>
+<li><p>Titre principal en violet</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">purple</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">L’héritage de propriétés</p>
+<p>En CSS, si vous appliquez un style à une balise, toutes les balises qui se trouvent à l’intérieur prendront le même style. Cela s’appelle l’héritage. Ainsi, toutes les balises qui se trouvent dans <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> héritent de ses propriétés, d’où le changement pour toute la page.</p>
+<p>C’est d’ailleurs de là que vient le nom “CSS”, qui signifie “Cascading Style Sheets”, c’est-à-dire “Feuilles de style en cascade”. Les propriétés CSS sont héritées en cascade.</p>
+</div>
+</section>
+<section id="ajoutez-une-image-de-fond-avec-background-image">
+<h3>Ajoutez une image de fond avec <code class="docutils literal notranslate"><span class="pre">background-image</span></code><a class="headerlink" href="#ajoutez-une-image-de-fond-avec-background-image" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une “image de fond” ne s’applique pas forcément à la page entière. On peut aussi mettre une image de fond derrière des titres, ou des paragraphes uniquement.</p>
+<p>Voyez déjà ce que donne <code class="docutils literal notranslate"><span class="pre">background-image</span></code> appliqué à <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> sur ce <a href="https://codepen.io/Vincent-Guertler/pen/poQVRXq" target="_blank">lien CodePen</a>.</p>
+<p>Le résultat n’est pas parfait et l’image se répète à l’horizontal. Pour arriver à un résultat qui vous plait, il existe plusieurs autres propriétés très utiles:</p>
+<ol class="simple">
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat" target="_blank">background-repeat</a> permet de définir si et comment votre image se répète.</p></li>
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size" target="_blank">background-size</a> permet de définir la taille de l’image.</p></li>
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-position" target="_blank">background-position</a> permet d’indiquer la position de l’image.</p></li>
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-attachment" target="_blank">background-attachment</a> définit si la position de l’image est fixe ou si elle peut défiler avec le bloc englobant.</p></li>
+</ol>
+<p>Cela fait pas mal d’informations d’un coup. Je vous invite à les tester mais il est inutile de retenir toutes les propriétés par coeur. Les informaticiens ont une mémoire très limitée, mais accès à Internet.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>Rendez-vous à nouveau sur ce <a href="https://codepen.io/Vincent-Guertler/pen/poQVRXq" target="_blank">CodePen</a>.</p>
+<p>Au lieu d’appliquer une image de fond à toute la page, vous allez l’appliquer uniquement au titre afin de faire une bannière.</p>
+<p>Voici la marche à suivre:</p>
+<ol class="simple">
+<li><p>Ajouter une balise <code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">class="banniere&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour du titre de la page. Cela permet de créer un nouveau bloc pour la bannière qui va englober votre titre.</p></li>
+<li><p>Créez la classe <code class="docutils literal notranslate"><span class="pre">.banniere</span></code> en CSS et utilisez <code class="docutils literal notranslate"><span class="pre">background-image</span></code> pour appliquer l’image de fond de votre choix.</p></li>
+<li><p>Centrez le titre et mettez le en blanc.</p></li>
+<li><p>Ajoutez la propriété <code class="docutils literal notranslate"><span class="pre">background-size:</span> <span class="pre">cover;</span></code> afin que l’image soit redimensionnée au mieux pour couvrir le titre.</p></li>
+<li><p>Ajoutez la propriété <code class="docutils literal notranslate"><span class="pre">padding:</span> <span class="pre">100px</span></code> pour “faire gonfler” la bannière (nous verrons cette propriété plus tard).</p></li>
+<li><p>Ajoutez <code class="docutils literal notranslate"><span class="pre">background-position:</span> <span class="pre">center;</span></code> pour centrer l’image de fond autour du titre.</p></li>
+</ol>
+<p>Si le résultat ne vous convient pas (en fonction de l’image choisie), continuez à faire des tests jusqu’à avoir un résultat satisfaisant ou appelez votre enseignant.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici le code HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"banniere"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mon blog<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est le contenu de mon premier paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est le contenu de mon deuxième paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p class="card-text">Et le code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">banniere</span> <span class="p">{</span>
+    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://www.justgeek.fr/wp-content/uploads/2023/01/mettre-fond-ecran-anime-pc.jpg</span><span class="p">);</span>
+    <span class="k">background-size</span><span class="p">:</span> <span class="kc">cover</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section id="creez-des-degrades-avec-linear-gradient">
+<h3>Créez des dégradés avec <code class="docutils literal notranslate"><span class="pre">linear-gradient</span></code><a class="headerlink" href="#creez-des-degrades-avec-linear-gradient" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le code suivant permet de créer un dégradé:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">background</span><span class="o">:</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">90deg</span><span class="o">,</span> <span class="p">#</span><span class="nn">8360c3</span><span class="o">,</span> <span class="p">#</span><span class="nn">2ebf91</span><span class="o">);</span>
+</pre></div>
+</div>
+<img alt="../_images/linear_gradient.png" src="../_images/linear_gradient.png"/>
+<p>Le plus simple pour s’en servir est de passer par <a href="https://uigradients.com/" target="_blank">UI Gradients</a> et de simplement copier le code CSS correspondant au dégradé souhaité.</p>
+</section>
+<section id="jouez-sur-la-transparence-avec-opacity">
+<h3>Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code><a class="headerlink" href="#jouez-sur-la-transparence-avec-opacity" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">opacity</span></code> permet de rendre n’importe quel élément de votre page plus ou moins transparent.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">opacity</span><span class="o">:</span> <span class="nt">0</span><span class="p">.</span><span class="nc">5</span><span class="o">;</span> <span class="c">/* Valeurs entre 0.0 (invisible) et 1.0 (opaque par défaut) */</span>
+</pre></div>
+</div>
+<img alt="../_images/opacity.png" src="../_images/opacity.png"/>
+</section>
+</section>
+<section id="apparence-du-texte">
+<h2>Apparence du texte<a class="headerlink" href="#apparence-du-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cette section, nous allons nous attaquer à la mise en forme du texte.</p>
+<section id="changez-la-taille-de-votre-texte-avec-font-size">
+<h3>Changez la taille de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-size</span></code><a class="headerlink" href="#changez-la-taille-de-votre-texte-avec-font-size" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour modifier la taille du texte, on utilise la propriété CSS <code class="docutils literal notranslate"><span class="pre">font-size</span></code> et ensuite, on indique:</p>
+<ul class="simple">
+<li><p>une taille absolue en pixels (déconseillé car ne s’adapte pas à l’écran)</p></li>
+<li><p>une taille relative (recommandé car s’adapte à l’écran)</p></li>
+</ul>
+<p>Commençons par la taille absolue. Pour avoir un texte d’exactement 16 pixels de hauteur, vous devez écrire:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-size</span><span class="o">:</span> <span class="nt">16px</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>Concernant la taille relative, le méthode la plus fréquente consiste à indiquer la taille en <code class="docutils literal notranslate"><span class="pre">em</span></code>:</p>
+<ul class="simple">
+<li><p>Le texte a une taille normale avec <code class="docutils literal notranslate"><span class="pre">1em</span></code>.</p></li>
+<li><p>Le texte est 1.3x plus grand avec <code class="docutils literal notranslate"><span class="pre">1.3em</span></code>.</p></li>
+<li><p>Le texte est plus petit avec une valeur inférieure à 1, comme <code class="docutils literal notranslate"><span class="pre">0.8em</span></code>.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Exercice 3</p>
+<p>Vous pouvez tester différentes tailles relatives sur ce <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">lien CodePen</a>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Le problème des tailles absolues</p>
+<p>16 pixels est une taille standard pour lire un texte mais peut ne pas suffire selon l’écran sur lequel il s’affiche. Imaginez que vous projetez votre site sur l’écran d’un stade qui possède une très bonne résolution (nombre de pixels par pouce), vos 16 pixels apparaîtront minuscules !</p>
+<p>Une taille relative quant à elle apparaîtra toujours identique peu importe la résolution de l’écran.</p>
+</div>
+</section>
+<section id="changez-la-police-de-votre-texte-avec-font-family">
+<h3>Changez la police de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-family</span></code><a class="headerlink" href="#changez-la-police-de-votre-texte-avec-font-family" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La propriété à utiliser se nomme <code class="docutils literal notranslate"><span class="pre">font-family</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-family</span><span class="o">:</span> <span class="nt">Verdana</span><span class="o">;</span> <span class="c">/* Valeur par défaut */</span>
+</pre></div>
+</div>
+<p>Pour qu’une police s’affiche correctement chez le visiteur du site, il faut qu’il la possède ! Les polices suivantes sont les plus sûres car tous les navigateurs les possèdent par défaut:</p>
+<ul class="simple">
+<li><p>Arial (sans-serif)</p></li>
+<li><p>Verdana (sans-serif)</p></li>
+<li><p>Tahoma (sans-serif)</p></li>
+<li><p>Trebuchet MS (sans-serif)</p></li>
+<li><p>Times New Roman (serif)</p></li>
+<li><p>Georgia (serif)</p></li>
+<li><p>Garamond (serif)</p></li>
+<li><p>Courier New (monospace)</p></li>
+<li><p>Brush Script MT (cursive)</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Exercice 4</p>
+<p>Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">CodePen</a> et modifiez la police de l’élément 3.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">grand</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.3</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">Brush</span> <span class="n">Script</span> <span class="n">MT</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<p>Si vous en voulez d’autres, faites un tour sur <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> et appelez votre enseignant pour savoir comment les intégrer à votre site.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Avec ou sans sérif ?<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le sérif désigne l’empattement situé à l’extrémité des caractères. Choisir une police de caractères sans sérif est plus judicieux en termes d’accessibilité, car c’est plus facile à lire.</p>
+<img alt="../_images/serif.jpg" src="../_images/serif.jpg"/>
+</div>
+</details></section>
+<section id="italique-gras-souligne">
+<h3>Italique, gras, souligné<a class="headerlink" href="#italique-gras-souligne" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Italique et gras en HTML</p>
+<p>Rappelez-vous, les balises <code class="docutils literal notranslate"><span class="pre">&lt;em&gt;</span> <span class="pre">&lt;/em&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span> <span class="pre">&lt;/strong&gt;</span></code> servent respectivement à mettre un mot en <em>italique</em> ou en <strong>gras</strong> afin de mettre de l’<em>importance</em> sur un mot. Les robots qui parcourent le web pour référence votre site en tiennent compte !</p>
+<p>C’est donc la manière à privilégier si vous souhaitez donner de l’importance à certains mots clé sur votre site. Sinon, voyons comment utiliser le CSS pour simplement changer la forme du texte.</p>
+</div>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">font-style</span></code> permet de mettre du texte en <em>italique</em>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span> <span class="c">/* Valeur par défaut */</span>
+<span class="nt">font-style</span><span class="o">:</span> <span class="nt">italic</span><span class="o">;</span> <span class="c">/* Valeur pour mettre en italique */</span>
+</pre></div>
+</div>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">font-weight</span></code> permet de choisir l’<strong>épaisseur</strong> du texte:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-weight</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span> <span class="c">/* Valeur par défaut */</span>
+<span class="nt">font-weight</span><span class="o">:</span> <span class="nt">bold</span><span class="o">;</span> <span class="c">/* Valeur pour mettre en gras */</span>
+<span class="nt">font-weight</span><span class="o">:</span> <span class="nt">thin</span><span class="o">;</span> <span class="c">/* Valeur pour mettre en fin */</span>
+</pre></div>
+</div>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">text-decoration</span></code> permet de souligner ou barrer du texte:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="c">/* Valeur par défaut (sauf pour les liens) */</span>
+<span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">underline</span><span class="o">;</span> <span class="c">/* Valeur pour souligner */</span>
+<span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">line-through</span><span class="o">;</span> <span class="c">/* Valeur pour barrer */</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 5</p>
+<p>Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">CodePen</a> et faites en sorte que l’élément 2 soit <em>italique</em> et souligné ainsi que l’élément 4 soit <strong>gras</strong> et barré.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">normal</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">tres-grand</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">2.5</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">line-through</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section id="alignez-votre-texte-avec-text-align">
+<h3>Alignez votre texte avec <code class="docutils literal notranslate"><span class="pre">text-align</span></code><a class="headerlink" href="#alignez-votre-texte-avec-text-align" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La propriété permet <code class="docutils literal notranslate"><span class="pre">text-align</span></code> permet de définir l’alignement de votre texte:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">text-align</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span> <span class="c">/* Valeur par défaut (aligné à gauche) */</span>
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span> <span class="c">/* Valeur pour aligner au centre */</span>
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">right</span><span class="o">;</span> <span class="c">/* Valeur pour aligner à droite */</span>
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">justify</span><span class="o">;</span> <span class="c">/* Valeur pour mettre le texte en justifié */</span>
+</pre></div>
+</div>
+<img alt="../_images/alignement_css.png" src="../_images/alignement_css.png"/>
+<div class="note admonition">
+<p class="admonition-title">Rappel justifié</p>
+<p>Justifier le texte permet de faire en sorte qu’il prenne toute la largeur possible sans laisser d’espace blanc à la fin des lignes. Les textes des journaux, par exemple, sont toujours justifiés.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>L’alignement ne fonctionne que sur des balises de type <code class="docutils literal notranslate"><span class="pre">block</span></code> comme <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">h1</span></code>, <code class="docutils literal notranslate"><span class="pre">div</span></code>, etc.</p>
+<p>Aligner le texte d’une balise <code class="docutils literal notranslate"><span class="pre">inline</span></code> comme <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">strong</span></code>, <code class="docutils literal notranslate"><span class="pre">span</span></code> n’est pas possible. Et c’est logique, vous n’allez pas aligner quelques mots au milieu d’un paragraphe !</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 6</p>
+<p>Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">CodePen</a> et alignez l’élément 1 au centre de la page.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">petit</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.7</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+</section>
+<section id="bordures-et-ombres">
+<h2>Bordures et ombres<a class="headerlink" href="#bordures-et-ombres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous voulez ajouter une bordure à l’un des éléments de votre page ? CSS propose de nombreuses propriétés pour ça ! Voici les 3 principales:</p>
+<ul class="simple">
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-width" target="_blank">border-width</a> permet de définir la largeur de la bordure.</p></li>
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-color" target="_blank">border-color</a> permet de définir sa couleur.</p></li>
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-style" target="_blank">border-style</a> permet de définir son style (ex: pointillé).</p></li>
+</ul>
+<img alt="../_images/borders.png" src="../_images/borders.png"/>
+<p>Il est aussi possible d’utiliser le raccourci <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border" target="_blank">border</a> puis de spécifier la largeur, la couleur et le style en une seule fois comme ceci.<br/>
+Cet exemple montre comment appliquer une bordure bleue en pointillé.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">border</span><span class="o">:</span> <span class="nt">1em</span> <span class="nt">dashed</span> <span class="nt">blue</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>Vous préférez les bordures arrondies ?<br/>
+<a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-radius" target="_blank">border-radius</a> permet d’arrondir les angles de la bordure.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">border-radius</span><span class="o">:</span> <span class="nt">20px</span><span class="o">;</span>
+</pre></div>
+</div>
+<img alt="../_images/border_radius.png" src="../_images/border_radius.png"/>
+<p>Vous voulez ajouter de la profondeur à vos éléments ?<br/>
+<a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow" target="_blank">box-shadow</a> permet d’ajouter des ombres aux blocs pour leur donner une illusion de profondeur.</p>
+<div class="hint admonition">
+<p class="admonition-title">Trouver l’effet souhaité</p>
+<p>Il n’est pas toujours simple de trouver l’effet d’ombre désiré à tâtons. <a href="https://getcssscan.com/css-box-shadow-examples" target="_blank">CSS Scan</a> donne des exemples que vous pouvez simplement copier.</p>
+</div>
+<img alt="../_images/border_shadow.png" src="../_images/border_shadow.png"/>
+<div class="note admonition">
+<p class="admonition-title">Exercice 7</p>
+<p>Rendez-vous sur <a href="https://codepen.io/Vincent-Guertler/pen/GRwdwZp" target="_blank">CodePen</a> et testez un peu ces différentes bordures et ombres.</p>
+</div>
+</section>
+<section id="survoler-des-elements-avec-hover">
+<h2>Survoler des éléments avec :hover<a class="headerlink" href="#survoler-des-elements-avec-hover" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le sélecteur CSS <code class="docutils literal notranslate"><span class="pre">:hover</span></code> permet de dire que l’on veut modifier les propriétés de style des éléments que l’on survole avec le curseur de la souris.</p>
+<img alt="../_images/css_hover.gif" src="../_images/css_hover.gif"/>
+<p>Le code ci-dessous permet de dire que les liens doivent être surlignés en jaune lorsqu’ils sont survolés. Testez <a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_sel_hover" target="_blank">ici</a>.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="exercice-recapitulatif">
+<h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Exercice récapitulatif</p>
+<p>Pas d’exercice à rendre pour ce chapitre !</p>
+<p>Prenez ce temps pour avancer sur votre site personnel ou pour avancer dans le parcours.</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="css3.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">7. Structurer sa page en blocs</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="css1.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">5. Introduction au CSS</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/web/css2.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">6. Plus de propriétés</a><ul>
+<li><a class="reference internal" href="#plus-de-couleurs">Plus de couleurs</a><ul>
+<li><a class="reference internal" href="#appliquez-une-couleur-de-fond-avec-background-color">Appliquez une couleur de fond avec <code class="docutils literal notranslate"><span class="pre">background-color</span></code></a></li>
+<li><a class="reference internal" href="#ajoutez-une-image-de-fond-avec-background-image">Ajoutez une image de fond avec <code class="docutils literal notranslate"><span class="pre">background-image</span></code></a></li>
+<li><a class="reference internal" href="#creez-des-degrades-avec-linear-gradient">Créez des dégradés avec <code class="docutils literal notranslate"><span class="pre">linear-gradient</span></code></a></li>
+<li><a class="reference internal" href="#jouez-sur-la-transparence-avec-opacity">Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apparence-du-texte">Apparence du texte</a><ul>
+<li><a class="reference internal" href="#changez-la-taille-de-votre-texte-avec-font-size">Changez la taille de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-size</span></code></a></li>
+<li><a class="reference internal" href="#changez-la-police-de-votre-texte-avec-font-family">Changez la police de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-family</span></code></a></li>
+<li><a class="reference internal" href="#italique-gras-souligne">Italique, gras, souligné</a></li>
+<li><a class="reference internal" href="#alignez-votre-texte-avec-text-align">Alignez votre texte avec <code class="docutils literal notranslate"><span class="pre">text-align</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bordures-et-ombres">Bordures et ombres</a></li>
+<li><a class="reference internal" href="#survoler-des-elements-avec-hover">Survoler des éléments avec :hover</a></li>
+<li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>
