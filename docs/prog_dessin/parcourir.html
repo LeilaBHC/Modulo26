@@ -1,0 +1,628 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="6. Randomiser (exemples)" href="randomiser.html" /><link rel="prev" title="4. Paramétrer" href="parametrer.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>5. Parcourir - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/js1.html">9. Introduction à JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/rappels.html">1. Rappels de programmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/intro_pygame.html">2. Introduction à Pygame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner_new.html">3. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">4. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">5. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit.html">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="parcourir">
+<span id="prog-dessin-parcourir"></span><h1>5. Parcourir<a class="headerlink" href="#parcourir" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans ce chapitre, nous allons découvrir le concept très important de <strong>liste</strong>. Une liste est une séquence ordonnée d’objets, par exemple de couleurs, de distances ou d’angles. Nous pouvons parcourir les valeurs d’une liste une après l’autre avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>. Nous allons voir que :</p>
+<ul class="simple">
+<li><p>la liste <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30]</span></code> représente une séquence de valeurs,</p></li>
+<li><p>dans la boucle <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">d</span> <span class="pre">in</span> <span class="pre">[10,</span> <span class="pre">20,</span> <span class="pre">30]:</span></code> la variable d’itération <code class="docutils literal notranslate"><span class="pre">d</span></code> parcourt des nombres,</p></li>
+<li><p>dans la boucle <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">c</span> <span class="pre">in</span> <span class="pre">['red',</span> <span class="pre">'blue',</span> <span class="pre">'green']:</span></code> la variable d’itération <code class="docutils literal notranslate"><span class="pre">c</span></code> parcourt des couleurs.</p></li>
+</ul>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>En informatique, une liste est</p>
+<p><label class="answer correct"><input type="checkbox"/>une séquence d’objets ordonnée</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une séquence d’objets non ordonnée</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un ensemble mathématique</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une suite de nombres (et uniquement ça)</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><p>Auparavant nous avons vu la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> comme une simple répétition. Dans ce chapitre, la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> est différente dans le sens où nous parcourons une séquence et nous utilisons une valeur différente pour chaque tour. En programmation, cette idée de <strong>parcourir une séquence</strong> et d’utiliser une <strong>valeur successive</strong> à chaque tour, est un concept fondamental.</p>
+<section id="variable-diteration">
+<h2>Variable d’itération<a class="headerlink" href="#variable-diteration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans des boucles d’itération, nous allons utiliser des variables d’une seule lettre. Ce n’est pas une règle de python, mais c’est une convention.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> pour un angle</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> pour une couleur</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> pour une distance</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span></code> pour un indice (entier)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> pour un rayon</p></li>
+</ul>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>La variable <code class="docutils literal notranslate"><span class="pre">i</span></code> désigne normalement</p>
+<p><label class="answer incorrect"><input type="checkbox"/>une longueur</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un caractère</label><br/>
+<label class="answer correct"><input type="checkbox"/>un entier</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une coordonnée</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div></section>
+<section id="id1">
+<h2>Parcourir<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans les exemples suivants nous allons parcourir différents types de listes.</p>
+<section id="des-couleurs">
+<h3>Des couleurs<a class="headerlink" href="#des-couleurs" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour dessiner de multiples couleurs, nous pouvons définir une liste de couleurs à parcourir.
+En Python, une liste est délimitée par des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> et les éléments sont séparés par une virgule.</p>
+<p>Dans l’expression <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">c</span> <span class="pre">in</span> <span class="pre">[...]</span></code>, la variable <code class="docutils literal notranslate"><span class="pre">c</span></code> va prendre à tour de rôle les valeurs dans la séquence. Dans l’exemple ci-dessous, <code class="docutils literal notranslate"><span class="pre">c</span></code> prendra successivement les valeurs : <code class="docutils literal notranslate"><span class="pre">'yellow'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cyan'</span></code>, <code class="docutils literal notranslate"><span class="pre">'orange'</span></code>, etc. Le bloc indenté qui suit la ligne <code class="docutils literal notranslate"><span class="pre">for</span></code> sera exécuté autant de fois que la séquence contient d’éléments.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">dot(80,</span> <span class="pre">c)</span></code> afficher un disque de diamètre 80 et de couleur <code class="docutils literal notranslate"><span class="pre">c</span></code>.<br/>
+La fonction <code class="docutils literal notranslate"><span class="pre">write(c)</span></code> affiche le nom de la couleur <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Modifiez la séquence des couleurs.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ3VwJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjQ6MTogJ2JhY2t3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDQsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjY6NTogJ2RvdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo3OjU6ICd3cml0ZScgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA3LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo4OjU6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDgsICJjb2x1bW4iOiA0fV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKYmFja3dhcmQoMjAwKQpmb3IgYyBpbiBbJ3llbGxvdycsICdjeWFuJywgJ29yYW5nZScsICdwaW5rJywgJ2xpbWUnXToKICAgIGRvdCg4MCwgYykKICAgIHdyaXRlKGMpCiAgICBmb3J3YXJkKDgwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</div>
+</section>
+<section id="des-diametres">
+<h3>Des diamètres<a class="headerlink" href="#des-diametres" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous pouvons également parcourir une séquence de nombres et ainsi, spécifier une liste de diamètres de disques.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">dot(d,</span> <span class="pre">'pink')</span></code> affiche un disque de diamètre <code class="docutils literal notranslate"><span class="pre">d</span></code> de couleur rose.<br/>
+La fonction <code class="docutils literal notranslate"><span class="pre">write(d)</span></code> affiche la distance <code class="docutils literal notranslate"><span class="pre">d</span></code>.</p>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Modifiez la séquence des diamètres.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ3VwJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjQ6MTogJ2JhY2t3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDQsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjY6NTogJ2RvdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo3OjU6ICd3cml0ZScgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA3LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo4OjU6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDgsICJjb2x1bW4iOiA0fV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKYmFja3dhcmQoMjIwKQpmb3IgZCBpbiBbNDAsIDYwLCA4MCwgNjAsIDQwXToKICAgIGRvdChkLCAncGluaycpCiAgICB3cml0ZShkKQogICAgZm9yd2FyZCgxMDAp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</div>
+</section>
+<section id="des-distances">
+<h3>Des distances<a class="headerlink" href="#des-distances" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans le chapitre <a class="reference internal" href="definir.html#prog-dessin-definir"><span class="std std-ref">2. Définir</span></a> nous avons vu les fonctions <code class="docutils literal notranslate"><span class="pre">batiment()</span></code> et <code class="docutils literal notranslate"><span class="pre">porte()</span></code> avec 8 lignes chacune qui dessinent un rectangle.</p>
+<p>À l’aide d’une liste qui contient ces 4 distances, nous pouvons écrire ces fonctions de manière bien plus compacte. Pour illustrer les distances parcourues, nous l’affichons à chaque itération avec <code class="docutils literal notranslate"><span class="pre">write(a)</span></code>.</p>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Modifiez la taille du bâtiment et de la porte.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjU6OTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo5OiAnd3JpdGUnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNiwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Nzo5OiAnZm9yd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA3LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo4Ojk6ICdsZWZ0JyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDgsICJjb2x1bW4iOiA4fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjEyOjk6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDEyLCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMzo5OiAnd3JpdGUnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMTMsICJjb2x1bW4iOiA4fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjE0Ojk6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDE0LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxNTo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxNSwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTg6MTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMTgsICJjb2x1bW4iOiAwfV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBiYXRpbWVudCgpOgogICAgZm9yIGQgaW4gWzIwMCwgMTAwLCAyMDAsIDEwMF06CiAgICAgICAgZm9yd2FyZChkLzIpCiAgICAgICAgd3JpdGUoZCkKICAgICAgICBmb3J3YXJkKGQvMikKICAgICAgICBsZWZ0KDkwKQoKZGVmIHBvcnRlKCk6CiAgICBmb3IgZCBpbiBbMzAsIDUwLCAzMCwgNTBdOgogICAgICAgIGZvcndhcmQoZC8yKQogICAgICAgIHdyaXRlKGQpCiAgICAgICAgZm9yd2FyZChkLzIpCiAgICAgICAgbGVmdCg5MCkKCmJhdGltZW50KCkKZm9yd2FyZCg0MCkKcG9ydGUoKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</div>
+</section>
+<section id="des-angles">
+<h3>Des angles<a class="headerlink" href="#des-angles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous allons reprendre notre fonction <code class="docutils literal notranslate"><span class="pre">maison()</span></code> et, à l’aide d’une séquence, nous allons l’écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable <code class="docutils literal notranslate"><span class="pre">angle</span></code> pour nous en rappeler.
+Pour illustrer le parcours des angles, nous les affichons à chaque itération avec <code class="docutils literal notranslate"><span class="pre">write(angle)</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjQ6NTogJ2RvdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA0LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo1OjU6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDUsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5Ojc6OTogJ3dyaXRlJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDcsICJjb2x1bW4iOiA4fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5Ojg6OTogJ2xlZnQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogOCwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6OTo5OiAnZm9yd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA5LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMDo1OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxMCwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTI6MTogJ2JhY2t3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDEyLCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxNDoxOiAnZm9yd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxNCwgImNvbHVtbiI6IDB9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBtYWlzb24oZCk6CiAgICBkb3QoKQogICAgZm9yd2FyZCgxLjQxKmQpCiAgICBmb3IgYSBpbiBbOTAsIDQ1LCA5MCwgNDVdOgogICAgICAgIHdyaXRlKGEpCiAgICAgICAgbGVmdChhKQogICAgICAgIGZvcndhcmQoZCkKICAgIGxlZnQoOTApCgpiYWNrd2FyZCgyMDApICAgICAgICAKbWFpc29uKDUwKQpmb3J3YXJkKDE1MCkKbWFpc29uKDgwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</section>
+<section id="range">
+<h2>Range<a class="headerlink" href="#range" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous vous rappelez de <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(n)</span></code> ?<br/>
+La fonction <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> permet de produire une séquence linéaire d’entiers. Les entiers se trouvent dans l’intervalle semi-fermé <code class="docutils literal notranslate"><span class="pre">[start,</span> <span class="pre">stop[</span></code> avec un incrément de <code class="docutils literal notranslate"><span class="pre">step</span></code>.</p>
+<p>Le sens des paramètres :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> est la valeur de départ,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code> est la valeur finale, mais sans l’inclure,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code> est l’incrément (la distance entre 2 valeurs successives).</p></li>
+</ul>
+<p>Par défaut, <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">=</span> <span class="pre">1</span></code> et seule la valeur de <code class="docutils literal notranslate"><span class="pre">stop</span></code> est obligatoire. C’est pourquoi quand nous écrivions <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(n)</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> variait de <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">n-1</span></code>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Pour résumer</p>
+<p>Ecrire <code class="docutils literal notranslate"><span class="pre">range(10)</span></code> est donc similaire à écrire <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">...,</span> <span class="pre">8,</span> <span class="pre">9]</span></code>. L’unique différence réside dans le fait que la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> ne retourne pas à proprement parler une liste, mais un <a href="https://gayerie.dev/docs/python/python3/iterateur_generateur.html#les-generateurs">générateur</a>.</p>
+</div>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Affichez les entiers entre -50 et 200 avec un incrément de 25.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ3VwJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5Ojk6NTogJ2dvdG8nIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogOSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTA6NTogJ3dyaXRlJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDEwLCAiY29sdW1uIjogNH1d" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKc3RhcnQgPSAtMjUwCnN0b3AgPSAyNTAKc3RlcCA9IDUwCgpmb3IgeCBpbiByYW5nZShzdGFydCwgc3RvcCwgc3RlcCk6CiAgICBnb3RvKHgsIDApCiAgICB3cml0ZSh4KQ==" data-file="cmFuZ2UzLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="mi">201</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">25</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</div>
+</section>
+<section id="dessiner-une-spirale">
+<h2>Dessiner une spirale<a class="headerlink" href="#dessiner-une-spirale" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si nous dessinons un polygone, mais augmentons la longueur de chaque segment successif en utilisant la variable d’itération <code class="docutils literal notranslate"><span class="pre">i</span></code>, nous obtenons une spirale.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjQ6NTogJ3dyaXRlJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDQsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjU6NTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo1OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogNH1d" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvciBpIGluIHJhbmdlKDEwMCk6CiAgICB3cml0ZShpKQogICAgZm9yd2FyZChpKQogICAgbGVmdCgzMCk=" data-file="cmFuZ2U4LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="maisons-en-couleurs">
+<h2>Maisons en couleurs<a class="headerlink" href="#maisons-en-couleurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Revenons à nos listes et parcourons une séquence d’angles avec une variable d’itération <code class="docutils literal notranslate"><span class="pre">a</span></code> pour dessiner une maison.</p>
+<p>Ensuite, nous allons parcourir une séquence de couleurs avec une variable <code class="docutils literal notranslate"><span class="pre">c</span></code> pour dessiner des maisons de différentes couleurs.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjQ6NTogJ2ZpbGxjb2xvcicgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA0LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo1OjU6ICdiZWdpbl9maWxsJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDUsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjY6NTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNiwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6ODo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA4LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo5Ojk6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDksICJjb2x1bW4iOiA4fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjEwOjU6ICdsZWZ0JyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDEwLCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMTo1OiAnZW5kX2ZpbGwnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMTEsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjEzOjE6ICdiYWNrd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxMywgImNvbHVtbiI6IDB9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTY6NTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMTYsICJjb2x1bW4iOiA0fV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBtYWlzb24oZCwgYyk6CiAgICBmaWxsY29sb3IoYykKICAgIGJlZ2luX2ZpbGwoKSAgICAgCiAgICBmb3J3YXJkICgxLjQxKmQpCiAgICBmb3IgYSBpbiBbOTAsIDQ1LCA5MCwgNDVdOgogICAgICAgIGxlZnQoYSkKICAgICAgICBmb3J3YXJkKGQpCiAgICBsZWZ0KDkwKQogICAgZW5kX2ZpbGwoKQoKYmFja3dhcmQoMjUwKQpmb3IgYyBpbiBbJ3JlZCcsICd5ZWxsb3cnLCAncGluaycsICdsaWdodGJsdWUnLCAnbGlnaHRncmVlbiddOgogICAgbWFpc29uKDUwLCBjKQogICAgZm9yd2FyZCgxMDAp" data-file="dHVwbGU1LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="fleur">
+<h2>Fleur<a class="headerlink" href="#fleur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
+Avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> nous parcourons une séquence de 6 couleurs alternantes.</p>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Il manque un pétale, corrigez le programme.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ2dldHNjcmVlbicgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAyLCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo1OjU6ICdmaWxsY29sb3InIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo1OiAnYmVnaW5fZmlsbCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo4Ojk6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDgsICJjb2x1bW4iOiA4fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5Ojk6OTogJ2xlZnQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogOSwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTA6NTogJ2VuZF9maWxsJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDEwLCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxNDo1OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxNCwgImNvbHVtbiI6IDR9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZ2V0c2NyZWVuKCkuYmdjb2xvcignbGlnaHRncmVlbicpCgpkZWYgbG9zYW5nZShkLCBjKToKICAgIGZpbGxjb2xvcihjKQogICAgYmVnaW5fZmlsbCgpCiAgICBmb3IgYSBpbiBbNjAsIDEyMCwgNjAsIDEyMF06CiAgICAgICAgZm9yd2FyZChkKQogICAgICAgIGxlZnQoYSkKICAgIGVuZF9maWxsKCkKCmZvciBjIGluIFsncGluaycsICdyZWQnLCAncGluaycsICdyZWQnLCAncGluayddOgogICAgbG9zYW5nZSgxMDAsIGMpCiAgICBsZWZ0KDYwKQ==" data-file="dHVwbGU2LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Il n’y a que 5 couleurs dans la listes ce qui ne créera que 5 losanges. Il suffit d’ajouter une couleur à la liste à parcourir.</p>
+</div>
+</details></div>
+</div>
+</section>
+<section id="smiley">
+<h2>Smiley<a class="headerlink" href="#smiley" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cet exemple nous allons parcourir différents diamètres de la bouche à l’aide d’une variable que nous appelons <code class="docutils literal notranslate"><span class="pre">d</span></code>. Voici quatre smileys avec différentes formes de bouche.</p>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Faites varier un autre paramètre, par exemple la distance des yeux, ou la taille d’un œil.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjM6MTogJ2dldHNjcmVlbicgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAzLCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo0OjE6ICd1cCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA0LCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo2OjE6ICdiYWNrd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo4OjU6ICdkb3QnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogOCwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTA6NTogJ2xlZnQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMTAsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjExOjU6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDExLCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMjo1OiAnZG90JyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDEyLCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxNDo1OiAncmlnaHQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMTQsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjE1OjU6ICdiYWNrd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxNSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTY6NTogJ2RvdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxNiwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTg6NTogJ3JpZ2h0JyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDE4LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOTo1OiAnZm9yd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxOSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MjA6NTogJ2RvdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAyMCwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MjE6NTogJ2xlZnQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMjEsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjIzOjU6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIzLCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToyNDo1OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAyNCwgImNvbHVtbiI6IDR9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmdldHNjcmVlbigpLmJnY29sb3IoJ3NreWJsdWUnKSAjIFBlcm1ldCBkZSBtb2RpZmllciBsYSBjb3VsZXVyIGRlIGZvbmQKdXAoKQoKYmFja3dhcmQoMjAwKQpmb3IgZCBpbiBbMTAsIDIwLCAzMCwgNDBdOgogICAgZG90KDEwMCwgJ3llbGxvdycpCgogICAgbGVmdCg0NSkKICAgIGZvcndhcmQoMjApCiAgICBkb3QoMTUpCgogICAgcmlnaHQoNDUpCiAgICBiYWNrd2FyZCgzMCkKICAgIGRvdCgxNSkKCiAgICByaWdodCg2MCkKICAgIGZvcndhcmQoMzUpCiAgICBkb3QoZCkKICAgIGxlZnQoNjApCiAgICAKICAgIGZvcndhcmQoMTIwKQogICAgbGVmdCg1KQ==" data-file="dHVwbGU4LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</div>
+</section>
+<section id="cube-3d">
+<h2>Cube 3D<a class="headerlink" href="#cube-3d" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec trois losanges, nous pouvons dessiner un cube en 3D.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjU6OTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMDo1OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxMCwgImNvbHVtbiI6IDR9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBsb3NhbmdlKGQpOgogICAgZm9yIGEgaW4gWzEyMCwgNjAsIDEyMCwgNjBdOgogICAgICAgIGZvcndhcmQoZCkKICAgICAgICBsZWZ0KGEpCiAgICAgICAgCmZvciBpIGluIHJhbmdlKDMpOgogICAgbG9zYW5nZSgxMDApCiAgICBsZWZ0KDEyMCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="cube-en-couleur">
+<h2>Cube en couleur<a class="headerlink" href="#cube-en-couleur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec l’utilisation de trois couleurs, l’effet 3D est accentué.
+Nous choisissons des couleurs claires pour les surfaces du haut, et des couleurs sombres pour les surfaces vers le bas.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjQ6NTogJ2ZpbGxjb2xvcicgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA0LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo1OjU6ICdiZWdpbl9maWxsJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDUsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5Ojc6OTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNywgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6ODo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA4LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo5OjU6ICdlbmRfZmlsbCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA5LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxNDo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxNCwgImNvbHVtbiI6IDh9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBsb3NhbmdlKGQsIGMpOgogICAgZmlsbGNvbG9yKGMpCiAgICBiZWdpbl9maWxsKCkKICAgIGZvciBhIGluIFsxMjAsIDYwLCAxMjAsIDYwXToKICAgICAgICBmb3J3YXJkKDEwMCkKICAgICAgICBsZWZ0KGEpCiAgICBlbmRfZmlsbCgpCgpkZWYgY3ViZSgpOiAgICAgIAogICAgZm9yIGMgaW4gWydwaW5rJywgJ3Zpb2xldCcsICdkYXJrdmlvbGV0J106CiAgICAgICAgbG9zYW5nZSgxMDAsIGMpCiAgICAgICAgbGVmdCgxMjApCgpjdWJlKCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="pavage-du-plan">
+<h2>Pavage du plan<a class="headerlink" href="#pavage-du-plan" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un pavage du plan est un ensemble de portions du plan, par exemple des polygones, dont l’union est le plan tout entier, sans recouvrement.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjQ6NTogJ2ZpbGxjb2xvcicgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA0LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo1OjU6ICdiZWdpbl9maWxsJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDUsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5Ojc6OTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNywgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6ODo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA4LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo5OjU6ICdlbmRfZmlsbCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA5LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxNDo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxNCwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MTc6NTogJ2JhY2t3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDE3LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOTo1OiAnZm9yd2FyZCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiAxOSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MjA6NTogJ2xlZnQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogMjAsICJjb2x1bW4iOiA0fV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBsb3NhbmdlKGQsIGMpOgogICAgZmlsbGNvbG9yKGMpCiAgICBiZWdpbl9maWxsKCkKICAgIGZvciBhIGluIFsxMjAsIDYwLCAxMjAsIDYwXToKICAgICAgICBmb3J3YXJkKDEwMCkKICAgICAgICBsZWZ0KGEpCiAgICBlbmRfZmlsbCgpCiAgICAgICAgCmRlZiBjdWJlKCk6CiAgICBmb3IgYyBpbiBbJ3BpbmsnLCAndmlvbGV0JywgJ2Rhcmt2aW9sZXQnXToKICAgICAgICBsb3NhbmdlKDEwMCwgYykKICAgICAgICBsZWZ0KDEyMCkKCmZvciBpIGluIHJhbmdlKDMpOgogICAgYmFja3dhcmQoMTAwKQogICAgY3ViZSgpCiAgICBmb3J3YXJkKDEwMCkKICAgIGxlZnQoMTIwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="exercice-recapitulatif">
+<h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Voici une fonction <code class="docutils literal notranslate"><span class="pre">star(c,</span> <span class="pre">d)</span></code> qui dessine une étoile de couleur <code class="docutils literal notranslate"><span class="pre">c</span></code> et de diamètre <code class="docutils literal notranslate"><span class="pre">d</span></code>.<br/>
+Utilisez des boucles <code class="docutils literal notranslate"><span class="pre">for</span></code> pour dessiner des étoiles de différentes couleurs et tailles, afin de créer une jolie composition.</p>
+<p>Il n’est pas nécessaire d’utiliser de l’aléatoire, vous pouvez définir vous-même des listes de couleurs et de diamètres à parcourir.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ2Zyb20gcmFuZG9tIGltcG9ydCAqJyB1c2VkOyB1bmFibGUgdG8gZGV0ZWN0IHVuZGVmaW5lZCBuYW1lcyIsICJsaW5lIjogMiwgImNvbHVtbiI6IDB9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6NTo1OiAnY29sb3InIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHJhbmRvbSwgdHVydGxlIiwgImxpbmUiOiA1LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo3Ojk6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiByYW5kb20sIHR1cnRsZSIsICJsaW5lIjogNywgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6ODo5OiAncmlnaHQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHJhbmRvbSwgdHVydGxlIiwgImxpbmUiOiA4LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMDoxOiAnZG90JyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiByYW5kb20sIHR1cnRsZSIsICJsaW5lIjogMTAsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjExOjE6ICd1cCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogcmFuZG9tLCB0dXJ0bGUiLCAibGluZSI6IDExLCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMjoxOiAnZ290bycgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogcmFuZG9tLCB0dXJ0bGUiLCAibGluZSI6IDEyLCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMjo2OiAncmFuZGludCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogcmFuZG9tLCB0dXJ0bGUiLCAibGluZSI6IDEyLCAiY29sdW1uIjogNX0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMjoyNjogJ3JhbmRpbnQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHJhbmRvbSwgdHVydGxlIiwgImxpbmUiOiAxMiwgImNvbHVtbiI6IDI1fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjEzOjE6ICdkb3duJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiByYW5kb20sIHR1cnRsZSIsICJsaW5lIjogMTMsICJjb2x1bW4iOiAwfV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmRlZiBzdGFyKGMsIGQpOgogICAgY29sb3IoYykKICAgIGZvciBpIGluIHJhbmdlKDUpOgogICAgICAgIGZvcndhcmQoZCkgCiAgICAgICAgcmlnaHQoMTQ0KQoKZG90KDEwMDAsICdibGFjaycpICMgRm9uZCBub2lyCnVwKCkKZ290byhyYW5kaW50KC0zMDAsIDMwMCksIHJhbmRpbnQoLTIwMCwgMjAwKSkgIyBQb3NpdGlvbiBhbMOpYXRvaXJlCmRvd24oKQpzdGFyKCd5ZWxsb3cnLCA1MCkKCiMgVm90cmUgY29kZSBpY2kuLi4=" data-file="ZXg1LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et déposez le fichier sur Moodle à l’endroit prévu.</p>
+</div>
+</div>
+</section>
+<section id="et-a-part-le-dessin">
+<h2>Et à part le dessin ?<a class="headerlink" href="#et-a-part-le-dessin" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les listes sont souvent un moyen de grouper des valeurs ensemble. Par exemple, le gymnase regroupe les notes d’un élève dans une branche pour en calculer la moyenne.</p>
+<div class="hint admonition">
+<p class="admonition-title">Rappel</p>
+<ul class="simple">
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> permet d’afficher du texte.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">0</span></code> est une instruction permettant de créer une variable <code class="docutils literal notranslate"><span class="pre">a</span></code> et lui donner la valeur <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">3</span></code> permet d’ajouter 3 à la variable <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+</ul>
+</div>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Ecrivez une fonction qui prend une liste de notes en paramètre et affiche la moyenne.</p>
+<p>La fonction prend donc un paramètre <code class="docutils literal notranslate"><span class="pre">notes</span></code> qui est une liste de nombres. La fonction <code class="docutils literal notranslate"><span class="pre">len(liste)</span></code> permet de calculer la longueur d’une liste.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_moyenne</span><span class="p">(</span><span class="n">notes</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">notes</span><span class="p">:</span>
+        <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">n</span>
+    <span class="n">moyenne</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">moyenne</span>
+
+<span class="n">moyenne</span> <span class="o">=</span> <span class="n">calcul_moyenne</span><span class="p">([</span><span class="mf">4.5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moyenne</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="randomiser.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">6. Randomiser (exemples)</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="parametrer.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">4. Paramétrer</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/prog_dessin/parcourir.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">5. Parcourir</a><ul>
+<li><a class="reference internal" href="#variable-diteration">Variable d’itération</a></li>
+<li><a class="reference internal" href="#id1">Parcourir</a><ul>
+<li><a class="reference internal" href="#des-couleurs">Des couleurs</a></li>
+<li><a class="reference internal" href="#des-diametres">Des diamètres</a></li>
+<li><a class="reference internal" href="#des-distances">Des distances</a></li>
+<li><a class="reference internal" href="#des-angles">Des angles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#range">Range</a></li>
+<li><a class="reference internal" href="#dessiner-une-spirale">Dessiner une spirale</a></li>
+<li><a class="reference internal" href="#maisons-en-couleurs">Maisons en couleurs</a></li>
+<li><a class="reference internal" href="#fleur">Fleur</a></li>
+<li><a class="reference internal" href="#smiley">Smiley</a></li>
+<li><a class="reference internal" href="#cube-3d">Cube 3D</a></li>
+<li><a class="reference internal" href="#cube-en-couleur">Cube en couleur</a></li>
+<li><a class="reference internal" href="#pavage-du-plan">Pavage du plan</a></li>
+<li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
+<li><a class="reference internal" href="#et-a-part-le-dessin">Et à part le dessin ?</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>
