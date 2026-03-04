@@ -13,7 +13,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    :hidden:
 
    prog_formel/intro
-   prog_formel/test
+   prog_formel/test_MD
    prog_formel/variables
    prog_formel/fonctions
    prog_formel/definitions
