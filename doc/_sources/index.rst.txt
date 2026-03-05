@@ -7,8 +7,8 @@ Informatique au gymnase : Travaux pratiques
 Bienvenue sur la plateforme de TP d'informatique !
 
 .. toctree::
-   :name: Programmation (parcours formels)
-   :caption: Programmation (parcours formels)
+   :name: Programmation (parcours formel)
+   :caption: Programmation (parcours formel)
    :maxdepth: 3
    :hidden:
 

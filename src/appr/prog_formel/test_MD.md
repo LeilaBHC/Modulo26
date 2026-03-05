@@ -1,6 +1,6 @@
 (prog_formel.test_MD)=
 
-# 2.1. Les variables 2
+# 8. Les variables 
 
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
