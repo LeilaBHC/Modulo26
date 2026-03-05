@@ -8,7 +8,7 @@ Bienvenue sur la plateforme de TP d'informatique !
 
 .. toctree::
    :name: Programmation (parcours formel)
-   :caption: Programmation (parcours formel)
+   :caption: Programmation (parcours formels)
    :maxdepth: 3
    :hidden:
 
