@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="2. Les variables" href="variables.html" /><link rel="prev" title="1. Introduction" href="intro.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>2. Les variables - Travaux pratiques</title>
+        <title>2.1. Les variables 2 - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -223,7 +223,7 @@
   <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">2. Les variables</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">2.1. Les variables 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variables.html">2. Les variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fonctions.html">3. Les fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">4. Définition de fonctions</a></li>
@@ -270,11 +270,13 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="les-variables">
-<span id="prog-formel-test-md"></span><h1>2. Les variables<a class="headerlink" href="#les-variables" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="les-variables-2">
+<span id="prog-formel-test-md"></span><h1>2.1. Les variables 2<a class="headerlink" href="#les-variables-2" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a><br/>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a></p>
 <section id="les-types-de-variables-simples">
 <h2>Les types de variables simples<a class="headerlink" href="#les-types-de-variables-simples" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une variable L est une valeur <strong>nommée et stockée en mémoire</strong> qui va varier au cours du programme.<br/>
+<p>Une variable K est une valeur <strong>nommée et stockée en mémoire</strong> qui va varier au cours du programme.<br/>
 En Python, les types de variables de base sont les suivants :</p>
 <ol class="simple">
 <li><p>Les <strong>nombre entiers</strong>, appelés <strong>int</strong>: 2, 45, -4, 56.</p></li>
@@ -283,6 +285,205 @@ En Python, les types de variables de base sont les suivants :</p>
 <li><p>Les <strong>booléens</strong>, appelés <strong>bool</strong>: True, False. Ce type de variable ne peut prendre que deux valeurs : True (vrai) et False (faux), à écrire avec une majuscule.</p></li>
 </ol>
 <p>Il est possible de vérifier le type d’une variable à l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">type</span></code> 😉</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 3</p>
+<p>Quel est le type des valeurs suivantes ?<br/>
+Vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">type()</span></code> pour vérifier vos réponses.<br/>
+a) “rewr”<br/>
+b) 34<br/>
+c) 5.0<br/>
+d) ’julien34’<br/>
+e) “65.5”<br/>
+f) True<br/>
+g) “False”<br/>
+h) rewr</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQodHlwZSguLi4pKQ==" data-file="ZXhfMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">a) Chaîne de caractères (str)<br/>
+b) Nombre entier (int)<br/>
+c) Nombre à virgule (float)<br/>
+d) Chaîne de caractères (str)<br/>
+e) Chaîne de caractères (str)<br/>
+f) Valeur logique (bool)<br/>
+g) Chaîne de caractères (str)<br/>
+h) ⚠️ erreur ⚠️ Il s’agit d’une variable (inconnue) ayant pour nom rewr.</p>
+</div>
+</details></div>
+</section>
+<section id="les-operateurs">
+<h2>Les opérateurs<a class="headerlink" href="#les-operateurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour chaque type de variable, plusieurs opérateurs sont définis qui permettent de manipuler ces variables.<br/>
+Pour les nombres entiers, les <strong>opérateurs arithmétiques</strong> suivants sont les plus courants :</p>
+<ul class="simple">
+<li><p>+ (addition),</p></li>
+<li><p>- (soustraction)</p></li>
+<li><p>* (multiplication)</p></li>
+<li><p>/ (division)</p></li>
+<li><p>// (division entière)</p></li>
+<li><p>% (modulo ou reste de la division entière)</p></li>
+</ul>
+<p>Toutes les opérations ci-dessus retournent un nombre entier, sauf la division (/) qui retourne un nombre à virgule.
+Les opérateurs similaires sont définis pour les nombres à virgules.
+Il existe également les <strong>opérateurs de comparaison</strong> qui retournent des booléens (True ou False):</p>
+<ul class="simple">
+<li><p>&gt; (plus grand que)</p></li>
+<li><p>&lt; (plus petit que)</p></li>
+<li><p>&gt;= (plus grand ou égal à)</p></li>
+<li><p>&lt;= (plus petit ou égal à)</p></li>
+<li><p>== (égal à)</p></li>
+<li><p>!= (non égal à)</p></li>
+</ul>
+<p>Enfin, les <strong>opérateur logiques</strong> suivants sont définis sur les booléens:</p>
+<ul class="simple">
+<li><p>and (et)</p></li>
+<li><p>or (ou)</p></li>
+<li><p>not (non)</p></li>
+</ul>
+<p>Les opérateurs sur les nombres <strong>suivent le même ordre de priorité qu’en mathématique</strong>.
+Les opérateurs arithmétiques ont la priorité sur les autres types d’opérateurs.<br/>
+Il est fortement recommendé d’utiliser les parenthèses pour clarifier l’ordre des opérations en cas de doute. 🤔</p>
+</section>
+<section id="assignation-de-variables">
+<h2>Assignation de variables<a class="headerlink" href="#assignation-de-variables" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Afin de manipuler des valeurs, il est utile de leur <strong>donner des noms</strong>, c’est ce qu’on appelle une <strong>assignation</strong>.<br/>
+<strong>Une variable est donc créée qu’on l’on assigne un nom à une valeur</strong>.<br/>
+Ceci se fait en utilisant l’opérateur <code class="docutils literal notranslate"><span class="pre">=</span></code> (à ne pas confondre avec l’opérateur <code class="docutils literal notranslate"><span class="pre">==</span></code> et qui est différent du <code class="docutils literal notranslate"><span class="pre">=</span></code> mathématique).</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9ICJCb25qb3VyIgpwcmludChhKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans l’exemple ci-dessus, on donne le nom <code class="docutils literal notranslate"><span class="pre">a</span></code> à la chaîne de caractère “bonjour”.
+On peut dire que la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> contient la chaîne de caractère “bonjour”.
+<strong>Une fois une variable nommée, on peut la manipuler en l’appelant par son nom</strong>.
+On demande ensuite à l’ordinateur d’écrire le contenu de <code class="docutils literal notranslate"><span class="pre">a</span></code> dans le terminal, c’est-à-dire “bonjour”.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 4</p>
+<p>⚠️ Python ne permet pas d’utiliser n’importe quel nom de variable. ⚠️<br/>
+Essayez d’utiliser les noms suivants pour nommer vos variables:<br/>
+a) 38b<br/>
+b) ’variable’<br/>
+c) mon age<br/>
+d) def<br/>
+Par exemple, écrivez <code class="docutils literal notranslate"><span class="pre">38b</span> <span class="pre">=</span> <span class="pre">5</span></code>.<br/>
+Lancez votre programme. Qu’observez-vous ?</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJpbnZhbGlkIGRlY2ltYWwgbGl0ZXJhbCIsICJsaW5lIjogMSwgImNvbHVtbiI6IDJ9XQ==" data-code="MzhiID0gNSAgIyBDYSBmb25jdGlvbm5lIMOnYSA/Pw==" data-file="ZXhfNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Tous ces noms de variables sont interdits et Python vous le fera savoir ! 😡<br/>
+Les règles expliquant le nommage de variables sont expliquées juste au dessous.<br/>
+Plus d’informations <a href="https://python.sdv.univ-paris-diderot.fr/02_variables/#23-nommage" target="_blank">ici</a> 😉</p>
+</div>
+</details></div>
+<p><strong>Les noms de variable ne peuvent pas commencer par un chiffre, ni contenir d’accent, d’apostrophe, de guillement d’espace ou de caractères spéciaux</strong>.
+Il y a également quelques mot-clés réservés par Python (ex : <code class="docutils literal notranslate"><span class="pre">def</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">return</span></code>, etc.) qui ne peuvent pas être utilisés (nous verrons plus tard à quoi sont réservés ces mots).</p>
+<p>Chaque nom ne peut correspondre qu’à une seule variable, donc si on redonne un nom déjà utilisé, l’ancienne variable désignée par ce nom est oubliée.
+Autrement dit, <strong>l’ancienne valeur de la variable est remplacée par la nouvelle valeur</strong>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9ICJCb25qb3VyIgphID0gIkF1IHJldm9pciIKcHJpbnQoYSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans le programme ci-dessus, la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> désigne d’abord le string “Bonjour”, puis elle désigne le string “Au revoir”.
+C’est cette dernière expression qui apparaît à l’écran avec la dernière ligne du programme.
+Une variable peut apparaître des deux côtés d’une assignation (d’un signe <code class="docutils literal notranslate"><span class="pre">=</span></code>).
+En ce cas, l’ordinateur calcule d’abord le côté droit, puis assigne le résultat à la variable apparaissant à gauche du signe <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YiA9IDUKYiA9IGIgKiAyCnByaW50KGIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans cet exemple, la première instruction assigne 5 à la variable <code class="docutils literal notranslate"><span class="pre">b</span></code>.
+La seconde instruction multiplie <code class="docutils literal notranslate"><span class="pre">b</span></code> par 2 (ce qui donne 10), puis le résultat est assigné à <code class="docutils literal notranslate"><span class="pre">b</span></code> qui contient maintenant le nombre 10.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 5</p>
+<p>Mettez la valeur 6 dans une variable appelée <code class="docutils literal notranslate"><span class="pre">a</span></code>, affichez-la à l’écran puis divisez-la par trois et remettez-la dans <code class="docutils literal notranslate"><span class="pre">a</span></code>.
+Imprimez la nouvelle valeur de <code class="docutils literal notranslate"><span class="pre">a</span></code> à l’écran.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBFY3JpdmV6IHZvdHJlIGNvZGUgaWNpCi4uLg==" data-file="ZXhfNS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDYKcHJpbnQoYSkKYSA9IGEgLyAzCnByaW50KGEp" data-file="ZXhfNS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 6</p>
+<p>Qu’impriment les petits programmes suivants ?
+Vérifiez vos réponses.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>			<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>			<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>			<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>			<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">y</span>			<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>			<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>		<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>		<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>			<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>			<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>			<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>			<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">//</span> <span class="n">x</span>		<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span>		<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span>		<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>		<span class="n">y</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>		<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>		<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">a) 3, 3<br/>
+b) 2, 2<br/>
+c) False, 3<br/>
+d) 2, 25<br/>
+e) 2, 4<br/>
+f) True, False</p>
+</div>
+</details></div>
+<p>Dans un programme écrit correctement, <strong>les noms des variables doivent toujours représenter au mieux l’utilité de la variable</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bon exemple</span>
+<span class="n">prenom</span> <span class="o">=</span> <span class="s1">'Jules'</span>
+<span class="n">nom</span> <span class="o">=</span> <span class="s1">'Vernes'</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">54</span>
+<span class="n">est_ecrivain</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Mauvais exemple</span>
+<span class="n">j</span> <span class="o">=</span> <span class="s1">'Jules'</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s1">'Vernes'</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">54</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Vous serez très heureux d’avoir correctement nommé vos variables quand votre programme deviendra plus complexe.
+Sans cela, il deviendrait rapidement illisible 🤯<br/>
+Ces conventions et bonnes pratiques sont écrites par la communauté dans des <a href="https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/" target="_blank">PEP</a>.</p>
+</section>
+<section id="exercices-turtle-facultatif">
+<h2>Exercices Turtle 🐢 (facultatif)<a class="headerlink" href="#exercices-turtle-facultatif" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Exercice - La maison</p>
+<p>Ecrivez un programme qui dessine une maison 🏠 (un carré avec un triangle sur la tête).
+Vous êtes conseillés de reprendre les exemples et exercices Turtle du 1er chapitre et de les combiner.<br/>
+Utilisez des variables pour éviter d’avoir à écrire plusieurs fois les mêmes chiffres (ex : <code class="docutils literal notranslate"><span class="pre">forward(d)</span></code> au lieu de <code class="docutils literal notranslate"><span class="pre">forward(100)</span></code>).</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgojIFJlcHJlbmV6IGxlIGNvZGUgcGVybWV0dGFudCBkZSBkZXNzaW5lciB1biBjYXJyw6kKLi4uCgojIFBsYWNlei12b3VzIHN1ciBsZSBzb21tZXQgZHUgY2FycsOpCi4uLiAKCiMgUmVwcmVuZXogbGUgY29kZSBwZXJtZXR0YW50IGRlIGRlc3NpbmVyIHVuIHRyaWFuZ2xlCi4uLgoKdHVydGxlLmRvbmUoKSAjIFRlcm1pbmUgbGUgZGVzc2lu" data-file="bWFpc29uLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgpkID0gMTAwICMgT24gdXRpbGlzZSB1bmUgdmFyaWFibGUgcG91ciBtw6ltb3Jpc2VyIGxhIHRhaWxsZQoKIyBPbiByZXByZW5kIGxlIGNvZGUgcGVybWV0dGFudCBkZSBkZXNzaW5lciB1biBjYXJyw6kKdHVydGxlLmZvcndhcmQoZCkgIyBBdmFuY2UgZGUgMTAwIHBpeGVscwp0dXJ0bGUubGVmdCg5MCkgIyBUb3VybmUgYSBnYXVjaGUgZGUgOTAgZGVncmVzCnR1cnRsZS5mb3J3YXJkKGQpCnR1cnRsZS5sZWZ0KDkwKQp0dXJ0bGUuZm9yd2FyZChkKQp0dXJ0bGUubGVmdCg5MCkKdHVydGxlLmZvcndhcmQoZCkKdHVydGxlLmxlZnQoOTApCgojIE9uIHNlIGTDqXBsYWNlIGF1IHNvbW1ldCBkdSBjYXJyw6kKdHVydGxlLmxlZnQoOTApCnR1cnRsZS5mb3J3YXJkKGQpCnR1cnRsZS5yaWdodCg5MCkKCiMgT24gcmVwcmVuZCBsZSBjb2RlIHBlcm1ldHRhbnQgZGUgZGVzc2luZXIgdW4gdHJpYW5nbGUKdHVydGxlLmZvcndhcmQoZCkgIyBBdmFuY2UgZGUgMTAwIHBpeGVscwp0dXJ0bGUubGVmdCgxMjApICMgVG91cm5lIGEgZ2F1Y2hlIGRlIDEyMCBkZWdyZXMgKDE4MC02MCkKdHVydGxlLmZvcndhcmQoZCkKdHVydGxlLmxlZnQoMTIwKQp0dXJ0bGUuZm9yd2FyZChkKQp0dXJ0bGUubGVmdCgxMjApCgp0dXJ0bGUuZG9uZSgpICMgVGVybWluZSBsZSBkZXNzaW4=" data-file="bWFpc29uLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Il existe évidemment de nombreuses manières d’arriver au même résultat !</p>
+</div>
+</details></div>
 </section>
 </section>
 
@@ -334,8 +535,11 @@ En Python, les types de variables de base sont les suivants :</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">2. Les variables</a><ul>
+<li><a class="reference internal" href="#">2.1. Les variables 2</a><ul>
 <li><a class="reference internal" href="#les-types-de-variables-simples">Les types de variables simples</a></li>
+<li><a class="reference internal" href="#les-operateurs">Les opérateurs</a></li>
+<li><a class="reference internal" href="#assignation-de-variables">Assignation de variables</a></li>
+<li><a class="reference internal" href="#exercices-turtle-facultatif">Exercices Turtle 🐢 (facultatif)</a></li>
 </ul>
 </li>
 </ul>

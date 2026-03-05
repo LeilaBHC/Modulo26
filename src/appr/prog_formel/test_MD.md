@@ -1,13 +1,13 @@
 (prog_formel.test_MD)=
 
-# 2. Les variables
+# 2.1. Les variables 2
 
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 ## Les types de variables simples
 
-Une variable L est une valeur **nommée et stockée en mémoire** qui va varier au cours du programme.  
+Une variable K est une valeur **nommée et stockée en mémoire** qui va varier au cours du programme.  
 En Python, les types de variables de base sont les suivants :
 
 1. Les **nombre entiers**, appelés **int**: 2, 45, -4, 56.
