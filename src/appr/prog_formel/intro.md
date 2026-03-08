@@ -52,21 +52,9 @@ Cela sert uniquement à l’humain qui va lire le programme 🤓
 print("bonjour")  # salutations
 ```
 
-```{admonition} Exercice 2
-:class: note
-Enlevez les guillemets autour de "bonjour". Qu’est-ce qui se passe ?
-```
 
-`````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-Le programme n’est plus compris par la machine car si "bonjour" était un texte pouvant être affiché sans problème, `bonjour` désigne une variable ayant pour nom bonjour.  
-Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait pas quoi afficher 🤔  
-⚠️ Du texte s'écrit toujours entre guillemets ou apostrophes (`""` ou `''`). ⚠️
-````
-`````
 
-## Exercices Turtle 🐢 (facultatif)
+## Exercices Turtle 🐢 
 
 `turtle` est un module Python permettant de faire du **dessin en codant**. La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
