@@ -143,3 +143,42 @@ a * 2 + 1
 
 Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
 Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
+
+### Exercice¶
+
+Ecrivez votre premier programme sur `THONNY` sauvegardez le sur le `Bureau`.
+
+````{admonition} Exercice - Le triangle
+:class: note
+Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.  
+(Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).
+
+```{codeplay}
+:file: triangle.py
+import turtle  # Importe le module
+
+...
+
+turtle.done()  # Termine le dessin
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: triangle.py
+import turtle # Importe le module
+
+turtle.forward(100) # Avance de 100 pixels
+turtle.left(120) # Tourne a gauche de 120 degres (180-60)
+turtle.forward(100)
+turtle.left(120)
+turtle.forward(100)
+turtle.left(120)
+
+turtle.done() # Termine le dessin
+``` 
+
+````
+`````
