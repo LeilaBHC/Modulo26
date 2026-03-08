@@ -113,8 +113,7 @@ turtle.left(120)
 
 turtle.done() # Termine le dessin
 ``` 
-Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
-Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
+
 ````
 `````
 
@@ -135,9 +134,12 @@ Thonny comporte un éditeur de script dans la partie supérieure et une console 
 print('hello')
 ```
 
+La console est utile pour exécuter et tester rapidement des expressions simples telles que
+
 ```{codeplay}
 a = 3
 a * 2 + 1
 ```
 
-La console est utile pour exécuter et tester rapidement des expressions simples telles que
+Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
+Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
