@@ -117,3 +117,10 @@ Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !
 Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
 ````
 `````
+## THONNY
+
+`THONNY` est un **environnement de développement intégré (IDE)** libre et open-source pour le langage de programmation Python.  Il comporte un éditeur de script et une console. Il s’installe dans un environnement virtuel et permet d’y installer facilement des modules supplémentaires.
+Son interface comporte:
+*   des boutons (Nouveau, Ouvrir, Executer, etc.)
+*   l’éditeur de script
+*   la console
