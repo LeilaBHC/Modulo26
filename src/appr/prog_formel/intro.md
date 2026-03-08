@@ -54,7 +54,7 @@ print("bonjour")  # salutations
 
 
 
-## Exercices Turtle 🐢 
+## Turtle 🐢 
 
 `turtle` est un module Python permettant de faire du **dessin en codant**. La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
 
@@ -82,40 +82,6 @@ turtle.done()  # Termine le dessin
 
 Si vous êtes curieux, la plateforme <a href="https://apprendre.modulo-info.ch/prog1/dessiner.html" target="_blank">Modulo</a> propose beaucoup d’autres exemples et exercices dans son chapitre **Programmation**.
 
-````{admonition} Exercice - Le triangle
-:class: note
-Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.  
-(Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).
-
-```{codeplay}
-:file: triangle.py
-import turtle  # Importe le module
-
-...
-
-turtle.done()  # Termine le dessin
-```
-````
-
-`````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-```{codeplay}
-:file: triangle.py
-import turtle # Importe le module
-
-turtle.forward(100) # Avance de 100 pixels
-turtle.left(120) # Tourne a gauche de 120 degres (180-60)
-turtle.forward(100)
-turtle.left(120)
-turtle.forward(100)
-turtle.left(120)
-
-turtle.done() # Termine le dessin
-``` 
-
-````
-`````
 
 ## THONNY
 
@@ -163,22 +129,3 @@ turtle.done()  # Termine le dessin
 ```
 ````
 
-`````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-```{codeplay}
-:file: triangle.py
-import turtle # Importe le module
-
-turtle.forward(100) # Avance de 100 pixels
-turtle.left(120) # Tourne a gauche de 120 degres (180-60)
-turtle.forward(100)
-turtle.left(120)
-turtle.forward(100)
-turtle.left(120)
-
-turtle.done() # Termine le dessin
-``` 
-
-````
-`````
