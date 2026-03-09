@@ -13,7 +13,6 @@ Bienvenue sur la plateforme de TP d'informatique !
    :hidden:
 
    prog_formel/intro
-   prog_formel/test_MD
    prog_formel/variables
    prog_formel/fonctions
    prog_formel/definitions
@@ -35,10 +34,11 @@ Bienvenue sur la plateforme de TP d'informatique !
     prog_dessin/parcourir
     prog_dessin/randomiser
     prog_dessin/projet
-    prog_dessin/projets_eleves
+    .. prog_dessin/projets_eleves
     prog_dessin/aventure
     prog_dessin/projet2
     prog_dessin/projets_eleves2
+    ..
 
 ..
    .. toctree::
