@@ -7,7 +7,7 @@
 
 ## Les types de variables simples
 
-Une variable L est une valeur **nommée et stockée en mémoire** qui va varier au cours du programme.  
+Une variable est une valeur **nommée et stockée en mémoire** qui va varier au cours du programme.  
 En Python, les types de variables de base sont les suivants :
 
 1. Les **nombre entiers**, appelés **int**: 2, 45, -4, 56.
