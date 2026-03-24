@@ -251,7 +251,7 @@ print("le nombre introduit est bien a ")
 
 ## Exercices Turtle 🐢
 
-````{admonition} Exercice - Dessin au choix
+````{admonition} Exercice (a rendre) - Dessin au choix
 :class: note
 Ecrivez (sur Thonny) un programme qui dessine une des formes suivantes : 
 
