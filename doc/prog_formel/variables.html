@@ -272,7 +272,7 @@
 <section id="les-types-de-variables-simples">
 <h2>Les types de variables simples<a class="headerlink" href="#les-types-de-variables-simples" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une variable est une valeur <strong>nommée et stockée en mémoire</strong> qui va varier au cours du programme.<br/>
-En Python, les types de variables de base sont les suivants :</p>
+En Python, les types de données  stockés dans les variables  sont les suivants :</p>
 <ol class="simple">
 <li><p>Les <strong>nombre entiers</strong>, appelés <strong>int</strong>: 2, 45, -4, 56.</p></li>
 <li><p>Les <strong>nombres à virgules</strong>, appelés <strong>float</strong>: 2.3, 6.5, 78.9, -89.0. La décimale est indiquée par un point (et non une virgule) comme cela est l’usage dans les pays anglo-saxons.</p></li>
@@ -344,7 +344,7 @@ Il existe également les <strong>opérateurs de comparaison</strong> qui retourn
 </ul>
 <p>Les opérateurs sur les nombres <strong>suivent le même ordre de priorité qu’en mathématique</strong>.
 Les opérateurs arithmétiques ont la priorité sur les autres types d’opérateurs.<br/>
-Il est fortement recommendé d’utiliser les parenthèses pour clarifier l’ordre des opérations en cas de doute. 🤔</p>
+Il est fortement recommandé d’utiliser les parenthèses pour clarifier l’ordre des opérations en cas de doute. 🤔</p>
 </section>
 <section id="assignation-de-variables">
 <h2>Assignation de variables<a class="headerlink" href="#assignation-de-variables" title="Lien permanent vers ce titre">¶</a></h2>
@@ -459,6 +459,13 @@ f) True, False</p>
 Sans cela, il deviendrait rapidement illisible 🤯<br/>
 Ces conventions et bonnes pratiques sont écrites par la communauté dans des <a href="https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/" target="_blank">PEP</a>.</p>
 </section>
+<section id="interaction-avec-lutilisateur">
+<h2>Interaction avec l’utilisateur<a class="headerlink" href="#interaction-avec-lutilisateur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour permettre l’interaction du programme avec l’utilisateur, par exemple la saisie de la valeur d’une valeur d’une variable, il faut procéder en deux temps :
+•	utiliser input()pour récupérer les caractères tapés au clavier par l’utilisateur,
+•	utiliser int() pour convertir le texte en nombre si besoin</p>
+<p>Tester l’interaction avec l’utilisateur avec ces programmes en observant à chaque fois le type de donnée des variables</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBFY3JpdmV6IHZvdHJlIGNvZGUgaWNpCm4gPSBpbnB1dCgiZW50cmV6IHVuIG5vbWJyZSA6ICIpCmEgPSBpbnQobikKcHJpbnQoImxlIG5vbWJyZSBpbnRyb2R1aXQgZXN0IGJpZW4gYSAiKQo=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercices-turtle-facultatif">
 <h2>Exercices Turtle 🐢 (facultatif)<a class="headerlink" href="#exercices-turtle-facultatif" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
@@ -534,6 +541,7 @@ Utilisez des variables pour éviter d’avoir à écrire plusieurs fois les mêm
 <li><a class="reference internal" href="#les-types-de-variables-simples">Les types de variables simples</a></li>
 <li><a class="reference internal" href="#les-operateurs">Les opérateurs</a></li>
 <li><a class="reference internal" href="#assignation-de-variables">Assignation de variables</a></li>
+<li><a class="reference internal" href="#interaction-avec-lutilisateur">Interaction avec l’utilisateur</a></li>
 <li><a class="reference internal" href="#exercices-turtle-facultatif">Exercices Turtle 🐢 (facultatif)</a></li>
 </ul>
 </li>

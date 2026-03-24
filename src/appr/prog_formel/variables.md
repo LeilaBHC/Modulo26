@@ -8,7 +8,7 @@
 ## Les types de variables simples
 
 Une variable est une valeur **nommée et stockée en mémoire** qui va varier au cours du programme.  
-En Python, les types de variables de base sont les suivants :
+En Python, les types de données  stockés dans les variables  sont les suivants :
 
 1. Les **nombre entiers**, appelés **int**: 2, 45, -4, 56.
 2. Les **nombres à virgules**, appelés **float**: 2.3, 6.5, 78.9, -89.0. La décimale est indiquée par un point (et non une virgule) comme cela est l’usage dans les pays anglo-saxons.
@@ -81,7 +81,7 @@ Enfin, les **opérateur logiques** suivants sont définis sur les booléens:
 
 Les opérateurs sur les nombres **suivent le même ordre de priorité qu’en mathématique**.
 Les opérateurs arithmétiques ont la priorité sur les autres types d’opérateurs.  
-Il est fortement recommendé d’utiliser les parenthèses pour clarifier l’ordre des opérations en cas de doute. 🤔
+Il est fortement recommandé d’utiliser les parenthèses pour clarifier l’ordre des opérations en cas de doute. 🤔
 
 ## Assignation de variables
 
@@ -226,6 +226,25 @@ b = True
 Vous serez très heureux d’avoir correctement nommé vos variables quand votre programme deviendra plus complexe.
 Sans cela, il deviendrait rapidement illisible 🤯  
 Ces conventions et bonnes pratiques sont écrites par la communauté dans des <a href="https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/" target="_blank">PEP</a>.
+## Interaction avec l'utilisateur
+Pour permettre l’interaction du programme avec l’utilisateur, par exemple la saisie de la valeur d’une valeur d’une variable, il faut procéder en deux temps : 
+•	utiliser input()pour récupérer les caractères tapés au clavier par l’utilisateur,
+•	utiliser int() pour convertir le texte en nombre si besoin
+
+Tester l’interaction avec l’utilisateur avec ces programmes en observant à chaque fois le type de donnée des variables
+
+```{codeplay}
+# Ecrivez votre code ici
+n = input("entrez un nombre : ")
+a = int(n)
+print("le nombre introduit est bien a ")
+
+``` 
+
+
+
+
+
 
 ## Exercices Turtle 🐢 (facultatif)
 
