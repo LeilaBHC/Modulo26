@@ -244,67 +244,18 @@ print("le nombre introduit est bien a ")
 
 
 
+# Exercices à rendre (Thonny):
+1) Écrivez un petit programme qui demande votre année de naissance et qui vous affiche votre âge.
 
+2) Écrivez un programme qui demande à l’utilisateur d’entrer un nombre en secondes et qui l’affiche en heures ; minutes et secondes.
 
-## Exercices Turtle 🐢 (facultatif)
+## Exercices Turtle 🐢
 
-````{admonition} Exercice - La maison
+````{admonition} Exercice - Dessin au choix
 :class: note
-Ecrivez un programme qui dessine une maison 🏠 (un carré avec un triangle sur la tête).
-Vous êtes conseillés de reprendre les exemples et exercices Turtle du 1er chapitre et de les combiner.  
-Utilisez des variables pour éviter d’avoir à écrire plusieurs fois les mêmes chiffres (ex : `forward(d)` au lieu de `forward(100)`).
+Ecrivez (sur Thonny) un programme qui dessine une des formes suivantes : 
 
-```{codeplay}
-:file: maison.py
-import turtle # Importe le module
-
-# Reprenez le code permettant de dessiner un carré
-...
-
-# Placez-vous sur le sommet du carré
-... 
-
-# Reprenez le code permettant de dessiner un triangle
-...
-
-turtle.done() # Termine le dessin
+```{image} ../media/formes.png
+:width: 300px
 ```
-````
 
-`````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-```{codeplay}
-:file: maison.py
-import turtle # Importe le module
-
-d = 100 # On utilise une variable pour mémoriser la taille
-
-# On reprend le code permettant de dessiner un carré
-turtle.forward(d) # Avance de 100 pixels
-turtle.left(90) # Tourne a gauche de 90 degres
-turtle.forward(d)
-turtle.left(90)
-turtle.forward(d)
-turtle.left(90)
-turtle.forward(d)
-turtle.left(90)
-
-# On se déplace au sommet du carré
-turtle.left(90)
-turtle.forward(d)
-turtle.right(90)
-
-# On reprend le code permettant de dessiner un triangle
-turtle.forward(d) # Avance de 100 pixels
-turtle.left(120) # Tourne a gauche de 120 degres (180-60)
-turtle.forward(d)
-turtle.left(120)
-turtle.forward(d)
-turtle.left(120)
-
-turtle.done() # Termine le dessin
-```
-Il existe évidemment de nombreuses manières d'arriver au même résultat !
-````
-`````
