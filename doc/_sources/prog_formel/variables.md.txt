@@ -256,6 +256,6 @@ print("le nombre introduit est bien a ")
 Ecrivez (sur Thonny) un programme qui dessine une des formes suivantes : 
 
 ```{image} ../media/formes.png
-:width: 300px
+
 ```
 
