@@ -244,14 +244,14 @@ print("le nombre introduit est bien a ")
 
 
 
-# Exercices à rendre (Thonny):
-## Exercice 1
+## Exercices à rendre (Thonny):
+# Exercice 1
 
 1) Écrivez un petit programme qui demande votre année de naissance et qui vous affiche votre âge.
 
 2) Écrivez un programme qui demande à l’utilisateur d’entrer un nombre en secondes et qui l’affiche en heures ; minutes et secondes.
 
-## Exercice2 Turtle 🐢
+# Exercice2 Turtle 🐢
 
 ````{admonition} Exercice (a rendre) - Dessin au choix
 :class: note
