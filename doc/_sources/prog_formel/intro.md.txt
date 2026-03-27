@@ -6,7 +6,7 @@
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 Ce site est une adaptation du site 
-<a href="https://globox.pythonanywhere.com/static/index.html" target="_blank">Site Gym Lab</a> élaboré par Vincent Gürtler. 
+<a href="https://globox.pythonanywhere.com/static/index.html" target="_blank"> Gym Lab</a> élaboré par Vincent Gürtler. 
 
 
 ## Votre tout premier programme 🤩
