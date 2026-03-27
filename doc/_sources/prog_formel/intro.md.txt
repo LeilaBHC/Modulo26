@@ -5,6 +5,10 @@
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
+Ce site est une adaptation du site 
+<a href="https://globox.pythonanywhere.com/static/index.html" target="_blank">Site Gym Lab</a> élaboré par Vincent Gürtler. 
+
+
 ## Votre tout premier programme 🤩
 
 Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:
