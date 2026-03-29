@@ -89,11 +89,12 @@ html_theme = 'furo'
 html_show_copyright = False
 html_show_sphinx = False
 html_show_copyright = False
-html_favicon = '../static/gymlab-icon.ico'
-html_title = 'Travaux pratiques'
+#html_favicon = '../static/gymlab-icon.ico'
+html_title = 'Python'
+# leila 
 html_theme_options = {
-    "light_logo": "modulo-logo-light.svg",
-    "dark_logo": "modulo-logo-dark.svg",
+    "light_logo": "CodeNPlay-logo.svg",
+    "dark_logo": "CodeNPlay-logo.svg",
     "navigation_with_keys": True,
     "light_css_variables": {
 

@@ -5,8 +5,8 @@
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
-Ce site est une adaptation du site 
-<a href="https://globox.pythonanywhere.com/static/index.html" target="_blank"> Gym Lab</a> élaboré par Vincent Gürtler. 
+Ce site web est une adaptation du site 
+<a href="https://globox.pythonanywhere.com/static/index.html" target="_blank"> Gym Lab</a> élaboré par Vincent Gürtler que je remercie vivement.
 
 
 ## Votre tout premier programme 🤩
