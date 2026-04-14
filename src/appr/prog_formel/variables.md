@@ -64,6 +64,7 @@ Pour les nombres entiers, les **opérateurs arithmétiques** suivants sont les p
 
 Toutes les opérations ci-dessus retournent un nombre entier, sauf la division (/) qui retourne un nombre à virgule.
 Les opérateurs similaires sont définis pour les nombres à virgules.
+Les opérateurs (+) et (*) s'appliquent aussi pour les 
 Il existe également les **opérateurs de comparaison** qui retournent des booléens (True ou False):
 
 * \> (plus grand que)
@@ -228,8 +229,9 @@ Sans cela, il deviendrait rapidement illisible 🤯
 Ces conventions et bonnes pratiques sont écrites par la communauté dans des <a href="https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/" target="_blank">PEP</a>.
 ## Interaction avec l'utilisateur
 Pour permettre l’interaction du programme avec l’utilisateur, par exemple la saisie de la valeur d’une valeur d’une variable, il faut procéder en deux temps : 
-•	utiliser input()pour récupérer les caractères tapés au clavier par l’utilisateur,
-•	utiliser int() pour convertir le texte en nombre si besoin
+
+* Utiliser input()pour récupérer les caractères tapés au clavier par l’utilisateur,
+* Utiliser int() pour convertir le texte en nombre si besoin
 
 Tester l’interaction avec l’utilisateur avec ces programmes en observant à chaque fois le type de donnée des variables
 
@@ -253,7 +255,7 @@ print("le nombre introduit est bien a ")
 
 ### Exercice2 Turtle 🐢
 
-````{admonition} Exercice (a rendre) - Dessin au choix
+````{admonition} Exercice (à rendre) - Dessin au choix
 :class: note
 Ecrivez (sur Thonny) un programme qui dessine une des formes suivantes : 
 
