@@ -5,8 +5,13 @@
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
-Ce site web est une adaptation du site 
-<a href="https://globox.pythonanywhere.com/static/index.html" target="_blank"> Gym Lab</a> élaboré par Vincent Gürtler que je remercie vivement!
+Ce site web est une adaptation des deux sites :
+- <a href="https://globox.pythonanywhere.com/static/index.html" target="_blank"> Gym Lab</a> élaboré par Vincent Gürtler. 
+- <a href="ttps://apprendre.modulo-info.ch/prog1/index.html" target="_blank"> Modulo</a> le site officiel du catalogue des ressources destinées à l'apprentissage de l'informatique au gymnase vaudois.
+
+
+
+
 
 
 ## Votre tout premier programme 🤩
