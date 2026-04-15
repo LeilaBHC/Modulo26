@@ -227,7 +227,7 @@ Reprenez l’exercice Turtle du chapitre précédent mais permettez à l’utili
 
 ```{codeplay}
 :file: maison_input.py
-import turtle # Importe le module
+from turtle import * # Importe le module
 
 # On demande à l'utilisateur la taille de la maison
 d = ...
@@ -235,7 +235,7 @@ d = ...
 # Copiez ici le code permettant de dessiner une maison
 ...
 
-turtle.done() # Termine le dessin
+done() # Termine le dessin
 ```
 ````
 
@@ -244,34 +244,34 @@ turtle.done() # Termine le dessin
 :animate: fade-in-slide-down
 ```{codeplay}
 :file: maison_input.py
-import turtle # Importe le module
+from turtle import * # Importe le module
 
 d = int(input("Entrez la taille de la maison: ")) # On demande à l'utilisateur la taille de la maison
 
 # On dessine le carré
-turtle.forward(d) # Avance de 100 pixels
-turtle.left(90) # Tourne a gauche de 90 degres
-turtle.forward(d)
-turtle.left(90)
-turtle.forward(d)
-turtle.left(90)
-turtle.forward(d)
-turtle.left(90)
+forward(d) # Avance de 100 pixels
+left(90) # Tourne a gauche de 90 degres
+forward(d)
+left(90)
+forward(d)
+left(90)
+forward(d)
+left(90)
 
 # On se déplace au sommet du carré
-turtle.left(90)
-turtle.forward(d)
-turtle.right(90)
+left(90)
+forward(d)
+right(90)
 
 # On dessine le triangle
-turtle.forward(d) # Avance de 100 pixels
-turtle.left(120) # Tourne a gauche de 120 degres (180-60)
-turtle.forward(d)
-turtle.left(120)
-turtle.forward(d)
-turtle.left(120)
+forward(d) # Avance de 100 pixels
+left(120) # Tourne a gauche de 120 degres (180-60)
+forward(d)
+left(120)
+forward(d)
+left(120)
 
-turtle.done() # Termine le dessin
+done() # Termine le dessin
 ```
 ````
 `````

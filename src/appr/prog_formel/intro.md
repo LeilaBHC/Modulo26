@@ -70,18 +70,18 @@ print("bonjour")  # salutations
 Ce code permet de dessiner un carré, testez-le !
 
 ```{codeplay}
-import turtle  # Importe le module
+from turtle import *  # Importe le module
 
-turtle.forward(100)  # Avance de 100 pixels
-turtle.left(90)  # Tourne a gauche de 90 degres
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
-turtle.left(90)
+forward(100)  # Avance de 100 pixels
+left(90)  # Tourne a gauche de 90 degres
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
 
-turtle.done()  # Termine le dessin
+done()  # Termine le dessin
 ```
 
 Si vous êtes curieux, la plateforme <a href="https://apprendre.modulo-info.ch/prog1/dessiner.html" target="_blank">Modulo</a> propose beaucoup d’autres exemples et exercices dans son chapitre **Programmation**.
@@ -125,11 +125,11 @@ Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ay
 
 ```{codeplay}
 :file: triangle.py
-import turtle  # Importe le module
+from turtle import *  # Importe le module
 
 ...
 
-turtle.done()  # Termine le dessin
+done()  # Termine le dessin
 ```
 ````
 
