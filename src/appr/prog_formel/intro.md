@@ -7,7 +7,7 @@
 
 Ce site web est une adaptation des deux sites :
 - <a href="https://globox.pythonanywhere.com/static/index.html" target="_blank"> Gym Lab</a> élaboré par Vincent Gürtler. 
-- <a href="ttps://apprendre.modulo-info.ch/prog1/index.html" target="_blank"> Modulo</a> le site officiel du catalogue des ressources destinées à l'apprentissage de l'informatique au gymnase vaudois.
+- <a href="https://apprendre.modulo-info.ch/prog1/index.html" target="_blank"> Modulo</a> le site officiel du catalogue des ressources destinées à l'apprentissage de l'informatique au gymnase vaudois.
 
 
 

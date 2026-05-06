@@ -239,7 +239,7 @@ Tester l’interaction avec l’utilisateur avec ces programmes en observant à 
 # Ecrivez votre code ici
 n = input("entrez un nombre : ")
 a = int(n)
-print("le nombre introduit est bien a ")
+print("le nombre introduit est bien :", a)
 
 ``` 
 
