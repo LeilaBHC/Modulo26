@@ -257,7 +257,7 @@ print("le nombre introduit est bien :", a)
 
 ````{admonition} Exercice (à rendre) - Dessin au choix
 :class: note
-Ecrivez (sur Thonny) un programme qui dessine une des formes suivantes : 
+Ecrivez (sur Thonny) un programme qui dessine deux dormes parmi les formes suivantes : 
 
 ```{image} ../media/formes.png
 
