@@ -369,24 +369,17 @@ Utilisez cette fonction dans un programme qui demande son poids et sa taille à 
 <h2>Exercices Turtle 🐢 (facultatif)<a class="headerlink" href="#exercices-turtle-facultatif" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice - Une maison fonctionnelle</p>
-<p>Il est temps d’améliorer notre code permettant de dessiner une maison grâce aux fonctions ! 🤩</p>
+<p>Il est temps d’améliorer notre manière de coder grâce aux fonctions ! 🤩
+L’objectif de cet exercice est de faire un joli dessin de votre choix en utilisant des formes simple, carré, rectangle, cercle, fleurs, maison ou autres.
+pour cela commencez à créer vos fonctions une par une puis réalisez votre oeuvre d’art.</p>
 <ol class="simple">
 <li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">carre(taille)</span></code> qui dessine un carré de la taille passée en argument.</p></li>
 <li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">triangle(taille)</span></code> qui dessine un triangle équilatéral avec la taille passée en argument.</p></li>
-<li><p>Enfin, écrivez une fonction <code class="docutils literal notranslate"><span class="pre">maison(taille)</span></code> qui appelle les 2 fonctions précédentes pour dessiner une maison de la taille passée en argument.</p></li>
+<li><p>Enfin, écrivez une fonction <code class="docutils literal notranslate"><span class="pre">maison(taille)</span></code> qui appelle les 2 fonctions précédentes pour dessiner une maison de la taille passée en argument.
+…</p></li>
 </ol>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgojIEZvbmN0aW9uIHF1aSBkZXNzaW5lIHVuIGNhcnLDqSBkZSB0YWlsbGUgZApkZWYgZGVzc2luZV9jYXJyZShkKToKICAgIC4uLgoKIyBGb25jdGlvbiBxdWkgZGVzc2luZSB1biB0cmlhbmdsZSBkZSB0YWlsbGUgZApkZWYgZGVzc2luZV90cmlhbmdsZShkKToKICAgIC4uLgoKIyBGb25jdGlvbiBxdWkgZGVzc2luZSB1bmUgbWFpc29uIGRlIHRhaWxsZSBkCmRlZiBkZXNzaW5lX21haXNvbihkKToKICAgIC4uLgoKIyBPbiBkZW1hbmRlIMOgIGwndXRpbGlzYXRldXIgbGEgdGFpbGxlIGRlIGxhIG1haXNvbgpkID0gaW50KGlucHV0KCJFbnRyZXogbGEgdGFpbGxlIGRlIGxhIG1haXNvbjogIikpCgojIEFwcGVsZXogbGEgZm9uY3Rpb24gZGVzc2luZV9tYWlzb24oKSBpY2kKLi4uCgp0dXJ0bGUuZG9uZSgpICMgVGVybWluZSBsZSBkZXNzaW4=" data-file="bWFpc29uX2ZvbmN0aW9ubmVsbGUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<div class="admonition-solution admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgojIEZvbmN0aW9uIHF1aSBkZXNzaW5lIHVuIGNhcnLDqSBkZSB0YWlsbGUgZApkZWYgZGVzc2luZV9jYXJyZShkKToKICAgIHR1cnRsZS5mb3J3YXJkKGQpICMgQXZhbmNlIGRlIDEwMCBwaXhlbHMKICAgIHR1cnRsZS5sZWZ0KDkwKSAjIFRvdXJuZSBhIGdhdWNoZSBkZSA5MCBkZWdyZXMKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCg5MCkKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCg5MCkKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCg5MCkKCiMgRm9uY3Rpb24gcXVpIGRlc3NpbmUgdW4gdHJpYW5nbGUgZGUgdGFpbGxlIGQKZGVmIGRlc3NpbmVfdHJpYW5nbGUoZCk6CiAgICB0dXJ0bGUuZm9yd2FyZChkKSAjIEF2YW5jZSBkZSAxMDAgcGl4ZWxzCiAgICB0dXJ0bGUubGVmdCgxMjApICMgVG91cm5lIGEgZ2F1Y2hlIGRlIDEyMCBkZWdyZXMgKDE4MC02MCkKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCgxMjApCiAgICB0dXJ0bGUuZm9yd2FyZChkKQogICAgdHVydGxlLmxlZnQoMTIwKQoKIyBGb25jdGlvbiBxdWkgZGVzc2luZSB1bmUgbWFpc29uIGRlIHRhaWxsZSBkCmRlZiBkZXNzaW5lX21haXNvbihkKToKICAgICMgT24gZGVzc2luZSBsZSBjYXJyw6kKICAgIGRlc3NpbmVfY2FycmUoZCkKCiAgICAjIE9uIHNlIGTDqXBsYWNlIGF1IHNvbW1ldCBkdSBjYXJyw6kKICAgIHR1cnRsZS5sZWZ0KDkwKQogICAgdHVydGxlLmZvcndhcmQoZCkKICAgIHR1cnRsZS5yaWdodCg5MCkKCiAgICAjIE9uIGRlc3NpbmUgbGUgdHJpYW5nbGUKICAgIGRlc3NpbmVfdHJpYW5nbGUoZCkKCmQgPSBpbnQoaW5wdXQoIkVudHJleiBsYSB0YWlsbGUgZGUgbGEgbWFpc29uOiAiKSkgIyBPbiBkZW1hbmRlIMOgIGwndXRpbGlzYXRldXIgbGEgdGFpbGxlIGRlIGxhIG1haXNvbgoKIyBPbiBkZXNzaW5lIGxhIG1haXNvbiBkZSB0YWlsbGUgZApkZXNzaW5lX21haXNvbihkKQoKIyBJbCBlc3QgZW5zdWl0ZSB0csOocyBmYWNpbGUgZGUgZGVzc2luZXIgZCdhdXRyZXMgbWFpc29ucyBkZSB0YWlsbGVzIHZhcmlhYmxlcwp0dXJ0bGUudXAoKSAjIFBlcm1ldCBkZSBsZXZlciBsZSBzdHlsbwp0dXJ0bGUuZ290bygxMjUsIDEyNSkgIyBTZSBkw6lwbGFjZSDDoCBjZXMgY29vcmRvbm7DqWVzCnR1cnRsZS5kb3duKCkgIyBQZXJtZXQgZGUgcmVjb21tZW5jZXIgw6AgZGVzc2luZXIKZGVzc2luZV9tYWlzb24oZC8yKQoKdHVydGxlLnVwKCkKdHVydGxlLmdvdG8oLTI1MCwgLTI1MCkKdHVydGxlLmRvd24oKQpkZXNzaW5lX21haXNvbihkKjIpCgp0dXJ0bGUuZG9uZSgpICMgVGVybWluZSBsZSBkZXNzaW4=" data-file="bWFpc29uX2ZvbmN0aW9ubmVsbGUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
+<p>Appelez ces fonctions avesc les bons arguments pour créer votre oeuvre d’art.</p>
+</div>
 </section>
 </section>
 

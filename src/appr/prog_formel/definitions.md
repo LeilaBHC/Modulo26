@@ -191,94 +191,12 @@ Gardez à l'esprit qu'une fois que vous avez choisi un nom pour une fonction ou 
 
 ````{admonition} Exercice - Une maison fonctionnelle
 :class: note
-Il est temps d’améliorer notre code permettant de dessiner une maison grâce aux fonctions ! 🤩
+Il est temps d’améliorer notre manière de coder grâce aux fonctions ! 🤩
+L'objectif de cet exercice est de faire un joli dessin de votre choix en utilisant des formes simple, carré, rectangle, cercle, fleurs, maison ou autres.
+pour cela commencez à créer vos fonctions une par une puis réalisez votre oeuvre d'art.
 1. Ecrivez une fonction `carre(taille)` qui dessine un carré de la taille passée en argument.
 2. Ecrivez une fonction `triangle(taille)` qui dessine un triangle équilatéral avec la taille passée en argument.
 3. Enfin, écrivez une fonction `maison(taille)` qui appelle les 2 fonctions précédentes pour dessiner une maison de la taille passée en argument.
-
-```{codeplay}
-:file: maison_fonctionnelle.py
-import turtle # Importe le module
-
-# Fonction qui dessine un carré de taille d
-def dessine_carre(d):
-    ...
-
-# Fonction qui dessine un triangle de taille d
-def dessine_triangle(d):
-    ...
-
-# Fonction qui dessine une maison de taille d
-def dessine_maison(d):
-    ...
-
-# On demande à l'utilisateur la taille de la maison
-d = int(input("Entrez la taille de la maison: "))
-
-# Appelez la fonction dessine_maison() ici
 ...
 
-turtle.done() # Termine le dessin
-```
-````
-
-`````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-```{codeplay}
-:file: maison_fonctionnelle.py
-import turtle # Importe le module
-
-# Fonction qui dessine un carré de taille d
-def dessine_carre(d):
-    turtle.forward(d) # Avance de 100 pixels
-    turtle.left(90) # Tourne a gauche de 90 degres
-    turtle.forward(d)
-    turtle.left(90)
-    turtle.forward(d)
-    turtle.left(90)
-    turtle.forward(d)
-    turtle.left(90)
-
-# Fonction qui dessine un triangle de taille d
-def dessine_triangle(d):
-    turtle.forward(d) # Avance de 100 pixels
-    turtle.left(120) # Tourne a gauche de 120 degres (180-60)
-    turtle.forward(d)
-    turtle.left(120)
-    turtle.forward(d)
-    turtle.left(120)
-
-# Fonction qui dessine une maison de taille d
-def dessine_maison(d):
-    # On dessine le carré
-    dessine_carre(d)
-
-    # On se déplace au sommet du carré
-    turtle.left(90)
-    turtle.forward(d)
-    turtle.right(90)
-
-    # On dessine le triangle
-    dessine_triangle(d)
-
-d = int(input("Entrez la taille de la maison: ")) # On demande à l'utilisateur la taille de la maison
-
-# On dessine la maison de taille d
-dessine_maison(d)
-
-# Il est ensuite très facile de dessiner d'autres maisons de tailles variables
-turtle.up() # Permet de lever le stylo
-turtle.goto(125, 125) # Se déplace à ces coordonnées
-turtle.down() # Permet de recommencer à dessiner
-dessine_maison(d/2)
-
-turtle.up()
-turtle.goto(-250, -250)
-turtle.down()
-dessine_maison(d*2)
-
-turtle.done() # Termine le dessin
-```
-````
-`````
+Appelez ces fonctions avesc les bons arguments pour créer votre oeuvre d'art.
