@@ -187,16 +187,19 @@ Gardez à l'esprit qu'une fois que vous avez choisi un nom pour une fonction ou 
 ````
 `````
 
-## Exercices Turtle 🐢 (facultatif)
+## Exercices A rendre (Turtle 🐢) :
 
-````{admonition} Exercice - Une maison fonctionnelle
+````{admonition} Exercice - Mon Oeuvre d'art
 :class: note
 Il est temps d’améliorer notre manière de coder grâce aux fonctions ! 🤩
 L'objectif de cet exercice est de faire un joli dessin de votre choix en utilisant des formes simple, carré, rectangle, cercle, fleurs, maison ou autres.
-pour cela commencez à créer vos fonctions une par une puis réalisez votre oeuvre d'art.
+
+Pour cela commencez à créer vos fonctions une par une puis réalisez votre oeuvre d'art.
 1. Ecrivez une fonction `carre(taille)` qui dessine un carré de la taille passée en argument.
 2. Ecrivez une fonction `triangle(taille)` qui dessine un triangle équilatéral avec la taille passée en argument.
 3. Enfin, écrivez une fonction `maison(taille)` qui appelle les 2 fonctions précédentes pour dessiner une maison de la taille passée en argument.
-...
+
+
+
 
 Appelez ces fonctions avesc les bons arguments pour créer votre oeuvre d'art.
