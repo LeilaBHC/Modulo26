@@ -192,7 +192,7 @@ Gardez à l'esprit qu'une fois que vous avez choisi un nom pour une fonction ou 
 ````{admonition} Exercice - Mon Oeuvre d'art
 :class: note
 Il est temps d’améliorer notre manière de coder grâce aux fonctions ! 🤩
-L'objectif de cet exercice est de faire un joli dessin de votre choix en utilisant des formes simple, carré, rectangle, cercle, fleurs, maison ou autres.
+L'objectif de cet exercice est de faire un joli dessin de votre choix en utilisant des formes simples, carré, rectangle, cercle, fleurs, maison ou autres.
 
 Pour cela commencez à créer vos fonctions une par une puis réalisez votre oeuvre d'art.
 1. Ecrivez une fonction `carre(taille)` qui dessine un carré de la taille passée en argument.
