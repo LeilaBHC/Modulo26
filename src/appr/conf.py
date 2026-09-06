@@ -37,19 +37,12 @@ latex_mode = False
 sys.path.append(os.path.abspath("../exts"))
 extensions = [
     'codeplay',
-    'glossary',
     'myst_parser',
     'questions',
     'sphinx_panels',
     'videos',
-    'logic',
-    'blanks',
-    'timeline',
     'exercise',
-    'conversions',
 ]
-
-glossary_doc = 'glossaire.csv'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../templates']
