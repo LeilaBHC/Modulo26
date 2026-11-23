@@ -106,7 +106,7 @@ Demande au clavier la quantité d'or trouvée dans le coffre, puis affiche le no
 or_en_poche = 150.0
 quantite_trouvee = float(input("Quantité d'or trouvée dans le coffre : "))
 
-or_en_poche = or_en_poche + quantite_trouvee
+...
 
 print("Nouvel or en poche :", or_en_poche)
 ```
@@ -124,8 +124,8 @@ or_en_poche = or_en_poche + quantite_trouvee
 
 print("Nouvel or en poche :", or_en_poche)
 ```
+````
 `````
-
 ## Exercice 2 — Tempête en mer
 
 Le navire traverse une tempête. Demande au joueur ou à la joueuse le niveau de solidité de la coque, sur 100.
