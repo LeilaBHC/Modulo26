@@ -42,7 +42,48 @@ print("** Carte au trésor :   ", possede_carte_tresor)
 print("**********************************************")
 ```
 
-````{admonition} Exercice 1.1 — Calculer l'or initial
+````{admonition} Exercice 1.1 — Fonction d’affichage
+:class: note
+Crée une fonction `affichage(nom, experience, pieces_or, carte)` qui affiche la fiche du capitaine.
+
+```{codeplay}
+:file: affichage_capitaine.py
+def affichage(nom, experience, pieces_or, carte):
+    ...
+
+nom_capitaine = "Barbe-Noire"
+experience = 5
+or_en_poche = 0.0
+possede_carte_tresor = True
+
+affichage(nom_capitaine, experience, or_en_poche, possede_carte_tresor)
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: affichage_capitaine.py
+def affichage(nom, experience, pieces_or, carte):
+    print("**********************************************")
+    print("** Capitaine :         ", nom)
+    print("** Expérience :        ", experience)
+    print("** Quantité d'or :     ", pieces_or)
+    print("** une carte au trésor :", carte)
+    print("**********************************************")
+
+nom_capitaine = "Barbe-Noire"
+experience = 5
+or_en_poche = 0.0
+possede_carte_tresor = True
+
+affichage(nom_capitaine, experience, or_en_poche, possede_carte_tresor)
+```
+````
+`````
+
+````{admonition} Exercice 1.2 — Calculer l'or initial
 :class: note
 Crée une fonction `calcul_or(experience)` qui calcule la quantité de pièces d'or initiale selon la formule :
 
@@ -124,7 +165,6 @@ or_en_poche = or_en_poche + quantite_trouvee
 
 print("Nouvel or en poche :", or_en_poche)
 ```
-````
 `````
 ## Exercice 2 — Tempête en mer
 

@@ -293,7 +293,22 @@
 </ul>
 <p>Demande ensuite au clavier le nom du capitaine et son niveau d’expérience.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tX2NhcGl0YWluZSA9IGlucHV0KCJOb20gZHUgY2FwaXRhaW5lIDogIikKZXhwZXJpZW5jZSA9IGludChpbnB1dCgiTml2ZWF1IGQnZXhww6lyaWVuY2UgOiAiKSkKb3JfZW5fcG9jaGUgPSAwLjAKcG9zc2VkZV9jYXJ0ZV90cmVzb3IgPSBUcnVlCgpwcmludCgiKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiIpCnByaW50KCIqKiBDYXBpdGFpbmUgOiAgICAgICAgICIsIG5vbV9jYXBpdGFpbmUpCnByaW50KCIqKiBFeHDDqXJpZW5jZSA6ICAgICAgICAiLCBleHBlcmllbmNlKQpwcmludCgiKiogUXVhbnRpdMOpIGQnb3IgOiAgICAgIiwgb3JfZW5fcG9jaGUpCnByaW50KCIqKiBDYXJ0ZSBhdSB0csOpc29yIDogICAiLCBwb3NzZWRlX2NhcnRlX3RyZXNvcikKcHJpbnQoIioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
-<p class="admonition-title">Exercice 1.1 — Calculer l’or initial</p>
+<p class="admonition-title">Exercice 1.1 — Fonction d’affichage</p>
+<p>Crée une fonction <code class="docutils literal notranslate"><span class="pre">affichage(nom,</span> <span class="pre">experience,</span> <span class="pre">pieces_or,</span> <span class="pre">carte)</span></code> qui affiche la fiche du capitaine.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGFmZmljaGFnZShub20sIGV4cGVyaWVuY2UsIHBpZWNlc19vciwgY2FydGUpOgogICAgLi4uCgpub21fY2FwaXRhaW5lID0gIkJhcmJlLU5vaXJlIgpleHBlcmllbmNlID0gNQpvcl9lbl9wb2NoZSA9IDAuMApwb3NzZWRlX2NhcnRlX3RyZXNvciA9IFRydWUKCmFmZmljaGFnZShub21fY2FwaXRhaW5lLCBleHBlcmllbmNlLCBvcl9lbl9wb2NoZSwgcG9zc2VkZV9jYXJ0ZV90cmVzb3Ip" data-file="YWZmaWNoYWdlX2NhcGl0YWluZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGFmZmljaGFnZShub20sIGV4cGVyaWVuY2UsIHBpZWNlc19vciwgY2FydGUpOgogICAgcHJpbnQoIioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioiKQogICAgcHJpbnQoIioqIENhcGl0YWluZSA6ICAgICAgICAgIiwgbm9tKQogICAgcHJpbnQoIioqIEV4cMOpcmllbmNlIDogICAgICAgICIsIGV4cGVyaWVuY2UpCiAgICBwcmludCgiKiogUXVhbnRpdMOpIGQnb3IgOiAgICAgIiwgcGllY2VzX29yKQogICAgcHJpbnQoIioqIHVuZSBjYXJ0ZSBhdSB0csOpc29yIDoiLCBjYXJ0ZSkKICAgIHByaW50KCIqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIikKCm5vbV9jYXBpdGFpbmUgPSAiQmFyYmUtTm9pcmUiCmV4cGVyaWVuY2UgPSA1Cm9yX2VuX3BvY2hlID0gMC4wCnBvc3NlZGVfY2FydGVfdHJlc29yID0gVHJ1ZQoKYWZmaWNoYWdlKG5vbV9jYXBpdGFpbmUsIGV4cGVyaWVuY2UsIG9yX2VuX3BvY2hlLCBwb3NzZWRlX2NhcnRlX3RyZXNvcik=" data-file="YWZmaWNoYWdlX2NhcGl0YWluZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 1.2 — Calculer l’or initial</p>
 <p>Crée une fonction <code class="docutils literal notranslate"><span class="pre">calcul_or(experience)</span></code> qui calcule la quantité de pièces d’or initiale selon la formule :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quantite_or</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">experience</span> <span class="o">*</span> <span class="mi">20</span>
 </pre></div>
