@@ -1,4 +1,4 @@
-.. image:: ../static/assets/modulo-head-banner.png
+.. image:: static/assets/modulo-head-bannerL.png
    :alt: "Bannière"
 
 Informatique au gymnase : Travaux pratiques
@@ -7,7 +7,6 @@ Informatique au gymnase : Travaux pratiques
 Bienvenue sur la plateforme de TP d'informatique !
 
 .. toctree::
-   :name: Programmation (parcours formel)
    :caption: Programmation (parcours formel)
    :maxdepth: 3
    :hidden:

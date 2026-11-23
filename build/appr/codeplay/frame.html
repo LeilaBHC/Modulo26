@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python Interpreter</title>
+  <meta charset="utf-8" />
+  <script src="clipboard.js" type="text/javascript"></script>
+  <script src="skulpt.min.js" type="text/javascript"></script>
+  <script src="skulpt-stdlib.js" type="text/javascript"></script>
+  <script src="codemirror.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="codemirror.css" />
+  <script src="python.js" type="text/javascript"></script>
+  <script src="popper.min.js" type="text/javascript"></script>
+  <script src="main.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="idea.css" />
+  <link rel="stylesheet" type="text/css" href="monokai.css" />
+  <link rel="stylesheet" type="text/css" href="bootstrap-buttons.css" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div id="tooltip">
+    <div id="tooltip-content">Utilise ton clavier!</div>
+    <div id="tooltip-arrow" data-popper-arrow></div>
+  </div>
+  <div id="control-area">
+    <button id="download" class="btn btn-secondary"><i class="fa fa-download"></i> Télécharger</button>
+    <button id="copy" class="btn btn-secondary" data-clipboard-action="copy" data-clipboard-target="#code"><i class="fa fa-clipboard"></i> Copier</button>
+    <button id="hints" class="btn btn-warning" disabled="true"><i class="fa fa-info"></i> Indices</button>
+    <button id="execute" class="btn btn-primary"><i class="fa fa-play"></i> Exécuter</button>
+    <button id="interrupt" class="btn btn-danger" disabled="true"><i class="fa fa-stop"></i> Interrompre</button>
+  </div>
+  <div id="editor-area">
+    <textarea id="code" cols="80" rows="2"></textarea>
+  </div>
+  <div id="output-area">
+    <div id="output-message">
+      Cliquer sur <span id="execute-keyword">Exécuter</span> pour afficher la sortie.
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-area">
+    <div id="canvas"></div>
+  </div>
+
+  <script>
+    function displayAnalysis(analysisData) {
+        if (!analysisData) return;
+        
+        const analysis = JSON.parse(atob(analysisData));
+        const editor = window.editor; // Votre instance CodeMirror
+
+        // Efface les marqueurs existants
+        editor.clearGutter('analysis-gutter');
+        
+        // Configure le gutter s'il n'existe pas déjà
+        if (!editor.getOption('gutters').includes('analysis-gutter')) {
+            const gutters = editor.getOption('gutters').concat(['analysis-gutter']);
+            editor.setOption('gutters', gutters);
+        }
+
+        // Efface les marqueurs de texte existants
+        if (window.analysisMarkers) {
+            window.analysisMarkers.forEach(marker => marker.clear());
+        }
+        window.analysisMarkers = [];
+
+        // Affiche les nouvelles erreurs
+        analysis.forEach(error => {
+            const line = error.line - 1;
+            const severity = error.type;
+            
+            // Crée l'icône d'erreur dans le gutter
+            const marker = document.createElement('div');
+            marker.className = `analysis-marker ${severity}`;
+            marker.title = error.message;
+            editor.setGutterMarker(line, 'analysis-gutter', marker);
+            
+            // Souligne le code problématique si on a une position de colonne
+            if (error.column > 0) {
+                const textMarker = editor.markText(
+                    {line: line, ch: error.column - 1},
+                    {line: line, ch: error.column + 1},
+                    {
+                        className: `analysis-highlight ${severity}`,
+                        title: error.message
+                    }
+                );
+                window.analysisMarkers.push(textMarker);
+            }
+        });
+    }
+
+    // Appliquer l'analyse au chargement
+    document.addEventListener('DOMContentLoaded', function() {
+        const iframe = document.querySelector('.codeframe');
+        if (iframe) {
+            const analysisData = iframe.getAttribute('data-analysis');
+            if (analysisData) {
+                displayAnalysis(analysisData);
+            }
+        }
+    });
+  </script>
+</body>
+
+</html>

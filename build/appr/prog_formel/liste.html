@@ -1,0 +1,659 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="8. Les algorithmes" href="algo.html" /><link rel="prev" title="6. Les types séquentiels" href="sequences.html" />
+
+    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>7. Les listes - Python</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Python</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/CodeNPlay-logo.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/CodeNPlay-logo.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Python</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">7. Les listes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algo.html">8. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="les-listes">
+<span id="prog-formel-liste"></span><h1>7. Les listes<a class="headerlink" href="#les-listes" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a><br/>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a></p>
+<p>Chaque partie du cours se termine par un exercice à faire seul, suivi de son corrigé. Essaie toujours de répondre avant de lire la solution.</p>
+<section id="quest-ce-quune-liste">
+<h2>1. Qu’est-ce qu’une liste ?<a class="headerlink" href="#quest-ce-quune-liste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une <strong>liste</strong> est une collection ordonnée d’éléments que l’on peut modifier. On peut y mettre des nombres, du texte, ou même un mélange des deux.</p>
+<p>Imagine une liste de courses : on peut y ajouter un article, en barrer un ou en changer un autre. C’est exactement ce que permettent les listes en programmation.</p>
+<p>Les listes sont :</p>
+<ul class="simple">
+<li><p><strong>ordonnées</strong> : chaque élément a une position fixe ;</p></li>
+<li><p><strong>modifiables</strong> : on peut changer, ajouter ou retirer des éléments ;</p></li>
+<li><p><strong>indexées</strong> : la position commence à <code class="docutils literal notranslate"><span class="pre">0</span></code>, et non à <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Exercice 1 : vrai ou faux ?</p>
+<ol class="simple">
+<li><p>Une liste peut contenir à la fois des nombres et du texte.</p></li>
+<li><p>Le premier élément d’une liste a l’indice <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p>Une liste est modifiable.</p></li>
+</ol>
+</div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text">Vrai.</p></li>
+<li><p class="card-text">Faux : l’indice du premier élément est <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p class="card-text">Vrai.</p></li>
+</ol>
+</div>
+</details></div>
+</section>
+<section id="creer-une-liste">
+<h2>2. Créer une liste<a class="headerlink" href="#creer-une-liste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>On utilise des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, avec les éléments séparés par des virgules.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0Kbm90ZXMgPSBbMTIsIDE1LCA5LCAxOF0KbWVsYW5nZSA9IFsiTMOpYSIsIDE3LCBUcnVlXQp2aWRlID0gW10KCnByaW50KGZydWl0cyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>On peut aussi créer une liste vide, puis la remplir plus tard avec <code class="docutils literal notranslate"><span class="pre">vide</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p>
+<p>Pour afficher une liste :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KcHJpbnQoZnJ1aXRzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Pour connaître sa taille :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KcHJpbnQobGVuKGZydWl0cykp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 2 : création</p>
+<p>Crée une liste <code class="docutils literal notranslate"><span class="pre">couleurs</span></code> contenant <code class="docutils literal notranslate"><span class="pre">"rouge"</span></code>, <code class="docutils literal notranslate"><span class="pre">"vert"</span></code> et <code class="docutils literal notranslate"><span class="pre">"bleu"</span></code>. Affiche-la, puis affiche sa taille.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSAuLi4KcHJpbnQoLi4uKQpwcmludCguLi4p" data-file="ZXhfbGlzdGVfMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCnByaW50KGNvdWxldXJzKQpwcmludChsZW4oY291bGV1cnMpKSAgIyAz" data-file="ZXhfbGlzdGVfMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="acceder-aux-elements">
+<h2>3. Accéder aux éléments<a class="headerlink" href="#acceder-aux-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Chaque élément est repéré par son indice, c’est-à-dire sa position.</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Élément</p></th>
+<th class="text-align:right head"><p>Indice</p></th>
+<th class="text-align:right head"><p>Indice négatif</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">"pomme"</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">-3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">"banane"</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">-2</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">"cerise"</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
+<td class="text-align:right"><p><code class="docutils literal notranslate"><span class="pre">-1</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KcHJpbnQoZnJ1aXRzWzBdKSAgICMgcG9tbWUKcHJpbnQoZnJ1aXRzWzJdKSAgICMgY2VyaXNlCnByaW50KGZydWl0c1stMV0pICAjIGNlcmlzZSA6IGxlIGRlcm5pZXIgw6lsw6ltZW50" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Attention : <code class="docutils literal notranslate"><span class="pre">fruits[3]</span></code> provoque une erreur (<code class="docutils literal notranslate"><span class="pre">IndexError</span></code>), car il n’y a pas d’élément à cette position.</p>
+<p>On peut extraire une partie d’une liste avec une <strong>tranche</strong> :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KcHJpbnQoZnJ1aXRzWzA6Ml0pICAjIFsncG9tbWUnLCAnYmFuYW5lJ10gOiBsZSAyIGVzdCBleGNsdQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 3 : accès</p>
+<p>Avec la liste <code class="docutils literal notranslate"><span class="pre">couleurs</span></code>, affiche le premier élément, le dernier élément, puis les deux premiers sous forme de tranche.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCnByaW50KC4uLikKcHJpbnQoLi4uKQpwcmludCguLi4p" data-file="ZXhfbGlzdGVfMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCnByaW50KGNvdWxldXJzWzBdKSAgICAjIHJvdWdlCnByaW50KGNvdWxldXJzWy0xXSkgICAjIGJsZXUKcHJpbnQoY291bGV1cnNbMDoyXSkgICMgWydyb3VnZScsICd2ZXJ0J10=" data-file="ZXhfbGlzdGVfMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="modifier-un-element">
+<h2>4. Modifier un élément<a class="headerlink" href="#modifier-un-element" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour changer un élément, on lui affecte une nouvelle valeur à l’aide de son indice.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KZnJ1aXRzWzFdID0gImtpd2kiCnByaW50KGZydWl0cyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 4 : modification</p>
+<p>Dans <code class="docutils literal notranslate"><span class="pre">couleurs</span></code>, remplace <code class="docutils literal notranslate"><span class="pre">"vert"</span></code> par <code class="docutils literal notranslate"><span class="pre">"jaune"</span></code>, puis affiche la liste.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCi4uLg==" data-file="ZXhfbGlzdGVfNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCmNvdWxldXJzWzFdID0gImphdW5lIgpwcmludChjb3VsZXVycykgICMgWydyb3VnZScsICdqYXVuZScsICdibGV1J10=" data-file="ZXhfbGlzdGVfNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="ajouter-des-elements">
+<h2>5. Ajouter des éléments<a class="headerlink" href="#ajouter-des-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="a-la-fin-avec-append">
+<h3>À la fin avec <code class="docutils literal notranslate"><span class="pre">append()</span></code><a class="headerlink" href="#a-la-fin-avec-append" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiXQpmcnVpdHMuYXBwZW5kKCJjZXJpc2UiKQpwcmludChmcnVpdHMp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="a-une-position-precise-avec-insert">
+<h3>À une position précise avec <code class="docutils literal notranslate"><span class="pre">insert()</span></code><a class="headerlink" href="#a-une-position-precise-avec-insert" title="Lien permanent vers ce titre">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">insert(indice,</span> <span class="pre">valeur)</span></code> place la valeur à l’indice voulu et décale les autres éléments vers la droite.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KZnJ1aXRzLmluc2VydCgxLCAiZnJhaXNlIikKcHJpbnQoZnJ1aXRzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="plusieurs-elements-avec-extend">
+<h3>Plusieurs éléments avec <code class="docutils literal notranslate"><span class="pre">extend()</span></code><a class="headerlink" href="#plusieurs-elements-avec-extend" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiXQpmcnVpdHMuZXh0ZW5kKFsia2l3aSIsICJtYW5ndWUiXSkKcHJpbnQoZnJ1aXRzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>À retenir :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">append()</span></code> ajoute un élément à la fin ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code> ajoute un élément à une position précise ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extend()</span></code> ajoute plusieurs éléments à la fin.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Exercice 5 : ajout et insertion</p>
+<p>À partir de <code class="docutils literal notranslate"><span class="pre">couleurs</span></code>, ajoute <code class="docutils literal notranslate"><span class="pre">"noir"</span></code> à la fin, insère <code class="docutils literal notranslate"><span class="pre">"blanc"</span></code> en deuxième position, puis ajoute <code class="docutils literal notranslate"><span class="pre">"orange"</span></code> et <code class="docutils literal notranslate"><span class="pre">"rose"</span></code> en une seule instruction. Affiche la liste.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCi4uLg==" data-file="ZXhfbGlzdGVfNS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCmNvdWxldXJzLmFwcGVuZCgibm9pciIpCmNvdWxldXJzLmluc2VydCgxLCAiYmxhbmMiKQpjb3VsZXVycy5leHRlbmQoWyJvcmFuZ2UiLCAicm9zZSJdKQpwcmludChjb3VsZXVycyk=" data-file="ZXhfbGlzdGVfNS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+</section>
+<section id="supprimer-des-elements">
+<h2>6. Supprimer des éléments<a class="headerlink" href="#supprimer-des-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="par-valeur-avec-remove">
+<h3>Par valeur avec <code class="docutils literal notranslate"><span class="pre">remove()</span></code><a class="headerlink" href="#par-valeur-avec-remove" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KZnJ1aXRzLnJlbW92ZSgiYmFuYW5lIikKcHJpbnQoZnJ1aXRzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="par-position-avec-pop-ou-del">
+<h3>Par position avec <code class="docutils literal notranslate"><span class="pre">pop()</span></code> ou <code class="docutils literal notranslate"><span class="pre">del</span></code><a class="headerlink" href="#par-position-avec-pop-ou-del" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KZGVybmllciA9IGZydWl0cy5wb3AoKQpwcmludChkZXJuaWVyKQpkZWwgZnJ1aXRzWzBdCnByaW50KGZydWl0cyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p><code class="docutils literal notranslate"><span class="pre">pop()</span></code> retire le dernier élément et le renvoie. On peut donc le stocker dans une variable.</p>
+</section>
+<section id="tout-vider-avec-clear">
+<h3>Tout vider avec <code class="docutils literal notranslate"><span class="pre">clear()</span></code><a class="headerlink" href="#tout-vider-avec-clear" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KZnJ1aXRzLmNsZWFyKCkKcHJpbnQoZnJ1aXRzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 6 : suppression</p>
+<p>Partant de <code class="docutils literal notranslate"><span class="pre">couleurs</span> <span class="pre">=</span> <span class="pre">["rouge",</span> <span class="pre">"jaune",</span> <span class="pre">"bleu",</span> <span class="pre">"noir",</span> <span class="pre">"orange",</span> <span class="pre">"rose"]</span></code> :</p>
+<ol class="simple">
+<li><p>supprime <code class="docutils literal notranslate"><span class="pre">"rouge"</span></code> avec <code class="docutils literal notranslate"><span class="pre">remove()</span></code> ;</p></li>
+<li><p>retire le dernier élément avec <code class="docutils literal notranslate"><span class="pre">pop()</span></code> et affiche-le ;</p></li>
+<li><p>supprime le premier élément avec <code class="docutils literal notranslate"><span class="pre">del</span></code> ;</p></li>
+<li><p>affiche la liste finale.</p></li>
+</ol>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgImphdW5lIiwgImJsZXUiLCAibm9pciIsICJvcmFuZ2UiLCAicm9zZSJdCi4uLg==" data-file="ZXhfbGlzdGVfNi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgImphdW5lIiwgImJsZXUiLCAibm9pciIsICJvcmFuZ2UiLCAicm9zZSJdCmNvdWxldXJzLnJlbW92ZSgicm91Z2UiKQpwcmludChjb3VsZXVycy5wb3AoKSkgICMgcm9zZQpkZWwgY291bGV1cnNbMF0KcHJpbnQoY291bGV1cnMpICAgICAgICAjIFsnamF1bmUnLCAnYmxldScsICdub2lyJywgJ29yYW5nZSdd" data-file="ZXhfbGlzdGVfNi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+</section>
+<section id="parcourir-une-liste">
+<h2>7. Parcourir une liste<a class="headerlink" href="#parcourir-une-liste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>, on traite chaque élément un par un.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KZm9yIGZydWl0IGluIGZydWl0czoKICAgIHByaW50KGZydWl0KQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Pour avoir aussi l’indice :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJ1aXRzID0gWyJwb21tZSIsICJiYW5hbmUiLCAiY2VyaXNlIl0KZm9yIGkgaW4gcmFuZ2UobGVuKGZydWl0cykpOgogICAgcHJpbnQoaSwgZnJ1aXRzW2ldKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 7 : parcours</p>
+<p>Avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>, affiche chaque couleur de la liste. Puis, avec <code class="docutils literal notranslate"><span class="pre">range</span></code>, affiche chaque couleur précédée de son indice.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCi4uLg==" data-file="ZXhfbGlzdGVfNy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291bGV1cnMgPSBbInJvdWdlIiwgInZlcnQiLCAiYmxldSJdCmZvciBjIGluIGNvdWxldXJzOgogICAgcHJpbnQoYykKCmZvciBpIGluIHJhbmdlKGxlbihjb3VsZXVycykpOgogICAgcHJpbnQoaSwgY291bGV1cnNbaV0p" data-file="ZXhfbGlzdGVfNy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="quelques-outils-pratiques">
+<h2>8. Quelques outils pratiques<a class="headerlink" href="#quelques-outils-pratiques" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm90ZXMgPSBbMTIsIDE1LCA5LCAxOF0KcHJpbnQobGVuKG5vdGVzKSkgICAjIDQgOiBub21icmUgZOKAmcOpbMOpbWVudHMKcHJpbnQobWF4KG5vdGVzKSkgICAjIDE4IDogcGx1cyBncmFuZGUgdmFsZXVyCnByaW50KG1pbihub3RlcykpICAgIyA5IDogcGx1cyBwZXRpdGUgdmFsZXVyCnByaW50KHN1bShub3RlcykpICAgIyA1NCA6IHNvbW1lCnByaW50KDE1IGluIG5vdGVzKSAgIyBUcnVlIDogdGVzdCBk4oCZYXBwYXJ0ZW5hbmNlCgpub3Rlcy5zb3J0KCkKcHJpbnQobm90ZXMpICAgICAgICAjIFs5LCAxMiwgMTUsIDE4XQoKbm90ZXMucmV2ZXJzZSgpCnByaW50KG5vdGVzKSAgICAgICAgIyBbMTgsIDE1LCAxMiwgOV0=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 8 : outils pratiques</p>
+<p>À partir de <code class="docutils literal notranslate"><span class="pre">notes</span> <span class="pre">=</span> <span class="pre">[12,</span> <span class="pre">15,</span> <span class="pre">9,</span> <span class="pre">18]</span></code>, affiche la plus grande note, la plus petite, la moyenne, puis la liste triée par ordre décroissant.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm90ZXMgPSBbMTIsIDE1LCA5LCAxOF0KLi4u" data-file="ZXhfbGlzdGVfOC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm90ZXMgPSBbMTIsIDE1LCA5LCAxOF0KcHJpbnQobWF4KG5vdGVzKSkgICAgICAgICAgICAgICAgICAjIDE4CnByaW50KG1pbihub3RlcykpICAgICAgICAgICAgICAgICAgIyA5CnByaW50KHN1bShub3RlcykgLyBsZW4obm90ZXMpKSAgICAgIyAxMy41Cm5vdGVzLnNvcnQoKQpub3Rlcy5yZXZlcnNlKCkKcHJpbnQobm90ZXMpICAgICAgICAgICAgICAgICAgICAgICAjIFsxOCwgMTUsIDEyLCA5XQ==" data-file="ZXhfbGlzdGVfOC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="tableau-recapitulatif">
+<h2>9. Tableau récapitulatif<a class="headerlink" href="#tableau-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Je veux…</p></th>
+<th class="head"><p>Je fais…</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Créer une liste</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Lire un élément</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste[0]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Modifier un élément</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste[0]</span> <span class="pre">=</span> <span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ajouter à la fin</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste.append(4)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Insérer à une position</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste.insert(1,</span> <span class="pre">99)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ajouter plusieurs éléments</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste.extend([5,</span> <span class="pre">6])</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Supprimer une valeur</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste.remove(99)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Supprimer par position</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste.pop(0)</span></code> ou <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">ma_liste[0]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Compter les éléments</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len(ma_liste)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Trier</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ma_liste.sort()</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="exercice-de-synthese">
+<h2>10. Exercice de synthèse<a class="headerlink" href="#exercice-de-synthese" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Exercice 9 : la liste de courses</p>
+<p>Reprends tout ce que tu as appris :</p>
+<ol class="simple">
+<li><p>Crée une liste vide <code class="docutils literal notranslate"><span class="pre">courses</span></code>.</p></li>
+<li><p>Ajoute <code class="docutils literal notranslate"><span class="pre">"pain"</span></code>, <code class="docutils literal notranslate"><span class="pre">"lait"</span></code> et <code class="docutils literal notranslate"><span class="pre">"oeufs"</span></code>.</p></li>
+<li><p>Insère <code class="docutils literal notranslate"><span class="pre">"beurre"</span></code> en première position.</p></li>
+<li><p>Remplace <code class="docutils literal notranslate"><span class="pre">"lait"</span></code> par <code class="docutils literal notranslate"><span class="pre">"lait</span> <span class="pre">d’avoine"</span></code>.</p></li>
+<li><p>Supprime <code class="docutils literal notranslate"><span class="pre">"oeufs"</span></code>.</p></li>
+<li><p>Affiche chaque article précédé de son numéro, en commençant à <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p>Affiche le nombre d’articles.</p></li>
+</ol>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291cnNlcyA9IFtdCi4uLg==" data-file="ZXhfbGlzdGVfc3ludGhlc2UucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-corrige admonition">
+<p class="admonition-title">Corrigé</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y291cnNlcyA9IFtdCmNvdXJzZXMuZXh0ZW5kKFsicGFpbiIsICJsYWl0IiwgIm9ldWZzIl0pCmNvdXJzZXMuaW5zZXJ0KDAsICJiZXVycmUiKQpjb3Vyc2VzWzJdID0gImxhaXQgZOKAmWF2b2luZSIKY291cnNlcy5yZW1vdmUoIm9ldWZzIikKCmZvciBpIGluIHJhbmdlKGxlbihjb3Vyc2VzKSk6CiAgICBwcmludChpICsgMSwgY291cnNlc1tpXSkKCnByaW50KGxlbihjb3Vyc2VzKSkgICMgMw==" data-file="ZXhfbGlzdGVfc3ludGhlc2UucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="algo.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">8. Les algorithmes</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="sequences.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">6. Les types séquentiels</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/prog_formel/liste.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">7. Les listes</a><ul>
+<li><a class="reference internal" href="#quest-ce-quune-liste">1. Qu’est-ce qu’une liste ?</a></li>
+<li><a class="reference internal" href="#creer-une-liste">2. Créer une liste</a></li>
+<li><a class="reference internal" href="#acceder-aux-elements">3. Accéder aux éléments</a></li>
+<li><a class="reference internal" href="#modifier-un-element">4. Modifier un élément</a></li>
+<li><a class="reference internal" href="#ajouter-des-elements">5. Ajouter des éléments</a><ul>
+<li><a class="reference internal" href="#a-la-fin-avec-append">À la fin avec <code class="docutils literal notranslate"><span class="pre">append()</span></code></a></li>
+<li><a class="reference internal" href="#a-une-position-precise-avec-insert">À une position précise avec <code class="docutils literal notranslate"><span class="pre">insert()</span></code></a></li>
+<li><a class="reference internal" href="#plusieurs-elements-avec-extend">Plusieurs éléments avec <code class="docutils literal notranslate"><span class="pre">extend()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#supprimer-des-elements">6. Supprimer des éléments</a><ul>
+<li><a class="reference internal" href="#par-valeur-avec-remove">Par valeur avec <code class="docutils literal notranslate"><span class="pre">remove()</span></code></a></li>
+<li><a class="reference internal" href="#par-position-avec-pop-ou-del">Par position avec <code class="docutils literal notranslate"><span class="pre">pop()</span></code> ou <code class="docutils literal notranslate"><span class="pre">del</span></code></a></li>
+<li><a class="reference internal" href="#tout-vider-avec-clear">Tout vider avec <code class="docutils literal notranslate"><span class="pre">clear()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#parcourir-une-liste">7. Parcourir une liste</a></li>
+<li><a class="reference internal" href="#quelques-outils-pratiques">8. Quelques outils pratiques</a></li>
+<li><a class="reference internal" href="#tableau-recapitulatif">9. Tableau récapitulatif</a></li>
+<li><a class="reference internal" href="#exercice-de-synthese">10. Exercice de synthèse</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>
