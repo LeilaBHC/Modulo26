@@ -26,7 +26,6 @@ Reprends la création du capitaine, mais empêche la personne utilisatrice de sa
 Redemande le nom tant qu'il est vide.
 
 ```{codeplay}
-:file: tp2_nom_capitaine.py
 nom = ""
 
 # À compléter : redemander le nom tant que nom == ""
