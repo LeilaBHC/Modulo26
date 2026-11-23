@@ -1,6 +1,6 @@
 (prog_formel.algo)=
 
-# 8. Les algorithmes
+# 9. Les algorithmes
 
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
@@ -739,4 +739,4 @@ print(liste)
 Cette vidéo (un peu spéciale pour vos oreilles) montre toute une liste d'algorithmes de tri en musique !
 
 ```{youtube} kPRA0W1kECg
-```
+``````
