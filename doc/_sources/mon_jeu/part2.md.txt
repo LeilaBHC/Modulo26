@@ -89,6 +89,34 @@ print("Expérience :", experience)
 ```
 ````
 
+````{admonition} Exercice 1.3 — Fiche du capitaine
+:class: note
+Affiche la fiche du capitaine avec son nom, son expérience, son or de départ calculé par `calcul_or()` et son grade obtenu avec `grade_capitaine()`.
+
+```{codeplay}
+:file: tp2_fiche_capitaine.py
+def calcul_or(experience):
+    ...
+
+def grade_capitaine(experience):
+    ...
+
+nom = ""
+...
+
+or_en_poche = calcul_or(experience)
+print("**********************************************")
+print("** Capitaine :", nom)
+print("** Expérience :", experience)
+print("** Or :", or_en_poche)
+print("** Grade :", grade_capitaine(experience))
+print("**********************************************")
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 ```{codeplay}
 :file: tp2_fiche_capitaine.py
 def calcul_or(experience):
@@ -123,7 +151,10 @@ print("** Expérience :", experience)
 print("** Or :", or_en_poche)
 print("** Grade :", grade_capitaine(experience))
 print("**********************************************")
+```
 ````
+`````
+
 
 ## Exercice 2 — La traversée
 
