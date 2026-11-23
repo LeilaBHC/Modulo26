@@ -1,6 +1,4 @@
-(prog_formel.fonctions_python)=
-
-# 5. Les fonctions en Python
+# 5. Les fonctions
 
 Une **fonction** est un bloc de code réutilisable auquel on donne un nom. On écrit son code une fois, puis on l'appelle autant de fois que nécessaire.
 
