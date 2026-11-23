@@ -34,8 +34,22 @@ Bienvenue sur la plateforme de TP d'informatique !
     prog_dessin/randomiser
     prog_dessin/aventure
 
+
+.. toctree::
+    :name: mon-jeu
+    :caption: Mon jeu
+    :maxdepth: 3
+    :hidden:
+
+    mon_jeu/part1
+    mon_jeu/part2
+    mon_jeu/jeu_complet
+
 `Programmation (parcours formel) <prog_formel/intro.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche formelle.
 
 `Programmation (parcours dessin) <prog_dessin/dessiner.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche par le dessin (basé sur le contenu de Modulo).
+
+`Mon jeu <mon_jeu/part1.html>`_
+: ce parcours accompagne la création d'un jeu en Python.
