@@ -38,7 +38,8 @@ print("Capitaine :", nom)
 ````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
-```python
+```{codeplay}
+:file: tp2_nom_capitaine.py
 nom = ""
 
 while nom == "":
