@@ -175,14 +175,7 @@ else:
 :file: titre_tempete.py
 degats = int(input("Dégâts subis par le navire (entre 0 et 100) : "))
 
-if degats < 15:
-    print("Traversée tranquille")
-elif degats < 40:
-    print("Belle frayeur")
-elif degats < 80:
-    print("Tempête redoutable")
-else:
-    print("NAUFRAGE ÉVITÉ DE JUSTESSE !")
+...
 ```
 ````
 
