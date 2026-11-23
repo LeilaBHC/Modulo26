@@ -28,6 +28,22 @@ Redemande le nom tant qu'il est vide.
 ```{codeplay}
 :file: tp2_nom_capitaine.py
 nom = ""
+
+while nom == "":
+    nom = input("Nom du capitaine : ").strip()
+    if nom == "":
+        print("Erreur : le nom ne peut pas être vide.")
+
+print("Capitaine :", nom)
+```
+````
+
+````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: tp2_nom_capitaine.py
+nom = ""
 while nom == "":
     nom = input("Nom du capitaine : ").strip()
     if nom == "":
@@ -41,6 +57,19 @@ print("Capitaine :", nom)
 :class: note
 Redemande l'expérience tant qu'elle n'est pas un entier compris entre `0` et `50`.
 
+```{codeplay}
+:file: tp2_experience_capitaine.py
+def demander_experience():
+    ...
+
+experience = demander_experience()
+print("Expérience :", experience)
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 ```{codeplay}
 :file: tp2_experience_capitaine.py
 def demander_experience():
@@ -61,15 +90,6 @@ experience = demander_experience()
 print("Expérience :", experience)
 ```
 ````
-
-````{admonition} Exercice 1.3 — Fiche du capitaine
-:class: note
-Affiche ensuite la fiche du capitaine avec :
-
-- son nom ;
-- son expérience ;
-- son or de départ calculé par `calcul_or()` ;
-- son grade obtenu avec `grade_capitaine()`.
 
 ```{codeplay}
 :file: tp2_fiche_capitaine.py
@@ -105,7 +125,6 @@ print("** Expérience :", experience)
 print("** Or :", or_en_poche)
 print("** Grade :", grade_capitaine(experience))
 print("**********************************************")
-```
 ````
 
 ## Exercice 2 — La traversée
@@ -125,6 +144,23 @@ Pour chaque jour :
 5. si `est_naufrage()` vaut `True`, utilise `break` pour arrêter la traversée ;
 6. sinon, après dix jours, affiche `"Terre en vue !"`.
 
+```{codeplay}
+:file: tp2_traversee.py
+import random
+
+solidite = 100
+
+# Complète les fonctions reparer_navire, est_naufrage et annoncer_titre
+...
+
+for jour in range(1, 11):
+    ...
+```
+````
+
+````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 ```{codeplay}
 :file: tp2_traversee.py
 import random
@@ -197,6 +233,21 @@ ile_tresor = random.randint(1, 20)
 tentatives = 5
 
 for essai in range(1, tentatives + 1):
+    ...
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: tp2_tresor.py
+import random
+
+ile_tresor = random.randint(1, 20)
+tentatives = 5
+
+for essai in range(1, tentatives + 1):
     saisie = input(f"Tentative {essai}/{tentatives} — île : ")
 
     try:
@@ -241,6 +292,32 @@ Tant que la personne utilisatrice ne saisit pas `fin` comme valeur unitaire :
 
 À la fin, affiche les résultats et ajoute le total perçu à l'or du capitaine.
 
+```{codeplay}
+:file: tp2_encheres.py
+def calculer_valeur(valeur_unitaire, quantite):
+    ...
+
+def appliquer_taxe_portuaire(total):
+    ...
+
+or_en_poche = 500
+nombre_ventes = 0
+total_percu_escale = 0
+meilleure_vente = 0
+
+while True:
+    ...
+
+print("Nombre de ventes :", nombre_ventes)
+print("Total perçu à l'escale :", total_percu_escale)
+print("Meilleure vente :", meilleure_vente)
+print("Or final :", or_en_poche)
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 ```{codeplay}
 :file: tp2_encheres.py
 def calculer_valeur(valeur_unitaire, quantite):
@@ -291,36 +368,11 @@ print("Total perçu à l'escale :", total_percu_escale)
 print("Meilleure vente :", meilleure_vente)
 print("Or final :", or_en_poche)
 ```
-````
+`````
 
-## Exercice 5 — Le jeu complet
+## Exercice 5 — Menu principal
 
-Chaque partie du jeu doit devenir une fonction qui reçoit une partie de l'état du jeu et retourne cet état modifié.
-
-````{admonition} Exercice 5 — Menu principal
-:class: note
-Assemble les exercices précédents dans un programme principal contenant le menu suivant :
-
-```text
-===== LA CHASSE AU TRÉSOR =====
-1. Voir la fiche du capitaine
-2. Prendre la mer
-3. Chercher le trésor
-4. Aller au marché
-5. Quitter
-```
-
-Le menu doit se répéter tant que la personne ne choisit pas `5`.
-
-Crée au minimum les fonctions :
-
-- `afficher_fiche(nom, experience, or_en_poche, solidite)` ;
-- `prendre_la_mer(solidite)` ;
-- `chercher_tresor()` ;
-- `aller_au_marche(or_en_poche)` ;
-- `menu_principal()`.
-
-Si le navire coule, affiche un message de fin contenant le grade et l'or final du capitaine.
+Le menu principal permet d'accéder aux différentes fonctionnalités du jeu.
 
 ```{codeplay}
 :file: tp2_jeu_complet.py
@@ -328,6 +380,45 @@ nom = "Barbe-Noire"
 experience = 5
 or_en_poche = 200
 solidite = 100
+
+# Définitions des fonctions
+...
+
+# Boucle du menu principal
+while True:
+    ...
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: tp2_jeu_complet.py
+nom = "Barbe-Noire"
+experience = 5
+or_en_poche = 200
+solidite = 100
+
+def afficher_fiche(nom, experience, or_en_poche, solidite):
+    print("**********************************************")
+    print("Capitaine :", nom)
+    print("Expérience :", experience)
+    print("Or :", or_en_poche)
+    print("Solidité :", solidite)
+    print("**********************************************")
+
+def prendre_la_mer(solidite):
+    solidite = max(0, solidite - 30)
+    print("Vous avez traversé une tempête. Solidité :", solidite)
+    return solidite
+
+def chercher_tresor():
+    print("Fonction de recherche du trésor à compléter")
+
+def aller_au_marche(or_en_poche):
+    print("Fonction du marché à compléter")
+    return or_en_poche
 
 while True:
     print("===== LA CHASSE AU TRÉSOR =====")
@@ -340,17 +431,21 @@ while True:
     choix = input("Votre choix : ")
 
     if choix == "1":
-        print(nom, experience, or_en_poche, solidite)
+        afficher_fiche(nom, experience, or_en_poche, solidite)
     elif choix == "2":
-        print("Fonction prendre_la_mer à compléter")
+        solidite = prendre_la_mer(solidite)
+        if solidite <= 0:
+            print("Partie terminée : le navire a coulé")
+            print("Or final :", or_en_poche)
+            break
     elif choix == "3":
-        print("Fonction chercher_tresor à compléter")
+        chercher_tresor()
     elif choix == "4":
-        print("Fonction aller_au_marche à compléter")
+        or_en_poche = aller_au_marche(or_en_poche)
     elif choix == "5":
         print("Au revoir !")
         break
     else:
         print("Choix invalide.")
 ```
-````
+`````
