@@ -17,7 +17,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_formel/definitions
    prog_formel/fonctions_python
    prog_formel/conditions
-   prog_formel/sequences
+   prog_formel/boucles
    prog_formel/liste
    prog_formel/algo
 

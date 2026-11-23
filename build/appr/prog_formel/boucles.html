@@ -1,0 +1,457 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="7. Les listes" href="liste.html" /><link rel="prev" title="5. Les structures conditionnelles" href="conditions.html" />
+
+    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>6. Les boucles - Python</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Python</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/CodeNPlay-logo.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/CodeNPlay-logo.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Python</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fonctions_python.html">5. Les fonctions en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">6. Les boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liste.html">7. Les listes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algo.html">8. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="les-boucles">
+<span id="prog-formel-boucles"></span><h1>6. Les boucles<a class="headerlink" href="#les-boucles" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a></p>
+<p>Une boucle permet de répéter plusieurs fois un bloc d’instructions. Cela évite de copier le même code encore et encore.</p>
+<p>Python propose principalement deux boucles :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code>, pour répéter des instructions un nombre connu de fois ou parcourir une séquence ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code>, pour répéter des instructions tant qu’une condition reste vraie.</p></li>
+</ul>
+<section id="la-boucle-for">
+<h2>La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#la-boucle-for" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’instruction <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">valeur</span> <span class="pre">in</span> <span class="pre">sequence</span></code> parcourt chaque élément d’une séquence. Pour chaque élément, elle exécute une fois le bloc d’instructions indenté.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlc2lkZW50cyA9IFsiQnVzaCIsICJDbGludG9uIiwgIkJ1c2giLCAiT2JhbWEiLCAiVHJ1bXAiXQpmb3Igbm9tIGluIHByZXNpZGVudHM6CiAgICBwcmludChub20p" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La variable <code class="docutils literal notranslate"><span class="pre">nom</span></code> prend successivement chaque valeur de la liste. Elle est appelée <strong>variable d’itération</strong>.</p>
+<p>L’exemple suivant dessine cinq cercles de couleurs différentes :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ3VwJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjM6MTogJ2JhY2t3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDMsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjY6NTogJ2RvdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo3OjU6ICd3cml0ZScgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA3LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo4OjU6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDgsICJjb2x1bW4iOiA0fV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQpiYWNrd2FyZCgyMDApCgpmb3IgY291bGV1ciBpbiBbJ3llbGxvdycsICdjeWFuJywgJ29yYW5nZScsICdwaW5rJywgJ2xpbWUnXToKICAgIGRvdCg4MCwgY291bGV1cikKICAgIHdyaXRlKGNvdWxldXIsIGFsaWduPSdjZW50ZXInKQogICAgZm9yd2FyZCg4MCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 23 - Somme des nombres</p>
+<p>Écrivez une boucle qui calcule la somme des nombres suivants : <code class="docutils literal notranslate"><span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">11</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="c29tbWUgPSAwCmZvciBub21icmUgaW4gWzIsIDMsIDUsIDcsIDExXToKICAgIC4uLgpwcmludChzb21tZSk=" data-file="ZXhfMjMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="c29tbWUgPSAwCmZvciBub21icmUgaW4gWzIsIDMsIDUsIDcsIDExXToKICAgIHNvbW1lID0gc29tbWUgKyBub21icmUKcHJpbnQoc29tbWUp" data-file="ZXhfMjMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="le-type-range">
+<h2>Le type <code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#le-type-range" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une <code class="docutils literal notranslate"><span class="pre">range</span></code> représente une suite de nombres entiers. Elle permet notamment de contrôler précisément le nombre de répétitions d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> utilise :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> : la première valeur ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code> : la limite finale, exclue ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code> : l’écart entre deux valeurs.</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IHJhbmdlKDEsIDEwKQpmb3Igbm9tYnJlIGluIG5vbWJyZXM6CiAgICBwcmludChmIntub21icmV9IGF1IGNhcnLDqSB2YXV0IHtub21icmUgKiogMn0iKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Avec seulement un argument, <code class="docutils literal notranslate"><span class="pre">range(10)</span></code> produit les nombres de <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
+<section id="dessiner-un-polygone">
+<h3>Dessiner un polygone<a class="headerlink" href="#dessiner-un-polygone" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjU6OTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogOH1d" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShsb25ndWV1ciwgbm9tYnJlX3NvbW1ldHMpOgogICAgZm9yIGkgaW4gcmFuZ2Uobm9tYnJlX3NvbW1ldHMpOgogICAgICAgIGZvcndhcmQobG9uZ3VldXIpCiAgICAgICAgbGVmdCgzNjAgLyBub21icmVfc29tbWV0cykKCnBvbHlnb25lKDUwLCA1KQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="parcourir-des-intervalles">
+<h3>Parcourir des intervalles<a class="headerlink" href="#parcourir-des-intervalles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’argument <code class="docutils literal notranslate"><span class="pre">step</span></code> permet de choisir l’écart entre les nombres :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ3VwJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjU6NTogJ2dvdG8nIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo1OiAnd3JpdGUnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNiwgImNvbHVtbiI6IDR9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKZm9yIHggaW4gcmFuZ2UoLTI1MCwgMjUxLCA1MCk6CiAgICBnb3RvKHgsIDApCiAgICB3cml0ZSh4LCBhbGlnbj0nY2VudGVyJyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="imbriquer-des-boucles">
+<h3>Imbriquer des boucles<a class="headerlink" href="#imbriquer-des-boucles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une boucle peut être placée à l’intérieur d’une autre boucle. Cela permet, par exemple, d’afficher toutes les tables de multiplication :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoMSwgMTApOgogICAgcHJpbnQoZiJUYWJsZSBkZSB7aX0iKQogICAgZm9yIGogaW4gcmFuZ2UoMSwgMTApOgogICAgICAgIHByaW50KGYie2l9IMOXIHtqfSA9IHtpICogan0iKQogICAgcHJpbnQoKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 24 - Nombres premiers</p>
+<ol class="simple">
+<li><p>Écrivez une fonction <code class="docutils literal notranslate"><span class="pre">est_premier(nombre)</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si le nombre est premier et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p></li>
+<li><p>Affichez tous les nombres premiers inférieurs à 1000.</p></li>
+</ol>
+<p>Pour rappel, un nombre premier est divisible uniquement par <code class="docutils literal notranslate"><span class="pre">1</span></code> et par lui-même.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGVzdF9wcmVtaWVyKG5vbWJyZSk6CiAgICBpZiBub21icmUgPCAyOgogICAgICAgIHJldHVybiBGYWxzZQoKICAgICMgVGVzdGV6IGxlcyBkaXZpc2V1cnMgcG9zc2libGVzIGF2ZWMgdW5lIGJvdWNsZQogICAgLi4uCgojIEFmZmljaGV6IGxlcyBub21icmVzIHByZW1pZXJzIGluZsOpcmlldXJzIMOgIDEwMDAKLi4u" data-file="ZXhfMjQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGVzdF9wcmVtaWVyKG5vbWJyZSk6CiAgICBpZiBub21icmUgPCAyOgogICAgICAgIHJldHVybiBGYWxzZQoKICAgIGZvciBkaXZpc2V1ciBpbiByYW5nZSgyLCBub21icmUpOgogICAgICAgIGlmIG5vbWJyZSAlIGRpdmlzZXVyID09IDA6CiAgICAgICAgICAgIHJldHVybiBGYWxzZQoKICAgIHJldHVybiBUcnVlCgpmb3Igbm9tYnJlIGluIHJhbmdlKDEwMDApOgogICAgaWYgZXN0X3ByZW1pZXIobm9tYnJlKToKICAgICAgICBwcmludChub21icmUp" data-file="ZXhfMjQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Dès qu’un <code class="docutils literal notranslate"><span class="pre">return</span></code> est exécuté, la fonction s’arrête immédiatement.</p>
+</div>
+</details></div>
+</section>
+</section>
+<section id="la-boucle-while">
+<h2>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#la-boucle-while" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> répète ses instructions tant que sa condition est vraie.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y29tcHRldXIgPSAwCndoaWxlIGNvbXB0ZXVyIDwgNToKICAgIHByaW50KGNvbXB0ZXVyKQogICAgY29tcHRldXIgPSBjb21wdGV1ciArIDE=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Il faut vérifier que la condition finira par devenir fausse. Sinon, la boucle ne s’arrête jamais.</p>
+<section id="sortir-dune-boucle-avec-break">
+<h3>Sortir d’une boucle avec <code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#sortir-dune-boucle-avec-break" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’instruction <code class="docutils literal notranslate"><span class="pre">break</span></code> permet d’arrêter immédiatement la boucle en cours.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlID0gMQp3aGlsZSBUcnVlOgogICAgcHJpbnQobm9tYnJlKQogICAgbm9tYnJlID0gbm9tYnJlICsgMQogICAgaWYgbm9tYnJlID4gNToKICAgICAgICBicmVhaw==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 25 - Deviner un nombre</p>
+<p>Créez une boucle qui demande un nombre à la personne utilisatrice jusqu’à ce qu’elle entre <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="d2hpbGUgVHJ1ZToKICAgIG5vbWJyZSA9IGludChpbnB1dCgiRGV2aW5lIGxlIG5vbWJyZSA6ICIpKQogICAgaWYgbm9tYnJlID09IDQyOgogICAgICAgIHByaW50KCJCcmF2byAhIikKICAgICAgICBicmVhawogICAgcHJpbnQoIkNlIG4nZXN0IHBhcyBsZSBib24gbm9tYnJlLiIp" data-file="ZXhfMjUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</section>
+</section>
+<section id="le-jeu-du-pendu">
+<h2>Le jeu du pendu<a class="headerlink" href="#le-jeu-du-pendu" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le jeu du pendu consiste à trouver un mot en devinant ses lettres. Le jeu utilise plusieurs boucles :</p>
+<ul class="simple">
+<li><p>une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> pour faire continuer la partie ;</p></li>
+<li><p>une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> pour parcourir les lettres du mot ;</p></li>
+<li><p>une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> ou <code class="docutils literal notranslate"><span class="pre">while</span></code> pour construire l’affichage du mot.</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bW90X2FfdHJvdXZlciA9ICJwb3Rpcm9uIgpsZXR0cmVzX3Ryb3V2ZWVzID0gW10KbmJfZXJyZXVycyA9IDAKCndoaWxlIG5iX2VycmV1cnMgPCA2OgogICAgbW90X2FmZmljaGUgPSAiIgoKICAgIGZvciBsZXR0cmUgaW4gbW90X2FfdHJvdXZlcjoKICAgICAgICBpZiBsZXR0cmUgaW4gbGV0dHJlc190cm91dmVlczoKICAgICAgICAgICAgbW90X2FmZmljaGUgPSBtb3RfYWZmaWNoZSArIGxldHRyZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIG1vdF9hZmZpY2hlID0gbW90X2FmZmljaGUgKyAiXyIKICAgICAgICBtb3RfYWZmaWNoZSA9IG1vdF9hZmZpY2hlICsgIiAiCgogICAgaWYgIl8iIG5vdCBpbiBtb3RfYWZmaWNoZToKICAgICAgICBwcmludCgiR2FnbsOpICEiKQogICAgICAgIGJyZWFrCgogICAgcHJpbnQobW90X2FmZmljaGUpCiAgICBsZXR0cmVfcHJvcG9zZWUgPSBpbnB1dCgiTGV0dHJlIDogIikKCiAgICBpZiBsZXR0cmVfcHJvcG9zZWUgaW4gbW90X2FfdHJvdXZlcjoKICAgICAgICBpZiBsZXR0cmVfcHJvcG9zZWUgbm90IGluIGxldHRyZXNfdHJvdXZlZXM6CiAgICAgICAgICAgIGxldHRyZXNfdHJvdXZlZXMuYXBwZW5kKGxldHRyZV9wcm9wb3NlZSkKICAgIGVsc2U6CiAgICAgICAgbmJfZXJyZXVycyA9IG5iX2VycmV1cnMgKyAxCgppZiBuYl9lcnJldXJzID09IDY6CiAgICBwcmludCgiUGVuZHUgISIpCiAgICBwcmludChmIkxlIG1vdCDDqXRhaXQge21vdF9hX3Ryb3V2ZXJ9LiIp" data-file="ZXhfcGVuZHUucHk=" data-output-max-lines="8" data-output-min-lines="8" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice du pendu</p>
+<p>Modifiez le programme pour que l’ordinateur choisisse aléatoirement un mot parmi une liste de mots.</p>
+<p>Plusieurs pistes sont possibles :</p>
+<ul class="simple">
+<li><p>utiliser <code class="docutils literal notranslate"><span class="pre">random.choice(liste)</span></code> ;</p></li>
+<li><p>utiliser <code class="docutils literal notranslate"><span class="pre">random.randint()</span></code> pour choisir un index.</p></li>
+</ul>
+<p>Faites en sorte que le programme s’arrête dès que le mot est trouvé.</p>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="liste.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">7. Les listes</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="conditions.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">5. Les structures conditionnelles</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/prog_formel/boucles.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">6. Les boucles</a><ul>
+<li><a class="reference internal" href="#la-boucle-for">La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
+<li><a class="reference internal" href="#le-type-range">Le type <code class="docutils literal notranslate"><span class="pre">range</span></code></a><ul>
+<li><a class="reference internal" href="#dessiner-un-polygone">Dessiner un polygone</a></li>
+<li><a class="reference internal" href="#parcourir-des-intervalles">Parcourir des intervalles</a></li>
+<li><a class="reference internal" href="#imbriquer-des-boucles">Imbriquer des boucles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#la-boucle-while">La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></a><ul>
+<li><a class="reference internal" href="#sortir-dune-boucle-avec-break">Sortir d’une boucle avec <code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#le-jeu-du-pendu">Le jeu du pendu</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>
