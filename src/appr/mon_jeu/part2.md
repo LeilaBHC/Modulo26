@@ -1,83 +1,356 @@
 (mon_jeu.part2)=
 
-# 2. Partie 2
+# 2. Partie 2 — La traversée pirate
 
-Dans cette deuxième partie, tu vas améliorer ton jeu pour qu'il puisse continuer pendant plusieurs tours.
+Dans cette partie, tu fais vivre l'aventure : voyage, recherche du trésor, marché aux enchères et menu principal.
 
-## Faire évoluer une partie
+Tu réutiliseras les fonctions des exercices précédents :
 
-Une partie peut évoluer grâce à :
+- `calcul_or()`
+- `affichage()`
+- `reparer_navire()`
+- `est_naufrage()`
+- `grade_capitaine()`
+- `calculer_valeur()`
+- `appliquer_taxe_portuaire()`
+- `annoncer_titre()`
 
-- une boucle `while` ;
-- un score ;
-- un nombre de tentatives ;
-- une liste de questions ou d'éléments possibles ;
-- des fonctions pour organiser le code.
+Les notions utilisées sont : `while`, `for`, `range`, les compteurs, les accumulateurs, `break`, `continue`, la validation de saisie, les boucles imbriquées et le module `random`.
 
-```{codeplay}
-score = 0
-continuer = True
+## Exercice 1 — Création du capitaine sécurisée
 
-while continuer:
-    reponse = input("Tape continuer ou quitter : ")
-    if reponse == "continuer":
-        score = score + 1
-        print("Score :", score)
-    else:
-        continuer = False
+Reprends la création du capitaine, mais empêche la personne utilisatrice de saisir une donnée incorrecte.
 
-print("Partie terminée !")
-```
-
-## Organiser le jeu avec une fonction
-
-```{codeplay}
-def demander_action():
-    return input("Que veux-tu faire ? ")
-
-action = demander_action()
-print("Tu as choisi :", action)
-```
-
-````{admonition} Exercice 1 : ajouter des tours
+````{admonition} Exercice 1.1 — Nom du capitaine
 :class: note
-Modifie ton jeu pour qu'il fasse plusieurs tours.
-
-Tu peux utiliser :
-
-- une boucle `while` ;
-- une variable `score` ;
-- une variable `nombre_tentatives` ;
-- une condition pour arrêter la partie.
+Redemande le nom tant qu'il est vide.
 
 ```{codeplay}
-:file: mon_jeu_part2.py
-score = 0
-continuer = True
+:file: tp2_nom_capitaine.py
+nom = ""
+while nom == "":
+    nom = input("Nom du capitaine : ").strip()
+    if nom == "":
+        print("Erreur : le nom ne peut pas être vide.")
 
-while continuer:
-    # demande une action
-    # modifie le score
-    # vérifie si la partie doit s'arrêter
-    ...
-
-print("Score final :", score)
+print("Capitaine :", nom)
 ```
 ````
 
-````{admonition} Exercice 2 : organiser le code
+````{admonition} Exercice 1.2 — Expérience valide
 :class: note
-Crée au moins une fonction utile à ton jeu, par exemple pour afficher les règles, demander une action ou vérifier une réponse.
+Redemande l'expérience tant qu'elle n'est pas un entier compris entre `0` et `50`.
 
 ```{codeplay}
-:file: mon_jeu_fonctions.py
-def afficher_regles():
-    ...
+:file: tp2_experience_capitaine.py
+def demander_experience():
+    while True:
+        saisie = input("Expérience (0 à 50) : ")
+        try:
+            experience = int(saisie)
+        except ValueError:
+            print("Erreur : entrez un nombre entier.")
+            continue
 
-def demander_action():
-    ...
+        if 0 <= experience <= 50:
+            return experience
 
-def verifier_reponse(reponse):
-    ...
+        print("Erreur : l'expérience doit être comprise entre 0 et 50.")
+
+experience = demander_experience()
+print("Expérience :", experience)
+```
+````
+
+````{admonition} Exercice 1.3 — Fiche du capitaine
+:class: note
+Affiche ensuite la fiche du capitaine avec :
+
+- son nom ;
+- son expérience ;
+- son or de départ calculé par `calcul_or()` ;
+- son grade obtenu avec `grade_capitaine()`.
+
+```{codeplay}
+:file: tp2_fiche_capitaine.py
+def calcul_or(experience):
+    return 100 + experience * 20
+
+def grade_capitaine(experience):
+    if experience < 2:
+        return "Mousse"
+    if experience <= 6:
+        return "Matelot"
+    if experience <= 15:
+        return "Capitaine"
+    return "Seigneur des mers"
+
+nom = ""
+while nom == "":
+    nom = input("Nom du capitaine : ").strip()
+
+while True:
+    try:
+        experience = int(input("Expérience (0 à 50) : "))
+        if 0 <= experience <= 50:
+            break
+        print("Erreur : l'expérience doit être comprise entre 0 et 50.")
+    except ValueError:
+        print("Erreur : entrez un nombre entier.")
+
+or_en_poche = calcul_or(experience)
+print("**********************************************")
+print("** Capitaine :", nom)
+print("** Expérience :", experience)
+print("** Or :", or_en_poche)
+print("** Grade :", grade_capitaine(experience))
+print("**********************************************")
+```
+````
+
+## Exercice 2 — La traversée
+
+Le navire commence avec `100` unités de solidité et doit tenir `10` jours en mer.
+
+Chaque jour, une tempête inflige des dégâts aléatoires entre `0` et `10` avec `random.randint(0, 10)`.
+
+````{admonition} Exercice 2.1 — Boucle des dix jours
+:class: note
+Pour chaque jour :
+
+1. tire les dégâts aléatoires ;
+2. soustrais-les à la solidité ;
+3. affiche le jour, les dégâts, la solidité restante et le titre obtenu avec `annoncer_titre()` ;
+4. tous les trois jours, utilise `reparer_navire()` pour ajouter `15` points sans dépasser `100` ;
+5. si `est_naufrage()` vaut `True`, utilise `break` pour arrêter la traversée ;
+6. sinon, après dix jours, affiche `"Terre en vue !"`.
+
+```{codeplay}
+:file: tp2_traversee.py
+import random
+
+solidite = 100
+
+def reparer_navire(solidite_actuelle, reparation):
+    return min(solidite_actuelle + reparation, 100)
+
+def est_naufrage(solidite):
+    return solidite <= 0
+
+def annoncer_titre(degats):
+    if degats < 15:
+        return "Traversée tranquille"
+    if degats < 40:
+        return "Belle frayeur"
+    if degats < 80:
+        return "Tempête redoutable"
+    return "NAUFRAGE ÉVITÉ DE JUSTESSE !"
+
+for jour in range(1, 11):
+    degats = random.randint(0, 10)
+    solidite = max(0, solidite - degats)
+
+    print("Jour", jour)
+    print("Dégâts :", degats)
+    print("Solidité restante :", solidite)
+    print("Titre :", annoncer_titre(degats))
+
+    if jour % 3 == 0:
+        solidite = reparer_navire(solidite, 15)
+        print("Réparation : solidité", solidite)
+
+    if est_naufrage(solidite):
+        print(f"Le navire a sombré au jour {jour}")
+        break
+else:
+    print("Terre en vue !")
+    print("Solidité finale :", solidite)
+```
+````
+
+````{admonition} À retenir
+:class: important
+- `break` permet d'arrêter immédiatement une boucle ;
+- la partie `else` d'une boucle `for` s'exécute uniquement si la boucle n'a pas été interrompue par `break` ;
+- `jour % 3 == 0` permet de détecter les jours `3`, `6` et `9`.
+````
+
+## Exercice 3 — À la recherche du trésor
+
+Le trésor est caché sur une île numérotée de `1` à `20`. Le joueur dispose de `5` tentatives.
+
+````{admonition} Exercice 3.1 — Deviner l'île
+:class: note
+À chaque essai :
+
+- indique `"Plus haut"` si le trésor se trouve sur une île plus élevée ;
+- indique `"Plus bas"` si le trésor se trouve sur une île moins élevée ;
+- utilise `continue` pour les saisies invalides ;
+- ne consomme pas de tentative lorsque la saisie est invalide ;
+- révèle l'île du trésor en cas d'échec.
+
+```{codeplay}
+:file: tp2_tresor.py
+import random
+
+ile_tresor = random.randint(1, 20)
+tentatives = 5
+
+for essai in range(1, tentatives + 1):
+    saisie = input(f"Tentative {essai}/{tentatives} — île : ")
+
+    try:
+        proposition = int(saisie)
+    except ValueError:
+        print("Erreur : entrez un nombre entier.")
+        continue
+
+    if proposition < 1 or proposition > 20:
+        print("Erreur : choisissez une île entre 1 et 20.")
+        continue
+
+    if proposition < ile_tresor:
+        print("Plus haut")
+    elif proposition > ile_tresor:
+        print("Plus bas")
+    else:
+        tentatives_restantes = tentatives - essai + 1
+        gain = 50 * tentatives_restantes
+        print("Trésor trouvé !")
+        print("Gain :", gain, "pièces d'or")
+        break
+else:
+    print("Échec : le trésor était sur l'île", ile_tresor)
+```
+````
+
+## Exercice 4 — Les enchères en continu
+
+Pendant toute l'escale, le capitaine vend son butin.
+
+````{admonition} Exercice 4 — Plusieurs ventes
+:class: note
+Tant que la personne utilisatrice ne saisit pas `fin` comme valeur unitaire :
+
+1. demande la quantité vendue ;
+2. utilise `calculer_valeur()` ;
+3. utilise `appliquer_taxe_portuaire()` ;
+4. compte le nombre de ventes ;
+5. additionne le total perçu ;
+6. conserve la meilleure vente.
+
+À la fin, affiche les résultats et ajoute le total perçu à l'or du capitaine.
+
+```{codeplay}
+:file: tp2_encheres.py
+def calculer_valeur(valeur_unitaire, quantite):
+    return valeur_unitaire * quantite
+
+def appliquer_taxe_portuaire(total):
+    if total > 200:
+        taux = 20
+        total_percu = total * 0.80
+    elif total >= 80:
+        taux = 10
+        total_percu = total * 0.90
+    else:
+        taux = 0
+        total_percu = total
+    return taux, total_percu
+
+or_en_poche = 500
+nombre_ventes = 0
+total_percu_escale = 0
+meilleure_vente = 0
+
+while True:
+    saisie = input("Valeur unitaire (tapez fin pour arrêter) : ")
+    if saisie.lower() == "fin":
+        break
+
+    try:
+        valeur_unitaire = float(saisie)
+        quantite = int(input("Quantité vendue : "))
+    except ValueError:
+        print("Saisie invalide.")
+        continue
+
+    total = calculer_valeur(valeur_unitaire, quantite)
+    taux, total_percu = appliquer_taxe_portuaire(total)
+
+    nombre_ventes = nombre_ventes + 1
+    total_percu_escale = total_percu_escale + total_percu
+    if total_percu > meilleure_vente:
+        meilleure_vente = total_percu
+
+    print(f"Taxe : {taux}% — Perçu : {total_percu} pièces d'or")
+
+or_en_poche = or_en_poche + total_percu_escale
+print("Nombre de ventes :", nombre_ventes)
+print("Total perçu à l'escale :", total_percu_escale)
+print("Meilleure vente :", meilleure_vente)
+print("Or final :", or_en_poche)
+```
+````
+
+## Exercice 5 — Le jeu complet
+
+Chaque partie du jeu doit devenir une fonction qui reçoit une partie de l'état du jeu et retourne cet état modifié.
+
+````{admonition} Exercice 5 — Menu principal
+:class: note
+Assemble les exercices précédents dans un programme principal contenant le menu suivant :
+
+```text
+===== LA CHASSE AU TRÉSOR =====
+1. Voir la fiche du capitaine
+2. Prendre la mer
+3. Chercher le trésor
+4. Aller au marché
+5. Quitter
+```
+
+Le menu doit se répéter tant que la personne ne choisit pas `5`.
+
+Crée au minimum les fonctions :
+
+- `afficher_fiche(nom, experience, or_en_poche, solidite)` ;
+- `prendre_la_mer(solidite)` ;
+- `chercher_tresor()` ;
+- `aller_au_marche(or_en_poche)` ;
+- `menu_principal()`.
+
+Si le navire coule, affiche un message de fin contenant le grade et l'or final du capitaine.
+
+```{codeplay}
+:file: tp2_jeu_complet.py
+nom = "Barbe-Noire"
+experience = 5
+or_en_poche = 200
+solidite = 100
+
+while True:
+    print("===== LA CHASSE AU TRÉSOR =====")
+    print("1. Voir la fiche du capitaine")
+    print("2. Prendre la mer")
+    print("3. Chercher le trésor")
+    print("4. Aller au marché")
+    print("5. Quitter")
+
+    choix = input("Votre choix : ")
+
+    if choix == "1":
+        print(nom, experience, or_en_poche, solidite)
+    elif choix == "2":
+        print("Fonction prendre_la_mer à compléter")
+    elif choix == "3":
+        print("Fonction chercher_tresor à compléter")
+    elif choix == "4":
+        print("Fonction aller_au_marche à compléter")
+    elif choix == "5":
+        print("Au revoir !")
+        break
+    else:
+        print("Choix invalide.")
 ```
 ````
