@@ -29,6 +29,7 @@ Redemande le nom tant qu'il est vide.
 :file: tp2_nom_capitaine.py
 nom = ""
 
+# Redemande le nom tant que nom == ""
 while nom == "":
     nom = input("Nom du capitaine : ")
     if nom == "":
