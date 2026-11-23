@@ -30,7 +30,7 @@ Redemande le nom tant qu'il est vide.
 nom = ""
 
 while nom == "":
-    nom = input("Nom du capitaine : ").strip()
+    nom = input("Nom du capitaine : ")
     if nom == "":
         print("Erreur : le nom ne peut pas être vide.")
 
@@ -45,7 +45,7 @@ print("Capitaine :", nom)
 :file: tp2_nom_capitaine.py
 nom = ""
 while nom == "":
-    nom = input("Nom du capitaine : ").strip()
+    nom = input("Nom du capitaine : ")
     if nom == "":
         print("Erreur : le nom ne peut pas être vide.")
 
@@ -107,7 +107,7 @@ def grade_capitaine(experience):
 
 nom = ""
 while nom == "":
-    nom = input("Nom du capitaine : ").strip()
+    nom = input("Nom du capitaine : ")
 
 while True:
     try:
