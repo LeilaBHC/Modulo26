@@ -14,10 +14,10 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_formel/intro
    prog_formel/variables
    prog_formel/conditions
+   prog_formel/fonctions_python
    prog_formel/boucles
    prog_formel/liste
    prog_formel/tuples
-   prog_formel/fonctions_python
    prog_formel/algo
 
 
