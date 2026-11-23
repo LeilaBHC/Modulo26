@@ -448,20 +448,71 @@
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGdyYWRlX2NhcGl0YWluZShleHBlcmllbmNlKToKICAgIGlmIGV4cGVyaWVuY2UgPCAyOgogICAgICAgIHJldHVybiAiTW91c3NlIgogICAgZWxpZiBleHBlcmllbmNlIDw9IDY6CiAgICAgICAgcmV0dXJuICJNYXRlbG90IgogICAgZWxpZiBleHBlcmllbmNlIDw9IDE1OgogICAgICAgIHJldHVybiAiQ2FwaXRhaW5lIgogICAgcmV0dXJuICJTZWlnbmV1ciBkZXMgbWVycyIKCnByaW50KGdyYWRlX2NhcGl0YWluZSgxKSkKcHJpbnQoZ3JhZGVfY2FwaXRhaW5lKDUpKQpwcmludChncmFkZV9jYXBpdGFpbmUoMjApKQ==" data-file="Z3JhZGVfY2FwaXRhaW5lLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
 </section>
-<section id="exercice-4-recapitulatif-de-la-partie-1">
-<h2>Exercice 4 — Récapitulatif de la Partie 1<a class="headerlink" href="#exercice-4-recapitulatif-de-la-partie-1" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-4-le-marche-aux-encheres">
+<h2>Exercice 4 — Le marché aux enchères<a class="headerlink" href="#exercice-4-le-marche-aux-encheres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>À chaque escale, le capitaine peut vendre son butin au marché du port.</p>
+<section id="calculer-la-valeur-du-butin">
+<h3>Calculer la valeur du butin<a class="headerlink" href="#calculer-la-valeur-du-butin" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="note admonition">
-<p class="admonition-title">Exercice 4 — Projet intégré</p>
-<p>Reprends les exercices précédents pour créer un petit programme qui contient :</p>
-<ol class="simple">
-<li><p>les données du capitaine ;</p></li>
-<li><p>le calcul de l’or initial ;</p></li>
-<li><p>la solidité du navire ;</p></li>
-<li><p>les dégâts de la tempête ;</p></li>
-<li><p>la possession ou non de la carte au trésor ;</p></li>
-<li><p>les fonctions <code class="docutils literal notranslate"><span class="pre">calcul_or()</span></code>, <code class="docutils literal notranslate"><span class="pre">est_naufrage()</span></code> et <code class="docutils literal notranslate"><span class="pre">grade_capitaine()</span></code>.</p></li>
-</ol>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tX2NhcGl0YWluZSA9IGlucHV0KCJOb20gZHUgY2FwaXRhaW5lIDogIikKZXhwZXJpZW5jZSA9IGludChpbnB1dCgiRXhww6lyaWVuY2UgOiAiKSkKcG9zc2VkZV9jYXJ0ZV90cmVzb3IgPSBUcnVlCgpkZWYgY2FsY3VsX29yKGV4cGVyaWVuY2UpOgogICAgLi4uCgpkZWYgZXN0X25hdWZyYWdlKHNvbGlkaXRlKToKICAgIC4uLgoKZGVmIGdyYWRlX2NhcGl0YWluZShleHBlcmllbmNlKToKICAgIC4uLgoKb3JfZW5fcG9jaGUgPSBjYWxjdWxfb3IoZXhwZXJpZW5jZSkKc29saWRpdGUgPSBpbnQoaW5wdXQoIlNvbGlkaXTDqSBkdSBuYXZpcmUgOiAiKSkKCnByaW50KCJDYXBpdGFpbmUgOiIsIG5vbV9jYXBpdGFpbmUpCnByaW50KCJHcmFkZSA6IiwgZ3JhZGVfY2FwaXRhaW5lKGV4cGVyaWVuY2UpKQpwcmludCgiT3IgZW4gcG9jaGUgOiIsIG9yX2VuX3BvY2hlKQpwcmludCgiTmF2aXJlIG5hdWZyYWfDqSA6IiwgZXN0X25hdWZyYWdlKHNvbGlkaXRlKSk=" data-file="Y2hhc3NlX3RyZXNvcl9wYXJ0aWUxLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<p class="admonition-title">Exercice 4.1 — Valeur totale</p>
+<p>Crée une fonction <code class="docutils literal notranslate"><span class="pre">calculer_valeur(valeur_unitaire,</span> <span class="pre">quantite)</span></code> qui retourne la valeur totale du butin.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVyX3ZhbGV1cih2YWxldXJfdW5pdGFpcmUsIHF1YW50aXRlKToKICAgIC4uLgoKcHJpbnQoY2FsY3VsZXJfdmFsZXVyKDMwLCA4KSk=" data-file="bWFyY2hlX3ZhbGV1ci5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVyX3ZhbGV1cih2YWxldXJfdW5pdGFpcmUsIHF1YW50aXRlKToKICAgIHJldHVybiB2YWxldXJfdW5pdGFpcmUgKiBxdWFudGl0ZQoKcHJpbnQoY2FsY3VsZXJfdmFsZXVyKDMwLCA4KSk=" data-file="bWFyY2hlX3ZhbGV1ci5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="appliquer-la-taxe-portuaire">
+<h3>Appliquer la taxe portuaire<a class="headerlink" href="#appliquer-la-taxe-portuaire" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Exercice 4.2 — Taxe du port</p>
+<p>Crée une fonction <code class="docutils literal notranslate"><span class="pre">appliquer_taxe_portuaire(total)</span></code> qui applique une taxe de <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">%</span></code> au-dessus de <code class="docutils literal notranslate"><span class="pre">200</span></code>, une taxe de <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">%</span></code> entre <code class="docutils literal notranslate"><span class="pre">80</span></code> et <code class="docutils literal notranslate"><span class="pre">200</span></code> inclus, ou aucune taxe en dessous de <code class="docutils literal notranslate"><span class="pre">80</span></code>. Elle retourne le taux et le total final.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGFwcGxpcXVlcl90YXhlX3BvcnR1YWlyZSh0b3RhbCk6CiAgICAuLi4KCnRhdXgsIHRvdGFsX2ZpbmFsID0gYXBwbGlxdWVyX3RheGVfcG9ydHVhaXJlKDI0MCkKcHJpbnQodGF1eCwgdG90YWxfZmluYWwp" data-file="dGF4ZV9wb3J0dWFpcmUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGFwcGxpcXVlcl90YXhlX3BvcnR1YWlyZSh0b3RhbCk6CiAgICBpZiB0b3RhbCA+IDIwMDoKICAgICAgICB0YXV4ID0gMjAKICAgICAgICB0b3RhbF9maW5hbCA9IHRvdGFsICogMC44MAogICAgZWxpZiB0b3RhbCA+PSA4MDoKICAgICAgICB0YXV4ID0gMTAKICAgICAgICB0b3RhbF9maW5hbCA9IHRvdGFsICogMC45MAogICAgZWxzZToKICAgICAgICB0YXV4ID0gMAogICAgICAgIHRvdGFsX2ZpbmFsID0gdG90YWwKCiAgICByZXR1cm4gdGF1eCwgdG90YWxfZmluYWwKCnRhdXgsIHRvdGFsX2ZpbmFsID0gYXBwbGlxdWVyX3RheGVfcG9ydHVhaXJlKDI0MCkKcHJpbnQodGF1eCwgdG90YWxfZmluYWwp" data-file="dGF4ZV9wb3J0dWFpcmUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="programme-complet-du-marche">
+<h3>Programme complet du marché<a class="headerlink" href="#programme-complet-du-marche" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Exercice 4.3 — Vente au marché</p>
+<p>Dans le programme principal, demande la valeur unitaire et la quantité vendue, utilise les deux fonctions, puis affiche le total avant taxe, la taxe appliquée et le total perçu.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVyX3ZhbGV1cih2YWxldXJfdW5pdGFpcmUsIHF1YW50aXRlKToKICAgIC4uLgoKZGVmIGFwcGxpcXVlcl90YXhlX3BvcnR1YWlyZSh0b3RhbCk6CiAgICAuLi4KCnZhbGV1cl91bml0YWlyZSA9IGZsb2F0KGlucHV0KCJWYWxldXIgdW5pdGFpcmUgZCd1biBvYmpldCA6ICIpKQpxdWFudGl0ZSA9IGludChpbnB1dCgiUXVhbnRpdMOpIHZlbmR1ZSA6ICIpKQoKdG90YWwgPSBjYWxjdWxlcl92YWxldXIodmFsZXVyX3VuaXRhaXJlLCBxdWFudGl0ZSkKdGF1eCwgdG90YWxfcGVyY3UgPSBhcHBsaXF1ZXJfdGF4ZV9wb3J0dWFpcmUodG90YWwpCgpwcmludChmIlRvdGFsIGF2YW50IHRheGUgOiB7dG90YWx9IHBpw6hjZXMgZCdvciIpCnByaW50KGYiVGF4ZSBhcHBsaXF1w6llIDoge3RhdXh9JSIpCnByaW50KGYiVG90YWwgcGVyw6d1IDoge3RvdGFsX3BlcmN1fSBwacOoY2VzIGQnb3IiKQ==" data-file="bWFyY2hlX2F1X3RyZXNvci5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVyX3ZhbGV1cih2YWxldXJfdW5pdGFpcmUsIHF1YW50aXRlKToKICAgIHJldHVybiB2YWxldXJfdW5pdGFpcmUgKiBxdWFudGl0ZQoKZGVmIGFwcGxpcXVlcl90YXhlX3BvcnR1YWlyZSh0b3RhbCk6CiAgICBpZiB0b3RhbCA+IDIwMDoKICAgICAgICB0YXV4ID0gMjAKICAgICAgICB0b3RhbF9wZXJjdSA9IHRvdGFsICogMC44MAogICAgZWxpZiB0b3RhbCA+PSA4MDoKICAgICAgICB0YXV4ID0gMTAKICAgICAgICB0b3RhbF9wZXJjdSA9IHRvdGFsICogMC45MAogICAgZWxzZToKICAgICAgICB0YXV4ID0gMAogICAgICAgIHRvdGFsX3BlcmN1ID0gdG90YWwKCiAgICByZXR1cm4gdGF1eCwgdG90YWxfcGVyY3UKCnZhbGV1cl91bml0YWlyZSA9IGZsb2F0KGlucHV0KCJWYWxldXIgdW5pdGFpcmUgZCd1biBvYmpldCA6ICIpKQpxdWFudGl0ZSA9IGludChpbnB1dCgiUXVhbnRpdMOpIHZlbmR1ZSA6ICIpKQoKdG90YWwgPSBjYWxjdWxlcl92YWxldXIodmFsZXVyX3VuaXRhaXJlLCBxdWFudGl0ZSkKdGF1eCwgdG90YWxfcGVyY3UgPSBhcHBsaXF1ZXJfdGF4ZV9wb3J0dWFpcmUodG90YWwpCgpwcmludChmIlRvdGFsIGF2YW50IHRheGUgOiB7dG90YWx9IHBpw6hjZXMgZCdvciIpCnByaW50KGYiVGF4ZSBhcHBsaXF1w6llIDoge3RhdXh9JSIpCnByaW50KGYiVG90YWwgcGVyw6d1IDoge3RvdGFsX3BlcmN1fSBwacOoY2VzIGQnb3IiKQ==" data-file="bWFyY2hlX2F1X3RyZXNvci5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+<p><strong>Exemple d’exécution attendu :</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Valeur unitaire d'un objet : 30
+Quantité vendue : 8
+Total avant taxe : 240.0 pièces d'or
+Taxe appliquée : 20%
+Total perçu : 192.0 pièces d'or
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -518,7 +569,12 @@
 <li><a class="reference internal" href="#exercice-1-creer-le-capitaine">Exercice 1 — Créer le capitaine</a></li>
 <li><a class="reference internal" href="#exercice-2-tempete-en-mer">Exercice 2 — Tempête en mer</a></li>
 <li><a class="reference internal" href="#exercice-3-navigation-et-equipage">Exercice 3 — Navigation et équipage</a></li>
-<li><a class="reference internal" href="#exercice-4-recapitulatif-de-la-partie-1">Exercice 4 — Récapitulatif de la Partie 1</a></li>
+<li><a class="reference internal" href="#exercice-4-le-marche-aux-encheres">Exercice 4 — Le marché aux enchères</a><ul>
+<li><a class="reference internal" href="#calculer-la-valeur-du-butin">Calculer la valeur du butin</a></li>
+<li><a class="reference internal" href="#appliquer-la-taxe-portuaire">Appliquer la taxe portuaire</a></li>
+<li><a class="reference internal" href="#programme-complet-du-marche">Programme complet du marché</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

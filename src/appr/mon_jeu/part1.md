@@ -340,40 +340,143 @@ print(grade_capitaine(20))
 ```
 `````
 
-## Exercice 4 — Récapitulatif de la Partie 1
+## Exercice 4 — Le marché aux enchères
 
-````{admonition} Exercice 4 — Projet intégré
+À chaque escale, le capitaine peut vendre son butin au marché du port.
+
+### Calculer la valeur du butin
+
+````{admonition} Exercice 4.1 — Valeur totale
 :class: note
-Reprends les exercices précédents pour créer un petit programme qui contient :
-
-1. les données du capitaine ;
-2. le calcul de l'or initial ;
-3. la solidité du navire ;
-4. les dégâts de la tempête ;
-5. la possession ou non de la carte au trésor ;
-6. les fonctions `calcul_or()`, `est_naufrage()` et `grade_capitaine()`.
+Crée une fonction `calculer_valeur(valeur_unitaire, quantite)` qui retourne la valeur totale du butin.
 
 ```{codeplay}
-:file: chasse_tresor_partie1.py
-nom_capitaine = input("Nom du capitaine : ")
-experience = int(input("Expérience : "))
-possede_carte_tresor = True
-
-def calcul_or(experience):
+:file: marche_valeur.py
+def calculer_valeur(valeur_unitaire, quantite):
     ...
 
-def est_naufrage(solidite):
-    ...
-
-def grade_capitaine(experience):
-    ...
-
-or_en_poche = calcul_or(experience)
-solidite = int(input("Solidité du navire : "))
-
-print("Capitaine :", nom_capitaine)
-print("Grade :", grade_capitaine(experience))
-print("Or en poche :", or_en_poche)
-print("Navire naufragé :", est_naufrage(solidite))
+print(calculer_valeur(30, 8))
 ```
 ````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: marche_valeur.py
+def calculer_valeur(valeur_unitaire, quantite):
+    return valeur_unitaire * quantite
+
+print(calculer_valeur(30, 8))
+```
+````
+`````
+
+### Appliquer la taxe portuaire
+
+````{admonition} Exercice 4.2 — Taxe du port
+:class: note
+Crée une fonction `appliquer_taxe_portuaire(total)` qui applique une taxe de `20 %` au-dessus de `200`, une taxe de `10 %` entre `80` et `200` inclus, ou aucune taxe en dessous de `80`. Elle retourne le taux et le total final.
+
+```{codeplay}
+:file: taxe_portuaire.py
+def appliquer_taxe_portuaire(total):
+    ...
+
+taux, total_final = appliquer_taxe_portuaire(240)
+print(taux, total_final)
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: taxe_portuaire.py
+def appliquer_taxe_portuaire(total):
+    if total > 200:
+        taux = 20
+        total_final = total * 0.80
+    elif total >= 80:
+        taux = 10
+        total_final = total * 0.90
+    else:
+        taux = 0
+        total_final = total
+
+    return taux, total_final
+
+taux, total_final = appliquer_taxe_portuaire(240)
+print(taux, total_final)
+```
+````
+`````
+
+### Programme complet du marché
+
+````{admonition} Exercice 4.3 — Vente au marché
+:class: note
+Dans le programme principal, demande la valeur unitaire et la quantité vendue, utilise les deux fonctions, puis affiche le total avant taxe, la taxe appliquée et le total perçu.
+
+```{codeplay}
+:file: marche_au_tresor.py
+def calculer_valeur(valeur_unitaire, quantite):
+    ...
+
+def appliquer_taxe_portuaire(total):
+    ...
+
+valeur_unitaire = float(input("Valeur unitaire d'un objet : "))
+quantite = int(input("Quantité vendue : "))
+
+total = calculer_valeur(valeur_unitaire, quantite)
+taux, total_percu = appliquer_taxe_portuaire(total)
+
+print(f"Total avant taxe : {total} pièces d'or")
+print(f"Taxe appliquée : {taux}%")
+print(f"Total perçu : {total_percu} pièces d'or")
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: marche_au_tresor.py
+def calculer_valeur(valeur_unitaire, quantite):
+    return valeur_unitaire * quantite
+
+def appliquer_taxe_portuaire(total):
+    if total > 200:
+        taux = 20
+        total_percu = total * 0.80
+    elif total >= 80:
+        taux = 10
+        total_percu = total * 0.90
+    else:
+        taux = 0
+        total_percu = total
+
+    return taux, total_percu
+
+valeur_unitaire = float(input("Valeur unitaire d'un objet : "))
+quantite = int(input("Quantité vendue : "))
+
+total = calculer_valeur(valeur_unitaire, quantite)
+taux, total_percu = appliquer_taxe_portuaire(total)
+
+print(f"Total avant taxe : {total} pièces d'or")
+print(f"Taxe appliquée : {taux}%")
+print(f"Total perçu : {total_percu} pièces d'or")
+```
+`````
+
+**Exemple d'exécution attendu :**
+
+```text
+Valeur unitaire d'un objet : 30
+Quantité vendue : 8
+Total avant taxe : 240.0 pièces d'or
+Taxe appliquée : 20%
+Total perçu : 192.0 pièces d'or
+```
