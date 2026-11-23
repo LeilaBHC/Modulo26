@@ -29,11 +29,8 @@ Redemande le nom tant qu'il est vide.
 :file: tp2_nom_capitaine.py
 nom = ""
 
-# Redemande le nom tant que nom == ""
-while nom == "":
-    nom = input("Nom du capitaine : ")
-    if nom == "":
-        print("Erreur : le nom ne peut pas être vide.")
+# À compléter : redemander le nom tant que nom == ""
+...
 
 print("Capitaine :", nom)
 ```
@@ -42,9 +39,9 @@ print("Capitaine :", nom)
 ````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
-```{codeplay}
-:file: tp2_nom_capitaine.py
+```python
 nom = ""
+
 while nom == "":
     nom = input("Nom du capitaine : ")
     if nom == "":
