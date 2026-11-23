@@ -13,8 +13,6 @@ Bienvenue sur la plateforme de TP d'informatique !
 
    prog_formel/intro
    prog_formel/variables
-   prog_formel/fonctions
-   prog_formel/definitions
    prog_formel/fonctions_python
    prog_formel/conditions
    prog_formel/boucles
