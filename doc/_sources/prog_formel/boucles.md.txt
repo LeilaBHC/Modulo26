@@ -212,7 +212,6 @@ while a <= 10000:
 print(f"Maintenant a vaut {a} !")
 ```
 `````
-`````
 
 ````{admonition} Exercice 4
 :class: note
