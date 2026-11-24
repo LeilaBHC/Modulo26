@@ -301,3 +301,25 @@ pre#output::-webkit-scrollbar-thumb {
   background-clip: padding-box;
 }
 
+.CodeMirror-vscrollbar {
+  width: 14px !important;
+  opacity: 1 !important;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+  width: 14px;
+  -webkit-appearance: none;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-track {
+  background: rgb(128 128 128 / 18%);
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  min-height: 30px;
+  background: rgb(128 128 128 / 75%);
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
