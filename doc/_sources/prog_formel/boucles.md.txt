@@ -238,7 +238,7 @@ while reponse != "Bien merci et toi ?":
 print("Très bien, merci de demander !")
 ```
 ````
-`````
+
 
 ### Sortir d'une boucle avec `break`
 
