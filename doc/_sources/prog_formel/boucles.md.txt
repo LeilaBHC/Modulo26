@@ -34,6 +34,7 @@ for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
     dot(80, couleur)
     write(couleur, align='center')
     forward(80)
+```
 ````{admonition} Exercice 1 - Somme des nombres
 :class: note
 Écrivez une boucle qui calcule la somme des nombres suivants : `2, 3, 5, 7, 11`.
@@ -48,7 +49,7 @@ print(somme)
 ````
 
 `````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
 :file: ex_1.py
@@ -57,7 +58,6 @@ for nombre in [2, 3, 5, 7, 11]:
     somme = somme + nombre
 print(somme)
 ```
-````
 `````
 
 ## Le type `range`
@@ -138,7 +138,7 @@ def est_premier(nombre):
 ````
 
 `````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
 :file: ex_2.py
@@ -201,7 +201,7 @@ print(f"Maintenant a vaut {a} !")
 ````
 
 `````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
 :file: ex_3.py
@@ -211,15 +211,7 @@ while a <= 10000:
     a = a * 10
 print(f"Maintenant a vaut {a} !")
 ```
-Il est possible d'arriver au même résultat en calculant une puissance de `10` avec l'opérateur `**` :
-```{codeplay}
-a = 10
-n = 1
-while n <= 4:
-    print(a ** n)
-    n = n + 1
-```
-````
+`````
 `````
 
 ````{admonition} Exercice 4
@@ -239,17 +231,6 @@ Très bien, merci de demander !
 
 ```{codeplay}
 :file: ex_4.py
-...
-
-print("Très bien, merci de demander !")
-```
-````
-
-`````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-```{codeplay}
-:file: ex_4.py
 reponse = input("Comment tu vas ? ")
 
 while reponse != "Bien merci et toi ?":
@@ -257,7 +238,6 @@ while reponse != "Bien merci et toi ?":
 
 print("Très bien, merci de demander !")
 ```
-⚠️ Python est sensible à la casse. `"Salut"` et `"salut"` ne sont pas égaux lors d'une comparaison avec `==`.
 ````
 `````
 
@@ -272,6 +252,8 @@ while True:
     nombre = nombre + 1
     if nombre > 5:
         break
+```
+
 ````{admonition} Exercice 5 - Deviner un nombre
 :class: note
 Créez une boucle qui demande un nombre à la personne utilisatrice jusqu'à ce qu'elle entre `42`.
@@ -286,7 +268,6 @@ while True:
     print("Ce n'est pas le bon nombre.")
 ```
 ````
-`````
 
 ## Le jeu du pendu
 
