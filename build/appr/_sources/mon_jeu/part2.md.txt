@@ -88,6 +88,7 @@ experience = demander_experience()
 print("Expérience :", experience)
 ```
 ````
+`````
 
 ````{admonition} Exercice 1.3 — Fiche du capitaine
 :class: note
