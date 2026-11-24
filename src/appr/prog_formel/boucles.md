@@ -34,12 +34,14 @@ for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
     dot(80, couleur)
     write(couleur, align='center')
     forward(80)
-````{admonition} Exercice 23 - Somme des nombres
+```
+
+````{admonition} Exercice 1 - Somme des nombres
 :class: note
 Écrivez une boucle qui calcule la somme des nombres suivants : `2, 3, 5, 7, 11`.
 
 ```{codeplay}
-:file: ex_23.py
+:file: ex_1.py
 somme = 0
 for nombre in [2, 3, 5, 7, 11]:
     ...
@@ -51,7 +53,7 @@ print(somme)
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_23.py
+:file: ex_1.py
 somme = 0
 for nombre in [2, 3, 5, 7, 11]:
     somme = somme + nombre
@@ -114,9 +116,7 @@ for i in range(1, 10):
     for j in range(1, 10):
         print(f"{i} × {j} = {i * j}")
     print()
-```
-
-````{admonition} Exercice 24 - Nombres premiers
+````{admonition} Exercice 2 - Nombres premiers
 :class: note
 1. Écrivez une fonction `est_premier(nombre)` qui retourne `True` si le nombre est premier et `False` sinon.
 2. Affichez tous les nombres premiers inférieurs à 1000.
@@ -124,7 +124,7 @@ for i in range(1, 10):
 Pour rappel, un nombre premier est divisible uniquement par `1` et par lui-même.
 
 ```{codeplay}
-:file: ex_24.py
+:file: ex_2.py
 def est_premier(nombre):
     if nombre < 2:
         return False
@@ -141,7 +141,7 @@ def est_premier(nombre):
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_24.py
+:file: ex_2.py
 def est_premier(nombre):
     if nombre < 2:
         return False
@@ -186,12 +186,12 @@ print(f"Maintenant a vaut {a} !")
 
 Dans cet exemple, on initialise la variable `a` à `1`. Puis, tant qu’elle est inférieure à `100`, on l’affiche à l’écran et on la double. Ainsi, `a` passe de `1` à `2`, `4`, `8`, etc. Le programme affiche toutes les puissances de deux inférieures à `100`.
 
-````{admonition} Exercice 18
+````{admonition} Exercice 3
 :class: note
 Modifiez ce programme pour qu’il imprime toutes les puissances de `10` inférieures ou égales à `10000`.
 
 ```{codeplay}
-:file: ex_18.py
+:file: ex_3.py
 a = 1
 while a < 100:
     print(a)
@@ -204,7 +204,7 @@ print(f"Maintenant a vaut {a} !")
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_18.py
+:file: ex_3.py
 a = 10
 while a <= 10000:
     print(a)
@@ -222,7 +222,7 @@ while n <= 4:
 ````
 `````
 
-````{admonition} Exercice 19
+````{admonition} Exercice 4
 :class: note
 Écrivez un programme qui demande en boucle à l'utilisateur comment il va tant qu'il ne répond pas `"Bien merci et toi ?"`.
 
@@ -238,7 +238,7 @@ Très bien, merci de demander !
 ```
 
 ```{codeplay}
-:file: ex_19.py
+:file: ex_4.py
 ...
 
 print("Très bien, merci de demander !")
@@ -249,7 +249,7 @@ print("Très bien, merci de demander !")
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_19.py
+:file: ex_4.py
 reponse = input("Comment tu vas ? ")
 
 while reponse != "Bien merci et toi ?":
@@ -272,14 +272,12 @@ while True:
     nombre = nombre + 1
     if nombre > 5:
         break
-```
-
-````{admonition} Exercice 25 - Deviner un nombre
+````{admonition} Exercice 5 - Deviner un nombre
 :class: note
 Créez une boucle qui demande un nombre à la personne utilisatrice jusqu'à ce qu'elle entre `42`.
 
 ```{codeplay}
-:file: ex_25.py
+:file: ex_5.py
 while True:
     nombre = int(input("Devine le nombre : "))
     if nombre == 42:

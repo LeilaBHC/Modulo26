@@ -280,102 +280,48 @@
 <p>L’instruction <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">valeur</span> <span class="pre">in</span> <span class="pre">sequence</span></code> parcourt chaque élément d’une séquence. Pour chaque élément, elle exécute une fois le bloc d’instructions indenté.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlc2lkZW50cyA9IFsiQnVzaCIsICJDbGludG9uIiwgIkJ1c2giLCAiT2JhbWEiLCAiVHJ1bXAiXQpmb3Igbm9tIGluIHByZXNpZGVudHM6CiAgICBwcmludChub20p" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La variable <code class="docutils literal notranslate"><span class="pre">nom</span></code> prend successivement chaque valeur de la liste. Elle est appelée <strong>variable d’itération</strong>.</p>
 <p>L’exemple suivant dessine cinq cercles de couleurs différentes :</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJpbnZhbGlkIHN5bnRheCIsICJsaW5lIjogOSwgImNvbHVtbiI6IDF9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQpiYWNrd2FyZCgyMDApCgpmb3IgY291bGV1ciBpbiBbJ3llbGxvdycsICdjeWFuJywgJ29yYW5nZScsICdwaW5rJywgJ2xpbWUnXToKICAgIGRvdCg4MCwgY291bGV1cikKICAgIHdyaXRlKGNvdWxldXIsIGFsaWduPSdjZW50ZXInKQogICAgZm9yd2FyZCg4MCkKYGBgYHthZG1vbml0aW9ufSBFeGVyY2ljZSAyMyAtIFNvbW1lIGRlcyBub21icmVzCjpjbGFzczogbm90ZQrDiWNyaXZleiB1bmUgYm91Y2xlIHF1aSBjYWxjdWxlIGxhIHNvbW1lIGRlcyBub21icmVzIHN1aXZhbnRzIDogYDIsIDMsIDUsIDcsIDExYC4KCmBgYHtjb2RlcGxheX0KOmZpbGU6IGV4XzIzLnB5CnNvbW1lID0gMApmb3Igbm9tYnJlIGluIFsyLCAzLCA1LCA3LCAxMV06CiAgICAuLi4KcHJpbnQoc29tbWUp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ3VwJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjM6MTogJ2JhY2t3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDMsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjY6NTogJ2RvdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo3OjU6ICd3cml0ZScgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA3LCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo4OjU6ICdmb3J3YXJkJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDgsICJjb2x1bW4iOiA0fV0=" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQpiYWNrd2FyZCgyMDApCgpmb3IgY291bGV1ciBpbiBbJ3llbGxvdycsICdjeWFuJywgJ29yYW5nZScsICdwaW5rJywgJ2xpbWUnXToKICAgIGRvdCg4MCwgY291bGV1cikKICAgIHdyaXRlKGNvdWxldXIsIGFsaWduPSdjZW50ZXInKQogICAgZm9yd2FyZCg4MCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 1 - Somme des nombres</p>
+<p>Écrivez une boucle qui calcule la somme des nombres suivants : <code class="docutils literal notranslate"><span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">11</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="c29tbWUgPSAwCmZvciBub21icmUgaW4gWzIsIDMsIDUsIDcsIDExXToKICAgIC4uLgpwcmludChzb21tZSk=" data-file="ZXhfMS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="c29tbWUgPSAwCmZvciBub21icmUgaW4gWzIsIDMsIDUsIDcsIDExXToKICAgIHNvbW1lID0gc29tbWUgKyBub21icmUKcHJpbnQoc29tbWUp" data-file="ZXhfMS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+<section id="le-type-range">
+<h2>Le type <code class="docutils literal notranslate"><span class="pre">range</span></code><a class="headerlink" href="#le-type-range" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une <code class="docutils literal notranslate"><span class="pre">range</span></code> représente une suite de nombres entiers. Elle permet notamment de contrôler précisément le nombre de répétitions d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> utilise :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> : la première valeur ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code> : la limite finale, exclue ;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code> : l’écart entre deux valeurs.</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IHJhbmdlKDEsIDEwKQpmb3Igbm9tYnJlIGluIG5vbWJyZXM6CiAgICBwcmludChmIntub21icmV9IGF1IGNhcnLDqSB2YXV0IHtub21icmUgKiogMn0iKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Avec seulement un argument, <code class="docutils literal notranslate"><span class="pre">range(10)</span></code> produit les nombres de <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
+<section id="dessiner-un-polygone">
+<h3>Dessiner un polygone<a class="headerlink" href="#dessiner-un-polygone" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjU6OTogJ2ZvcndhcmQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo5OiAnbGVmdCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogdHVydGxlIiwgImxpbmUiOiA2LCAiY29sdW1uIjogOH1d" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShsb25ndWV1ciwgbm9tYnJlX3NvbW1ldHMpOgogICAgZm9yIGkgaW4gcmFuZ2Uobm9tYnJlX3NvbW1ldHMpOgogICAgICAgIGZvcndhcmQobG9uZ3VldXIpCiAgICAgICAgbGVmdCgzNjAgLyBub21icmVfc29tbWV0cykKCnBvbHlnb25lKDUwLCA1KQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="parcourir-des-intervalles">
+<h3>Parcourir des intervalles<a class="headerlink" href="#parcourir-des-intervalles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’argument <code class="docutils literal notranslate"><span class="pre">step</span></code> permet de choisir l’écart entre les nombres :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ3VwJyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiB0dXJ0bGUiLCAibGluZSI6IDIsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjU6NTogJ2dvdG8nIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNSwgImNvbHVtbiI6IDR9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6Njo1OiAnd3JpdGUnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHR1cnRsZSIsICJsaW5lIjogNiwgImNvbHVtbiI6IDR9XQ==" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKZm9yIHggaW4gcmFuZ2UoLTI1MCwgMjUxLCA1MCk6CiAgICBnb3RvKHgsIDApCiAgICB3cml0ZSh4LCBhbGlnbj0nY2VudGVyJyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="imbriquer-des-boucles">
+<h3>Imbriquer des boucles<a class="headerlink" href="#imbriquer-des-boucles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une boucle peut être placée à l’intérieur d’une autre boucle. Cela permet, par exemple, d’afficher toutes les tables de multiplication :</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJpbnZhbGlkIHN5bnRheCIsICJsaW5lIjogNiwgImNvbHVtbiI6IDF9XQ==" data-code="Zm9yIGkgaW4gcmFuZ2UoMSwgMTApOgogICAgcHJpbnQoZiJUYWJsZSBkZSB7aX0iKQogICAgZm9yIGogaW4gcmFuZ2UoMSwgMTApOgogICAgICAgIHByaW50KGYie2l9IMOXIHtqfSA9IHtpICogan0iKQogICAgcHJpbnQoKQpgYGBge2FkbW9uaXRpb259IEV4ZXJjaWNlIDIgLSBOb21icmVzIHByZW1pZXJzCjpjbGFzczogbm90ZQoxLiDDiWNyaXZleiB1bmUgZm9uY3Rpb24gYGVzdF9wcmVtaWVyKG5vbWJyZSlgIHF1aSByZXRvdXJuZSBgVHJ1ZWAgc2kgbGUgbm9tYnJlIGVzdCBwcmVtaWVyIGV0IGBGYWxzZWAgc2lub24uCjIuIEFmZmljaGV6IHRvdXMgbGVzIG5vbWJyZXMgcHJlbWllcnMgaW5mw6lyaWV1cnMgw6AgMTAwMC4KClBvdXIgcmFwcGVsLCB1biBub21icmUgcHJlbWllciBlc3QgZGl2aXNpYmxlIHVuaXF1ZW1lbnQgcGFyIGAxYCBldCBwYXIgbHVpLW3Dqm1lLgoKYGBge2NvZGVwbGF5fQo6ZmlsZTogZXhfMi5weQpkZWYgZXN0X3ByZW1pZXIobm9tYnJlKToKICAgIGlmIG5vbWJyZSA8IDI6CiAgICAgICAgcmV0dXJuIEZhbHNlCgogICAgIyBUZXN0ZXogbGVzIGRpdmlzZXVycyBwb3NzaWJsZXMgYXZlYyB1bmUgYm91Y2xlCiAgICAuLi4KCiMgQWZmaWNoZXogbGVzIG5vbWJyZXMgcHJlbWllcnMgaW5mw6lyaWV1cnMgw6AgMTAwMAouLi4=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 `````{admonition} Solution
 ````{dropdown} &lt;span style="color:grey"&gt;Cliquer ici pour voir la réponse&lt;/span&gt;
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_23.py
-somme = 0
-for nombre in [2, 3, 5, 7, 11]:
-    somme = somme + nombre
-print(somme)
-```
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-## Le type `range`
-
-Une `range` représente une suite de nombres entiers. Elle permet notamment de contrôler précisément le nombre de répétitions d'une boucle `for`.
-
-La fonction `range(start, stop, step)` utilise :
-
-- `start` : la première valeur ;
-- `stop` : la limite finale, exclue ;
-- `step` : l'écart entre deux valeurs.
-
-```{codeplay}
-nombres = range(1, 10)
-for nombre in nombres:
-    print(f"{nombre} au carré vaut {nombre ** 2}")
-```
-
-Avec seulement un argument, `range(10)` produit les nombres de `0` à `9`.
-
-### Dessiner un polygone
-
-```{codeplay}
-from turtle import *
-
-def polygone(longueur, nombre_sommets):
-    for i in range(nombre_sommets):
-        forward(longueur)
-        left(360 / nombre_sommets)
-
-polygone(50, 5)
-```
-
-### Parcourir des intervalles
-
-L'argument `step` permet de choisir l'écart entre les nombres :
-
-```{codeplay}
-from turtle import *
-up()
-
-for x in range(-250, 251, 50):
-    goto(x, 0)
-    write(x, align='center')
-```
-
-### Imbriquer des boucles
-
-Une boucle peut être placée à l'intérieur d'une autre boucle. Cela permet, par exemple, d'afficher toutes les tables de multiplication :
-
-```{codeplay}
-for i in range(1, 10):
-    print(f"Table de {i}")
-    for j in range(1, 10):
-        print(f"{i} × {j} = {i * j}")
-    print()
-```
-
-````{admonition} Exercice 24 - Nombres premiers
-:class: note
-1. Écrivez une fonction `est_premier(nombre)` qui retourne `True` si le nombre est premier et `False` sinon.
-2. Affichez tous les nombres premiers inférieurs à 1000.
-
-Pour rappel, un nombre premier est divisible uniquement par `1` et par lui-même.
-
-```{codeplay}
-:file: ex_24.py
-def est_premier(nombre):
-    if nombre &lt; 2:
-        return False
-
-    # Testez les diviseurs possibles avec une boucle
-    ...
-
-# Affichez les nombres premiers inférieurs à 1000
-...
-```
-````
-
-`````{admonition} Solution
-````{dropdown} &lt;span style="color:grey"&gt;Cliquer ici pour voir la réponse&lt;/span&gt;
-:animate: fade-in-slide-down
-```{codeplay}
-:file: ex_24.py
+:file: ex_2.py
 def est_premier(nombre):
     if nombre &lt; 2:
         return False
@@ -392,34 +338,72 @@ for nombre in range(1000):
 ```
 
 Dès qu'un `return` est exécuté, la fonction s'arrête immédiatement.
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+## La boucle `while`
+
+La boucle `while` répète ses instructions tant que sa condition est vraie.
+
+```{codeplay}
+compteur = 0
+while compteur &lt; 5:
+    print(compteur)
+    compteur = compteur + 1
+```
+
+Il faut vérifier que la condition finira par devenir fausse. Sinon, la boucle ne s'arrête jamais.
+
+L’instruction `while` peut aussi remplacer une répétition dont le nombre d’itérations n’est pas connu à l’avance : elle continue tant qu’une condition reste vraie.
+
+```{codeplay}
+a = 1
+while a &lt; 100:
+    print(a)
+    a = a * 2
+print(f"Maintenant a vaut {a} !")
+```
+
+Dans cet exemple, on initialise la variable `a` à `1`. Puis, tant qu’elle est inférieure à `100`, on l’affiche à l’écran et on la double. Ainsi, `a` passe de `1` à `2`, `4`, `8`, etc. Le programme affiche toutes les puissances de deux inférieures à `100`.
+
+````{admonition} Exercice 3
+:class: note
+Modifiez ce programme pour qu’il imprime toutes les puissances de `10` inférieures ou égales à `10000`.
+
+```{codeplay}
+:file: ex_3.py
+a = 1
+while a &lt; 100:
+    print(a)
+    a = a * 2
+print(f"Maintenant a vaut {a} !")
+```
+````
+
+`````{admonition} Solution
+````{dropdown} &lt;span style="color:grey"&gt;Cliquer ici pour voir la réponse&lt;/span&gt;
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_3.py
+a = 10
+while a &lt;= 10000:
+    print(a)
+    a = a * 10
+print(f"Maintenant a vaut {a} !")
+```
+Il est possible d'arriver au même résultat en calculant une puissance de `10` avec l'opérateur `**` :
+```{codeplay}
+a = 10
+n = 1
+while n &lt;= 4:
+    print(a ** n)
+    n = n + 1
+```
 ````
 </pre></div>
 </div>
-</section>
-<section id="la-boucle-while">
-<h2>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#la-boucle-while" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> répète ses instructions tant que sa condition est vraie.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y29tcHRldXIgPSAwCndoaWxlIGNvbXB0ZXVyIDwgNToKICAgIHByaW50KGNvbXB0ZXVyKQogICAgY29tcHRldXIgPSBjb21wdGV1ciArIDE=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Il faut vérifier que la condition finira par devenir fausse. Sinon, la boucle ne s’arrête jamais.</p>
-<p>L’instruction <code class="docutils literal notranslate"><span class="pre">while</span></code> peut aussi remplacer une répétition dont le nombre d’itérations n’est pas connu à l’avance : elle continue tant qu’une condition reste vraie.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEKd2hpbGUgYSA8IDEwMDoKICAgIHByaW50KGEpCiAgICBhID0gYSAqIDIKcHJpbnQoZiJNYWludGVuYW50IGEgdmF1dCB7YX0gISIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans cet exemple, on initialise la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> à <code class="docutils literal notranslate"><span class="pre">1</span></code>. Puis, tant qu’elle est inférieure à <code class="docutils literal notranslate"><span class="pre">100</span></code>, on l’affiche à l’écran et on la double. Ainsi, <code class="docutils literal notranslate"><span class="pre">a</span></code> passe de <code class="docutils literal notranslate"><span class="pre">1</span></code> à <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, etc. Le programme affiche toutes les puissances de deux inférieures à <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
 <div class="note admonition">
-<p class="admonition-title">Exercice 18</p>
-<p>Modifiez ce programme pour qu’il imprime toutes les puissances de <code class="docutils literal notranslate"><span class="pre">10</span></code> inférieures ou égales à <code class="docutils literal notranslate"><span class="pre">10000</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEKd2hpbGUgYSA8IDEwMDoKICAgIHByaW50KGEpCiAgICBhID0gYSAqIDIKcHJpbnQoZiJNYWludGVuYW50IGEgdmF1dCB7YX0gISIp" data-file="ZXhfMTgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<div class="admonition-solution admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEwCndoaWxlIGEgPD0gMTAwMDA6CiAgICBwcmludChhKQogICAgYSA9IGEgKiAxMApwcmludChmIk1haW50ZW5hbnQgYSB2YXV0IHthfSAhIik=" data-file="ZXhfMTgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Il est possible d’arriver au même résultat en calculant une puissance de <code class="docutils literal notranslate"><span class="pre">10</span></code> avec l’opérateur <code class="docutils literal notranslate"><span class="pre">**</span></code> :</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEwCm4gPSAxCndoaWxlIG4gPD0gNDoKICAgIHByaW50KGEgKiogbikKICAgIG4gPSBuICsgMQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
-<div class="note admonition">
-<p class="admonition-title">Exercice 19</p>
+<p class="admonition-title">Exercice 4</p>
 <p>Écrivez un programme qui demande en boucle à l’utilisateur comment il va tant qu’il ne répond pas <code class="docutils literal notranslate"><span class="pre">"Bien</span> <span class="pre">merci</span> <span class="pre">et</span> <span class="pre">toi</span> <span class="pre">?"</span></code>.</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code> permet de demander à l’utilisateur d’entrer du texte.</p>
 <p><strong>Exemple d’exécution :</strong></p>
@@ -430,7 +414,7 @@ Comment tu vas ? Bien merci et toi ?
 Très bien, merci de demander !
 </pre></div>
 </div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Li4uCgpwcmludCgiVHLDqHMgYmllbiwgbWVyY2kgZGUgZGVtYW5kZXIgISIp" data-file="ZXhfMTkucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Li4uCgpwcmludCgiVHLDqHMgYmllbiwgbWVyY2kgZGUgZGVtYW5kZXIgISIp" data-file="ZXhfNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <div class="admonition-solution admonition">
 <p class="admonition-title">Solution</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
@@ -440,17 +424,14 @@ Très bien, merci de demander !
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cmVwb25zZSA9IGlucHV0KCJDb21tZW50IHR1IHZhcyA/ICIpCgp3aGlsZSByZXBvbnNlICE9ICJCaWVuIG1lcmNpIGV0IHRvaSA/IjoKICAgIHJlcG9uc2UgPSBpbnB1dCgiQ29tbWVudCB0dSB2YXMgPyAiKQoKcHJpbnQoIlRyw6hzIGJpZW4sIG1lcmNpIGRlIGRlbWFuZGVyICEiKQ==" data-file="ZXhfMTkucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">⚠️ Python est sensible à la casse. <code class="docutils literal notranslate"><span class="pre">"Salut"</span></code> et <code class="docutils literal notranslate"><span class="pre">"salut"</span></code> ne sont pas égaux lors d’une comparaison avec <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cmVwb25zZSA9IGlucHV0KCJDb21tZW50IHR1IHZhcyA/ICIpCgp3aGlsZSByZXBvbnNlICE9ICJCaWVuIG1lcmNpIGV0IHRvaSA/IjoKICAgIHJlcG9uc2UgPSBpbnB1dCgiQ29tbWVudCB0dSB2YXMgPyAiKQoKcHJpbnQoIlRyw6hzIGJpZW4sIG1lcmNpIGRlIGRlbWFuZGVyICEiKQ==" data-file="ZXhfNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">⚠️ Python est sensible à la casse. <code class="docutils literal notranslate"><span class="pre">"Salut"</span></code> et <code class="docutils literal notranslate"><span class="pre">"salut"</span></code> ne sont pas égaux lors d’une comparaison avec <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
 </div>
 </details></div>
+</section>
 <section id="sortir-dune-boucle-avec-break">
 <h3>Sortir d’une boucle avec <code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#sortir-dune-boucle-avec-break" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’instruction <code class="docutils literal notranslate"><span class="pre">break</span></code> permet d’arrêter immédiatement la boucle en cours.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlID0gMQp3aGlsZSBUcnVlOgogICAgcHJpbnQobm9tYnJlKQogICAgbm9tYnJlID0gbm9tYnJlICsgMQogICAgaWYgbm9tYnJlID4gNToKICAgICAgICBicmVhaw==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
-<p class="admonition-title">Exercice 25 - Deviner un nombre</p>
-<p>Créez une boucle qui demande un nombre à la personne utilisatrice jusqu’à ce qu’elle entre <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="d2hpbGUgVHJ1ZToKICAgIG5vbWJyZSA9IGludChpbnB1dCgiRGV2aW5lIGxlIG5vbWJyZSA6ICIpKQogICAgaWYgbm9tYnJlID09IDQyOgogICAgICAgIHByaW50KCJCcmF2byAhIikKICAgICAgICBicmVhawogICAgcHJpbnQoIkNlIG4nZXN0IHBhcyBsZSBib24gbm9tYnJlLiIp" data-file="ZXhfMjUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJpbnZhbGlkIHN5bnRheCIsICJsaW5lIjogNywgImNvbHVtbiI6IDF9XQ==" data-code="bm9tYnJlID0gMQp3aGlsZSBUcnVlOgogICAgcHJpbnQobm9tYnJlKQogICAgbm9tYnJlID0gbm9tYnJlICsgMQogICAgaWYgbm9tYnJlID4gNToKICAgICAgICBicmVhawpgYGBge2FkbW9uaXRpb259IEV4ZXJjaWNlIDUgLSBEZXZpbmVyIHVuIG5vbWJyZQo6Y2xhc3M6IG5vdGUKQ3LDqWV6IHVuZSBib3VjbGUgcXVpIGRlbWFuZGUgdW4gbm9tYnJlIMOgIGxhIHBlcnNvbm5lIHV0aWxpc2F0cmljZSBqdXNxdSfDoCBjZSBxdSdlbGxlIGVudHJlIGA0MmAuCgpgYGB7Y29kZXBsYXl9CjpmaWxlOiBleF81LnB5CndoaWxlIFRydWU6CiAgICBub21icmUgPSBpbnQoaW5wdXQoIkRldmluZSBsZSBub21icmUgOiAiKSkKICAgIGlmIG5vbWJyZSA9PSA0MjoKICAgICAgICBwcmludCgiQnJhdm8gISIpCiAgICAgICAgYnJlYWsKICAgIHByaW50KCJDZSBuJ2VzdCBwYXMgbGUgYm9uIG5vbWJyZS4iKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
 <section id="le-jeu-du-pendu">
 <h2>Le jeu du pendu<a class="headerlink" href="#le-jeu-du-pendu" title="Lien permanent vers ce titre">¶</a></h2>
@@ -523,7 +504,10 @@ Très bien, merci de demander !
             <ul>
 <li><a class="reference internal" href="#">6. Les boucles</a><ul>
 <li><a class="reference internal" href="#la-boucle-for">La boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></a></li>
-<li><a class="reference internal" href="#la-boucle-while">La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></a><ul>
+<li><a class="reference internal" href="#le-type-range">Le type <code class="docutils literal notranslate"><span class="pre">range</span></code></a><ul>
+<li><a class="reference internal" href="#dessiner-un-polygone">Dessiner un polygone</a></li>
+<li><a class="reference internal" href="#parcourir-des-intervalles">Parcourir des intervalles</a></li>
+<li><a class="reference internal" href="#imbriquer-des-boucles">Imbriquer des boucles</a></li>
 <li><a class="reference internal" href="#sortir-dune-boucle-avec-break">Sortir d’une boucle avec <code class="docutils literal notranslate"><span class="pre">break</span></code></a></li>
 </ul>
 </li>

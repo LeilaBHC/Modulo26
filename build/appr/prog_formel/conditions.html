@@ -273,66 +273,6 @@
 <p>Les structures de contrôle sont un élément central de la programmation.
 <strong>Elles permettent de moduler l’exécution d’un programme selon la valeur de ses variables</strong>.<br/>
 Les structures de contrôle se retrouvent de façon presque identique dans tous les autres langages de programmation.</p>
-<section id="branchement-conditionnel-if-elif-else">
-<h2>Branchement conditionnel (<code class="docutils literal notranslate"><span class="pre">if</span></code> / <code class="docutils literal notranslate"><span class="pre">elif</span></code> / <code class="docutils literal notranslate"><span class="pre">else</span></code>)<a class="headerlink" href="#branchement-conditionnel-if-elif-else" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Un branchement conditionnel permet d’exécuter du code selon une condition. La condition est généralement obtenue avec une opération de comparaison et possède donc une valeur booléenne : <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJleHBlY3RlZCBhbiBpbmRlbnRlZCBibG9jayIsICJsaW5lIjogMywgImNvbHVtbiI6IDF9XQ==" data-code="aWYgY29uZGl0aW9uOgogICAgIyBleMOpY3V0w6kgc2kgY29uZGl0aW9uIGVzdCBUcnVlCmVsaWYgYXV0cmVfY29uZGl0aW9uOgogICAgIyBleMOpY3V0w6kgc2kgY29uZGl0aW9uIGVzdCBGYWxzZSBldCBhdXRyZV9jb25kaXRpb24gZXN0IFRydWUKZWxzZToKICAgICMgZXjDqWN1dMOpIHNpIGF1Y3VuZSBjb25kaXRpb24gbidlc3QgdnJhaWU=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans cet exemple, <code class="docutils literal notranslate"><span class="pre">elif</span></code> permet de tester une autre condition uniquement si les conditions précédentes sont fausses. Le bloc <code class="docutils literal notranslate"><span class="pre">else</span></code> est facultatif : il est exécuté lorsque aucune condition n’est vraie.</p>
-<p>⚠️ <strong>L’indentation est importante.</strong> En Python, les blocs de code appartenant à <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code> et aux fonctions sont délimités par l’indentation, généralement quatre espaces.</p>
-<section id="operateurs-de-comparaison">
-<h3>Opérateurs de comparaison<a class="headerlink" href="#operateurs-de-comparaison" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p>Opérateur</p></th>
-<th class="text-align:left head"><p>Signification</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
-<td class="text-align:left"><p>égal à</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
-<td class="text-align:left"><p>différent de</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
-<td class="text-align:left"><p>supérieur à</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
-<td class="text-align:left"><p>inférieur à</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
-<td class="text-align:left"><p>supérieur ou égal à</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
-<td class="text-align:left"><p>inférieur ou égal à</p></td>
-</tr>
-</tbody>
-</table></div>
-</section>
-<section id="operateurs-logiques">
-<h3>Opérateurs logiques<a class="headerlink" href="#operateurs-logiques" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p>Opérateur</p></th>
-<th class="text-align:left head"><p>Effet</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></td>
-<td class="text-align:left"><p>vrai si les deux conditions sont vraies</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
-<td class="text-align:left"><p>vrai si au moins une condition est vraie</p></td>
-</tr>
-<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">not</span></code></p></td>
-<td class="text-align:left"><p>inverse la condition</p></td>
-</tr>
-</tbody>
-</table></div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gMTcKCmlmIDE4IDw9IGFnZSA8IDY1OgogICAgcHJpbnQoIkFkdWx0ZSBhY3RpZiIpCgppZiBhZ2UgPCAxMiBvciBhZ2UgPiA4MDoKICAgIHByaW50KCJUYXJpZiByw6lkdWl0Iik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exemple-complet">
-<h3>Exemple complet<a class="headerlink" href="#exemple-complet" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm90ZSA9IDUKCmlmIG5vdGUgPT0gNjoKICAgIHByaW50KCJUcsOocyBiaWVuIikKZWxpZiBub3RlID49IDQ6CiAgICBwcmludCgiUGFzc2FibGUiKQplbHNlOgogICAgcHJpbnQoIkluc3VmZmlzYW50Iik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-</section>
 <section id="linstruction-if">
 <h2>L’instruction if<a class="headerlink" href="#linstruction-if" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’instruction <code class="docutils literal notranslate"><span class="pre">if</span></code> (si, en anglais) permet d’<strong>effectuer une liste d’instructions uniquement si une valeur booléenne (appelée la condition) est True (vraie)</strong>.</p>
@@ -347,10 +287,10 @@ L’instruction <code class="docutils literal notranslate"><span class="pre">if<
 Elle permet à l’ordinateur de savoir quelles sont les instructions qui appartiennent au bloc du <code class="docutils literal notranslate"><span class="pre">if</span></code> et quelles sont celles qui appartiennent au bloc du <code class="docutils literal notranslate"><span class="pre">else</span></code>.<br/>
 (L’indentation se fait de préférence avec la touche tabulation (<strong>TAB</strong>) du clavier.)</p>
 <div class="note admonition">
-<p class="admonition-title">Exercice 15</p>
+<p class="admonition-title">Exercice 1</p>
 <p>Ecrivez un programme qui demande son âge à l’utilisateur.
 Si l’utilisateur donne un nombre inférieur à 20, le programme écrit “Comme vous êtes jeune !”, sinon il écrit “Comme vous êtes vieux !”.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gLi4uCgouLi4=" data-file="ZXhfMTUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gLi4uCgouLi4=" data-file="ZXhfMS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <div class="admonition-solution admonition">
 <p class="admonition-title">Solution</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
@@ -360,14 +300,14 @@ Si l’utilisateur donne un nombre inférieur à 20, le programme écrit “Comm
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gaW50KGlucHV0KCJFbnRyZXogdm90cmUgYWdlOiAiKSkKCmlmIGFnZSA8IDIwOgogICAgcHJpbnQoIkNvbW1lIHZvdXMgw6p0ZXMgamV1bmUgISIpCmVsc2U6CiAgICBwcmludCgiQ29tbWUgdm91cyDDqnRlcyB2aWV1eCAhIik=" data-file="ZXhfMTUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Ici nous utilisons la fonction <code class="docutils literal notranslate"><span class="pre">int</span></code> car nous supposons que l’utilisateur entrera un nombre entier.
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gaW50KGlucHV0KCJFbnRyZXogdm90cmUgYWdlOiAiKSkKCmlmIGFnZSA8IDIwOgogICAgcHJpbnQoIkNvbW1lIHZvdXMgw6p0ZXMgamV1bmUgISIpCmVsc2U6CiAgICBwcmludCgiQ29tbWUgdm91cyDDqnRlcyB2aWV1eCAhIik=" data-file="ZXhfMS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Ici nous utilisons la fonction <code class="docutils literal notranslate"><span class="pre">int</span></code> car nous supposons que l’utilisateur entrera un nombre entier.
 Cependant le programme fonctionnerait de la même manière en utilisant la fonction <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
 </div>
 </details></div>
 <div class="note admonition">
-<p class="admonition-title">Exercice 16</p>
+<p class="admonition-title">Exercice 2</p>
 <p>Ecrivez la fonction maximum(a, b) qui prend 2 nombres en argument et retourne le plus grand.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIG1heGltdW0oYSwgYik6CiAgICAuLi4KCnByaW50KG1heGltdW0oMywgNCkpICMgQWZmaWNoZSA0CnByaW50KG1heGltdW0oLTEsIC01KSkgIyBBZmZpY2hlIC0x" data-file="ZXhfMTYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIG1heGltdW0oYSwgYik6CiAgICAuLi4KCnByaW50KG1heGltdW0oMywgNCkpICMgQWZmaWNoZSA0CnByaW50KG1heGltdW0oLTEsIC01KSkgIyBBZmZpY2hlIC0x" data-file="ZXhfMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <div class="admonition-solution admonition">
 <p class="admonition-title">Solution</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
@@ -377,14 +317,14 @@ Cependant le programme fonctionnerait de la même manière en utilisant la fonct
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIG1heGltdW0oYSwgYik6CiAgICBpZiBhID4gYjoKICAgICAgICByZXR1cm4gYQogICAgZWxzZToKICAgICAgICByZXR1cm4gYgoKcHJpbnQobWF4aW11bSgzLCA0KSkgIyBBZmZpY2hlIDQKcHJpbnQobWF4aW11bSgtMSwgLTUpKSAjIEFmZmljaGUgLTE=" data-file="ZXhfMTYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Cette fonction ne permet de comparer que 2 nombres mais nous verrons plus tard comment trouver le maximum dans une liste avec beaucoup de nombres 😉</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIG1heGltdW0oYSwgYik6CiAgICBpZiBhID4gYjoKICAgICAgICByZXR1cm4gYQogICAgZWxzZToKICAgICAgICByZXR1cm4gYgoKcHJpbnQobWF4aW11bSgzLCA0KSkgIyBBZmZpY2hlIDQKcHJpbnQobWF4aW11bSgtMSwgLTUpKSAjIEFmZmljaGUgLTE=" data-file="ZXhfMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Cette fonction ne permet de comparer que 2 nombres mais nous verrons plus tard comment trouver le maximum dans une liste avec beaucoup de nombres 😉</p>
 </div>
 </details></div>
 <p>Le bloc <code class="docutils literal notranslate"><span class="pre">elif</span></code> peut être ajouté après le bloc <code class="docutils literal notranslate"><span class="pre">if</span></code> pour <strong>tester des conditions supplémentaires</strong>.
 Notez que <code class="docutils literal notranslate"><span class="pre">elif</span></code> est la contraction de <em>else if</em> (sinon si, en français).
 L’exemple suivant démontre son utilité quand on a 4 situations possibles:</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aWxfZXN0X3RhcmQgPSBGYWxzZQpqZV9zdWlzX2ZhdGlndWUgPSBGYWxzZQoKaWYgaWxfZXN0X3RhcmQgYW5kIGplX3N1aXNfZmF0aWd1ZToKCXByaW50KCJKZSB2YWlzIGRvcm1pciIpCmVsaWYgaWxfZXN0X3RhcmQgYW5kIG5vdCBqZV9zdWlzX2ZhdGlndWU6CglwcmludCgiSmUgam91ZSDDoCBsYSBjb25zb2xlIikKZWxpZiBub3QgaWxfZXN0X3RhcmQgYW5kIGplX3N1aXNfZmF0aWd1ZToKCXByaW50KCJKZSBmYWlzIHVuZSBzaWVzdGUiKQplbHNlOgoJIyBJbCBuZSByZXN0ZSBwbHVzIHF1J3VuZSBzZXVsZSBwb3NzaWJpbGl0w6kKCXByaW50KCJKZSB2YWlzIGNvdXJpciBkZWhvcnMiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
-<p class="admonition-title">Exercice 17</p>
+<p class="admonition-title">Exercice 3</p>
 <p>Ecrivez un programme qui demande à l’utilisateur d’entrer les buts de l’équipe domicile et de l’équipe extérieur.
 Le programme affiche ensuite quelle équipe a gagné le match (ou match nul en cas d’égalité).
 <strong>Exemples d’exécution :</strong></p>
@@ -397,7 +337,7 @@ Buts marqués par l'équipe extérieur : 0
 Match nul !
 </pre></div>
 </div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnV0c19kb21pY2lsZSA9IC4uLgpidXRzX2V4dGVyaWV1ciA9IC4uLgoKLi4u" data-file="ZXhfMTcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnV0c19kb21pY2lsZSA9IC4uLgpidXRzX2V4dGVyaWV1ciA9IC4uLgoKLi4u" data-file="ZXhfMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <div class="admonition-solution admonition">
 <p class="admonition-title">Solution</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
@@ -407,7 +347,7 @@ Match nul !
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnV0c19kb21pY2lsZSA9IGludChpbnB1dCgiQnV0cyBtYXJxdcOpcyBwYXIgbCfDqXF1aXBlIGRvbWljaWxlOiAiKSkKYnV0c19leHRlcmlldXIgPSBpbnQoaW5wdXQoIkJ1dHMgbWFycXXDqXMgcGFyIGwnw6lxdWlwZSBleHTDqXJpZXVyOiAiKSkKCmlmIGJ1dHNfZG9taWNpbGUgPiBidXRzX2V4dGVyaWV1cjoKICAgIHByaW50KCJMJ8OpcXVpcGUgZG9taWNpbGUgYSBnYWduw6kgISEiKQplbGlmIGJ1dHNfZXh0ZXJpZXVyID4gYnV0c19kb21pY2lsZToKICAgIHByaW50KCJMJ8OpcXVpcGUgZXh0w6lyaWV1ciBhIGdhZ27DqSAhISIpCmVsc2U6CiAgICBwcmludCgiTWF0Y2ggbnVsICEiKQ==" data-file="ZXhfMTcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnV0c19kb21pY2lsZSA9IGludChpbnB1dCgiQnV0cyBtYXJxdcOpcyBwYXIgbCfDqXF1aXBlIGRvbWljaWxlOiAiKSkKYnV0c19leHRlcmlldXIgPSBpbnQoaW5wdXQoIkJ1dHMgbWFycXXDqXMgcGFyIGwnw6lxdWlwZSBleHTDqXJpZXVyOiAiKSkKCmlmIGJ1dHNfZG9taWNpbGUgPiBidXRzX2V4dGVyaWV1cjoKICAgIHByaW50KCJMJ8OpcXVpcGUgZG9taWNpbGUgYSBnYWduw6kgISEiKQplbGlmIGJ1dHNfZXh0ZXJpZXVyID4gYnV0c19kb21pY2lsZToKICAgIHByaW50KCJMJ8OpcXVpcGUgZXh0w6lyaWV1ciBhIGdhZ27DqSAhISIpCmVsc2U6CiAgICBwcmludCgiTWF0Y2ggbnVsICEiKQ==" data-file="ZXhfMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
 </section>
 <section id="le-module-random">
@@ -430,7 +370,7 @@ Par exmple, la fonction <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 </form></div><div class="note admonition">
-<p class="admonition-title">Exercice 20 - Devine mon nombre !</p>
+<p class="admonition-title">Exercice 4 - Devine mon nombre !</p>
 <p>Ecrivez un programme qui permet de jouer à “Devine mon nombre”:</p>
 <ol class="simple">
 <li><p>Laissez le programme tirer un nombre aléatoire entre 1 et 50.</p></li>
@@ -448,12 +388,12 @@ Devine mon nombre: 38
 Gagné ! (Il vous a fallu 6 coups)
 </pre></div>
 </div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdyYW5kb20nIGltcG9ydGVkIGJ1dCB1bnVzZWQiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfV0=" data-code="aW1wb3J0IHJhbmRvbQoKbm9tYnJlX215c3RlcmUgPSAuLi4Kbm9tYnJlX3Byb3Bvc2UgPSAuLi4KY291cHMgPSAxCndoaWxlIC4uLjoKICAgIGlmIC4uLjoKICAgICAgICBwcmludCgnUGx1cyBwZXRpdCcpCiAgICBlbHNlOgogICAgICAgIHByaW50KCdQbHVzIGdyYW5kJykKICAgIC4uLgpwcmludChmJ0dhZ27DqSAhIChJbCB2b3VzIGEgZmFsbHUge2NvdXBzfSBjb3VwcyknKQ==" data-file="ZXhfMjAucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdyYW5kb20nIGltcG9ydGVkIGJ1dCB1bnVzZWQiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfV0=" data-code="aW1wb3J0IHJhbmRvbQoKbm9tYnJlX215c3RlcmUgPSAuLi4Kbm9tYnJlX3Byb3Bvc2UgPSAuLi4KY291cHMgPSAxCndoaWxlIC4uLjoKICAgIGlmIC4uLjoKICAgICAgICBwcmludCgnUGx1cyBwZXRpdCcpCiAgICBlbHNlOgogICAgICAgIHByaW50KCdQbHVzIGdyYW5kJykKICAgIC4uLgpwcmludChmJ0dhZ27DqSAhIChJbCB2b3VzIGEgZmFsbHUge2NvdXBzfSBjb3VwcyknKQ==" data-file="ZXhfNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <!-- `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_20.py
+:file: ex_4.py
 import random
 
 nombre_mystere = random.randint(1, 50)
@@ -522,12 +462,6 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">5. Branchement</a><ul>
-<li><a class="reference internal" href="#branchement-conditionnel-if-elif-else">Branchement conditionnel (<code class="docutils literal notranslate"><span class="pre">if</span></code> / <code class="docutils literal notranslate"><span class="pre">elif</span></code> / <code class="docutils literal notranslate"><span class="pre">else</span></code>)</a><ul>
-<li><a class="reference internal" href="#operateurs-de-comparaison">Opérateurs de comparaison</a></li>
-<li><a class="reference internal" href="#operateurs-logiques">Opérateurs logiques</a></li>
-<li><a class="reference internal" href="#exemple-complet">Exemple complet</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#linstruction-if">L’instruction if</a></li>
 <li><a class="reference internal" href="#le-module-random">Le module random</a></li>
 </ul>

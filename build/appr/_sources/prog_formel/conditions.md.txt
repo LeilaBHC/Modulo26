@@ -9,65 +9,6 @@ Les structures de contrôle sont un élément central de la programmation.
 **Elles permettent de moduler l’exécution d'un programme selon la valeur de ses variables**.  
 Les structures de contrôle se retrouvent de façon presque identique dans tous les autres langages de programmation.
 
-## Branchement conditionnel (`if` / `elif` / `else`)
-
-Un branchement conditionnel permet d'exécuter du code selon une condition. La condition est généralement obtenue avec une opération de comparaison et possède donc une valeur booléenne : `True` ou `False`.
-
-```{codeplay}
-if condition:
-    # exécuté si condition est True
-elif autre_condition:
-    # exécuté si condition est False et autre_condition est True
-else:
-    # exécuté si aucune condition n'est vraie
-```
-
-Dans cet exemple, `elif` permet de tester une autre condition uniquement si les conditions précédentes sont fausses. Le bloc `else` est facultatif : il est exécuté lorsque aucune condition n'est vraie.
-
-⚠️ **L'indentation est importante.** En Python, les blocs de code appartenant à `if`, `elif`, `else` et aux fonctions sont délimités par l'indentation, généralement quatre espaces.
-
-### Opérateurs de comparaison
-
-| Opérateur | Signification |
-|:---:|:---|
-| `==` | égal à |
-| `!=` | différent de |
-| `>` | supérieur à |
-| `<` | inférieur à |
-| `>=` | supérieur ou égal à |
-| `<=` | inférieur ou égal à |
-
-### Opérateurs logiques
-
-| Opérateur | Effet |
-|:---:|:---|
-| `and` | vrai si les deux conditions sont vraies |
-| `or` | vrai si au moins une condition est vraie |
-| `not` | inverse la condition |
-
-```{codeplay}
-age = 17
-
-if 18 <= age < 65:
-    print("Adulte actif")
-
-if age < 12 or age > 80:
-    print("Tarif réduit")
-```
-
-### Exemple complet
-
-```{codeplay}
-note = 5
-
-if note == 6:
-    print("Très bien")
-elif note >= 4:
-    print("Passable")
-else:
-    print("Insuffisant")
-```
-
 ## L'instruction if
 
 L’instruction `if` (si, en anglais) permet d’**effectuer une liste d’instructions uniquement si une valeur booléenne (appelée la condition) est True (vraie)**.
@@ -92,13 +33,13 @@ L’instruction `if` teste cette variable.
 Elle permet à l’ordinateur de savoir quelles sont les instructions qui appartiennent au bloc du `if` et quelles sont celles qui appartiennent au bloc du `else`.  
 (L'indentation se fait de préférence avec la touche tabulation (**TAB**) du clavier.)
 
-````{admonition} Exercice 15
+````{admonition} Exercice 1
 :class: note
 Ecrivez un programme qui demande son âge à l’utilisateur. 
 Si l’utilisateur donne un nombre inférieur à 20, le programme écrit "Comme vous êtes jeune !", sinon il écrit "Comme vous êtes vieux !".
 
 ```{codeplay}
-:file: ex_15.py
+:file: ex_1.py
 age = ...
 
 ...
@@ -109,7 +50,7 @@ age = ...
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_15.py
+:file: ex_1.py
 age = int(input("Entrez votre age: "))
 
 if age < 20:
@@ -122,12 +63,12 @@ Cependant le programme fonctionnerait de la même manière en utilisant la fonct
 ````
 `````
 
-````{admonition} Exercice 16
+````{admonition} Exercice 2
 :class: note
 Ecrivez la fonction maximum(a, b) qui prend 2 nombres en argument et retourne le plus grand.
 
 ```{codeplay}
-:file: ex_16.py
+:file: ex_2.py
 def maximum(a, b):
     ...
 
@@ -140,7 +81,7 @@ print(maximum(-1, -5)) # Affiche -1
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_16.py
+:file: ex_2.py
 def maximum(a, b):
     if a > b:
         return a
@@ -173,7 +114,7 @@ else:
 	print("Je vais courir dehors")
 ```
 
-````{admonition} Exercice 17
+````{admonition} Exercice 3
 :class: note
 Ecrivez un programme qui demande à l'utilisateur d'entrer les buts de l'équipe domicile et de l'équipe extérieur.
 Le programme affiche ensuite quelle équipe a gagné le match (ou match nul en cas d'égalité).
@@ -189,7 +130,7 @@ Match nul !
 ```
 
 ```{codeplay}
-:file: ex_17.py
+:file: ex_3.py
 buts_domicile = ...
 buts_exterieur = ...
 
@@ -201,7 +142,7 @@ buts_exterieur = ...
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_17.py
+:file: ex_3.py
 buts_domicile = int(input("Buts marqués par l'équipe domicile: "))
 buts_exterieur = int(input("Buts marqués par l'équipe extérieur: "))
 
@@ -258,7 +199,7 @@ En Python, `random` est
 Un module est un recueil de fonctions prêtes à l'emploi que l'on peut importer dans notre code.
 ```
 
-````{admonition} Exercice 20 - Devine mon nombre !
+````{admonition} Exercice 4 - Devine mon nombre !
 :class: note
 Ecrivez un programme qui permet de jouer à "Devine mon nombre":
 1. Laissez le programme tirer un nombre aléatoire entre 1 et 50.
@@ -278,7 +219,7 @@ Gagné ! (Il vous a fallu 6 coups)
 ```
 
 ```{codeplay}
-:file: ex_20.py
+:file: ex_4.py
 import random
 
 nombre_mystere = ...
@@ -298,7 +239,7 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_20.py
+:file: ex_4.py
 import random
 
 nombre_mystere = random.randint(1, 50)

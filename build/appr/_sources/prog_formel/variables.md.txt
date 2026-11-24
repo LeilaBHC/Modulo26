@@ -17,7 +17,7 @@ En Python, les types de données  stockés dans les variables  sont les suivants
 
 Il est possible de vérifier le type d’une variable à l’aide de la fonction `type` 😉
 
-````{admonition} Exercice 3
+````{admonition} Exercice 1
 :class: note
 Quel est le type des valeurs suivantes ?  
 Vous pouvez utiliser la fonction `type()` pour vérifier vos réponses.  
@@ -31,7 +31,7 @@ g) "False"
 h) rewr
 
 ```{codeplay}
-:file: ex_3.py
+:file: ex_1.py
 print(type(...))
 ```
 ````
@@ -100,7 +100,7 @@ On peut dire que la variable `a` contient la chaîne de caractère "bonjour".
 **Une fois une variable nommée, on peut la manipuler en l’appelant par son nom**.
 On demande ensuite à l’ordinateur d’écrire le contenu de `a` dans le terminal, c’est-à-dire "bonjour".
 
-````{admonition} Exercice 4
+````{admonition} Exercice 2
 :class: note
 ⚠️ Python ne permet pas d’utiliser n’importe quel nom de variable. ⚠️  
 Essayez d’utiliser les noms suivants pour nommer vos variables:  
@@ -112,7 +112,7 @@ Par exemple, écrivez `38b = 5`.
 Lancez votre programme. Qu’observez-vous ?
 
 ```{codeplay}
-:file: ex_4.py
+:file: ex_2.py
 38b = 5  # Ca fonctionne ça ??
 ```
 ````
@@ -152,13 +152,13 @@ print(b)
 Dans cet exemple, la première instruction assigne 5 à la variable `b`.
 La seconde instruction multiplie `b` par 2 (ce qui donne 10), puis le résultat est assigné à `b` qui contient maintenant le nombre 10.
 
-````{admonition} Exercice 5
+````{admonition} Exercice 3
 :class: note
 Mettez la valeur 6 dans une variable appelée `a`, affichez-la à l’écran puis divisez-la par trois et remettez-la dans `a`. 
 Imprimez la nouvelle valeur de `a` à l’écran.
 
 ```{codeplay}
-:file: ex_5.py
+:file: ex_3.py
 # Ecrivez votre code ici
 ...
 ``` 
@@ -168,7 +168,7 @@ Imprimez la nouvelle valeur de `a` à l’écran.
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_5.py
+:file: ex_3.py
 a = 6
 print(a)
 a = a / 3
@@ -177,7 +177,7 @@ print(a)
 ````
 `````
 
-````{admonition} Exercice 6
+````{admonition} Exercice 4
 :class: note
 Qu’impriment les petits programmes suivants ? 
 Vérifiez vos réponses.
@@ -262,4 +262,5 @@ Ecrivez (sur Thonny) un programme qui dessine deux formes parmi les formes suiva
 ```{image} ../media/formes.png
 
 ```
+``````
 
