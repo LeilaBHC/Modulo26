@@ -424,68 +424,7 @@
 <section id="exercice-5-menu-principal">
 <h2>Exercice 5 — Menu principal<a class="headerlink" href="#exercice-5-menu-principal" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le menu principal permet d’accéder aux différentes fonctionnalités du jeu.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tID0gIkJhcmJlLU5vaXJlIgpleHBlcmllbmNlID0gNQpvcl9lbl9wb2NoZSA9IDIwMApzb2xpZGl0ZSA9IDEwMAoKIyBEw6lmaW5pdGlvbnMgZGVzIGZvbmN0aW9ucwouLi4KCiMgQm91Y2xlIGR1IG1lbnUgcHJpbmNpcGFsCndoaWxlIFRydWU6CiAgICAuLi4=" data-file="dHAyX2pldV9jb21wbGV0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-`````{admonition} Solution
-````{dropdown} &lt;span style="color:grey"&gt;Cliquer ici pour voir la réponse&lt;/span&gt;
-:animate: fade-in-slide-down
-```{codeplay}
-:file: tp2_jeu_complet.py
-nom = "Barbe-Noire"
-experience = 5
-or_en_poche = 200
-solidite = 100
-
-def afficher_fiche(nom, experience, or_en_poche, solidite):
-    print("**********************************************")
-    print("Capitaine :", nom)
-    print("Expérience :", experience)
-    print("Or :", or_en_poche)
-    print("Solidité :", solidite)
-    print("**********************************************")
-
-def prendre_la_mer(solidite):
-    solidite = max(0, solidite - 30)
-    print("Vous avez traversé une tempête. Solidité :", solidite)
-    return solidite
-
-def chercher_tresor():
-    print("Fonction de recherche du trésor à compléter")
-
-def aller_au_marche(or_en_poche):
-    print("Fonction du marché à compléter")
-    return or_en_poche
-
-while True:
-    print("===== LA CHASSE AU TRÉSOR =====")
-    print("1. Voir la fiche du capitaine")
-    print("2. Prendre la mer")
-    print("3. Chercher le trésor")
-    print("4. Aller au marché")
-    print("5. Quitter")
-
-    choix = input("Votre choix : ")
-
-    if choix == "1":
-        afficher_fiche(nom, experience, or_en_poche, solidite)
-    elif choix == "2":
-        solidite = prendre_la_mer(solidite)
-        if solidite &lt;= 0:
-            print("Partie terminée : le navire a coulé")
-            print("Or final :", or_en_poche)
-            break
-    elif choix == "3":
-        chercher_tresor()
-    elif choix == "4":
-        or_en_poche = aller_au_marche(or_en_poche)
-    elif choix == "5":
-        print("Au revoir !")
-        break
-    else:
-        print("Choix invalide.")
-```
-</pre></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHJhbmRvbQoKbm9tID0gIkJhcmJlLU5vaXJlIgpleHBlcmllbmNlID0gNQpvcl9lbl9wb2NoZSA9IDIwMApzb2xpZGl0ZSA9IDEwMAoKZGVmIGdyYWRlX2NhcGl0YWluZShleHBlcmllbmNlKToKICAgIGlmIGV4cGVyaWVuY2UgPCAyOgogICAgICAgIHJldHVybiAiTW91c3NlIgogICAgaWYgZXhwZXJpZW5jZSA8PSA2OgogICAgICAgIHJldHVybiAiTWF0ZWxvdCIKICAgIGlmIGV4cGVyaWVuY2UgPD0gMTU6CiAgICAgICAgcmV0dXJuICJDYXBpdGFpbmUiCiAgICByZXR1cm4gIlNlaWduZXVyIGRlcyBtZXJzIgoKZGVmIGFmZmljaGVyX2ZpY2hlKG5vbSwgZXhwZXJpZW5jZSwgb3JfZW5fcG9jaGUsIHNvbGlkaXRlKToKICAgIHByaW50KCIqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIikKICAgIHByaW50KCJDYXBpdGFpbmUgOiIsIG5vbSkKICAgIHByaW50KCJFeHDDqXJpZW5jZSA6IiwgZXhwZXJpZW5jZSkKICAgIHByaW50KCJPciA6Iiwgb3JfZW5fcG9jaGUpCiAgICBwcmludCgiU29saWRpdMOpIDoiLCBzb2xpZGl0ZSkKICAgIHByaW50KCIqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIikKCmRlZiByZXBhcmVyX25hdmlyZShzb2xpZGl0ZV9hY3R1ZWxsZSwgcmVwYXJhdGlvbik6CiAgICByZXR1cm4gbWluKHNvbGlkaXRlX2FjdHVlbGxlICsgcmVwYXJhdGlvbiwgMTAwKQoKZGVmIHByZW5kcmVfbGFfbWVyKHNvbGlkaXRlKToKICAgIGZvciBqb3VyIGluIHJhbmdlKDEsIDExKToKICAgICAgICBkZWdhdHMgPSByYW5kb20ucmFuZGludCgwLCAxMCkKICAgICAgICBzb2xpZGl0ZSA9IG1heCgwLCBzb2xpZGl0ZSAtIGRlZ2F0cykKICAgICAgICBwcmludCgiSm91ciIsIGpvdXIsICLigJQgZMOpZ8OidHMgOiIsIGRlZ2F0cywgIuKAlCBzb2xpZGl0w6kgOiIsIHNvbGlkaXRlKQoKICAgICAgICBpZiBqb3VyICUgMyA9PSAwOgogICAgICAgICAgICBzb2xpZGl0ZSA9IHJlcGFyZXJfbmF2aXJlKHNvbGlkaXRlLCAxNSkKICAgICAgICAgICAgcHJpbnQoIlLDqXBhcmF0aW9uIDogc29saWRpdMOpIiwgc29saWRpdGUpCgogICAgICAgIGlmIHNvbGlkaXRlIDw9IDA6CiAgICAgICAgICAgIHByaW50KGYiTGUgbmF2aXJlIGEgc29tYnLDqSBhdSBqb3VyIHtqb3VyfSIpCiAgICAgICAgICAgIHJldHVybiBzb2xpZGl0ZQogICAgZWxzZToKICAgICAgICBwcmludCgiVGVycmUgZW4gdnVlICEiKQogICAgICAgIHJldHVybiBzb2xpZGl0ZQoKZGVmIGNoZXJjaGVyX3RyZXNvcihvcl9lbl9wb2NoZSk6CiAgICBpbGVfdHJlc29yID0gcmFuZG9tLnJhbmRpbnQoMSwgMjApCgogICAgZm9yIGVzc2FpIGluIHJhbmdlKDEsIDYpOgogICAgICAgIHRyeToKICAgICAgICAgICAgcHJvcG9zaXRpb24gPSBpbnQoaW5wdXQoZiJUZW50YXRpdmUge2Vzc2FpfS81IOKAlCDDrmxlIDogIikpCiAgICAgICAgZXhjZXB0IFZhbHVlRXJyb3I6CiAgICAgICAgICAgIHByaW50KCJFcnJldXIgOiBlbnRyZXogdW4gbm9tYnJlIGVudGllci4iKQogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBpZiBwcm9wb3NpdGlvbiA8IDEgb3IgcHJvcG9zaXRpb24gPiAyMDoKICAgICAgICAgICAgcHJpbnQoIkVycmV1ciA6IGNob2lzaXNzZXogdW5lIMOubGUgZW50cmUgMSBldCAyMC4iKQogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBpZiBwcm9wb3NpdGlvbiA8IGlsZV90cmVzb3I6CiAgICAgICAgICAgIHByaW50KCJQbHVzIGhhdXQiKQogICAgICAgIGVsaWYgcHJvcG9zaXRpb24gPiBpbGVfdHJlc29yOgogICAgICAgICAgICBwcmludCgiUGx1cyBiYXMiKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIGdhaW4gPSA1MCAqICg2IC0gZXNzYWkpCiAgICAgICAgICAgIG9yX2VuX3BvY2hlID0gb3JfZW5fcG9jaGUgKyBnYWluCiAgICAgICAgICAgIHByaW50KCJUcsOpc29yIHRyb3V2w6kgISBHYWluIDoiLCBnYWluKQogICAgICAgICAgICByZXR1cm4gb3JfZW5fcG9jaGUKCiAgICBwcmludCgiw4ljaGVjIDogbGUgdHLDqXNvciDDqXRhaXQgc3VyIGwnw65sZSIsIGlsZV90cmVzb3IpCiAgICByZXR1cm4gb3JfZW5fcG9jaGUKCmRlZiBjYWxjdWxlcl92YWxldXIodmFsZXVyX3VuaXRhaXJlLCBxdWFudGl0ZSk6CiAgICByZXR1cm4gdmFsZXVyX3VuaXRhaXJlICogcXVhbnRpdGUKCmRlZiBhcHBsaXF1ZXJfdGF4ZV9wb3J0dWFpcmUodG90YWwpOgogICAgaWYgdG90YWwgPiAyMDA6CiAgICAgICAgdGF1eCA9IDIwCiAgICAgICAgdG90YWxfcGVyY3UgPSB0b3RhbCAqIDAuODAKICAgIGVsaWYgdG90YWwgPj0gODA6CiAgICAgICAgdGF1eCA9IDEwCiAgICAgICAgdG90YWxfcGVyY3UgPSB0b3RhbCAqIDAuOTAKICAgIGVsc2U6CiAgICAgICAgdGF1eCA9IDAKICAgICAgICB0b3RhbF9wZXJjdSA9IHRvdGFsCiAgICByZXR1cm4gdGF1eCwgdG90YWxfcGVyY3UKCmRlZiBhbGxlcl9hdV9tYXJjaGUob3JfZW5fcG9jaGUpOgogICAgbm9tYnJlX3ZlbnRlcyA9IDAKICAgIHRvdGFsX3BlcmN1X2VzY2FsZSA9IDAKICAgIG1laWxsZXVyZV92ZW50ZSA9IDAKCiAgICB3aGlsZSBUcnVlOgogICAgICAgIHNhaXNpZSA9IGlucHV0KCJWYWxldXIgdW5pdGFpcmUgKGZpbiBwb3VyIGFycsOqdGVyKSA6ICIpCiAgICAgICAgaWYgc2Fpc2llLmxvd2VyKCkgPT0gImZpbiI6CiAgICAgICAgICAgIGJyZWFrCgogICAgICAgIHRyeToKICAgICAgICAgICAgdmFsZXVyX3VuaXRhaXJlID0gZmxvYXQoc2Fpc2llKQogICAgICAgICAgICBxdWFudGl0ZSA9IGludChpbnB1dCgiUXVhbnRpdMOpIHZlbmR1ZSA6ICIpKQogICAgICAgIGV4Y2VwdCBWYWx1ZUVycm9yOgogICAgICAgICAgICBwcmludCgiU2Fpc2llIGludmFsaWRlLiIpCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIHRvdGFsID0gY2FsY3VsZXJfdmFsZXVyKHZhbGV1cl91bml0YWlyZSwgcXVhbnRpdGUpCiAgICAgICAgdGF1eCwgdG90YWxfcGVyY3UgPSBhcHBsaXF1ZXJfdGF4ZV9wb3J0dWFpcmUodG90YWwpCgogICAgICAgIG5vbWJyZV92ZW50ZXMgPSBub21icmVfdmVudGVzICsgMQogICAgICAgIHRvdGFsX3BlcmN1X2VzY2FsZSA9IHRvdGFsX3BlcmN1X2VzY2FsZSArIHRvdGFsX3BlcmN1CiAgICAgICAgbWVpbGxldXJlX3ZlbnRlID0gbWF4KG1laWxsZXVyZV92ZW50ZSwgdG90YWxfcGVyY3UpCiAgICAgICAgcHJpbnQoZiJUYXhlIDoge3RhdXh9JSDigJQgUGVyw6d1IDoge3RvdGFsX3BlcmN1fSBwacOoY2VzIGQnb3IiKQoKICAgIG9yX2VuX3BvY2hlID0gb3JfZW5fcG9jaGUgKyB0b3RhbF9wZXJjdV9lc2NhbGUKICAgIHByaW50KCJOb21icmUgZGUgdmVudGVzIDoiLCBub21icmVfdmVudGVzKQogICAgcHJpbnQoIlRvdGFsIHBlcsOndSA6IiwgdG90YWxfcGVyY3VfZXNjYWxlKQogICAgcHJpbnQoIk1laWxsZXVyZSB2ZW50ZSA6IiwgbWVpbGxldXJlX3ZlbnRlKQogICAgcmV0dXJuIG9yX2VuX3BvY2hlCgp3aGlsZSBUcnVlOgogICAgcHJpbnQoIj09PT09IExBIENIQVNTRSBBVSBUUsOJU09SID09PT09IikKICAgIHByaW50KCIxLiBWb2lyIGxhIGZpY2hlIGR1IGNhcGl0YWluZSIpCiAgICBwcmludCgiMi4gUHJlbmRyZSBsYSBtZXIiKQogICAgcHJpbnQoIjMuIENoZXJjaGVyIGxlIHRyw6lzb3IiKQogICAgcHJpbnQoIjQuIEFsbGVyIGF1IG1hcmNow6kiKQogICAgcHJpbnQoIjUuIFF1aXR0ZXIiKQoKICAgIGNob2l4ID0gaW5wdXQoIlZvdHJlIGNob2l4IDogIikKCiAgICBpZiBjaG9peCA9PSAiMSI6CiAgICAgICAgYWZmaWNoZXJfZmljaGUobm9tLCBleHBlcmllbmNlLCBvcl9lbl9wb2NoZSwgc29saWRpdGUpCiAgICBlbGlmIGNob2l4ID09ICIyIjoKICAgICAgICBzb2xpZGl0ZSA9IHByZW5kcmVfbGFfbWVyKHNvbGlkaXRlKQogICAgICAgIGlmIHNvbGlkaXRlIDw9IDA6CiAgICAgICAgICAgIHByaW50KCJQYXJ0aWUgdGVybWluw6llIOKAlCBOYXZpcmUgY291bMOpIikKICAgICAgICAgICAgcHJpbnQoIkdyYWRlIDoiLCBncmFkZV9jYXBpdGFpbmUoZXhwZXJpZW5jZSkpCiAgICAgICAgICAgIHByaW50KCJPciBmaW5hbCA6Iiwgb3JfZW5fcG9jaGUpCiAgICAgICAgICAgIGJyZWFrCiAgICBlbGlmIGNob2l4ID09ICIzIjoKICAgICAgICBvcl9lbl9wb2NoZSA9IGNoZXJjaGVyX3RyZXNvcihvcl9lbl9wb2NoZSkKICAgIGVsaWYgY2hvaXggPT0gIjQiOgogICAgICAgIG9yX2VuX3BvY2hlID0gYWxsZXJfYXVfbWFyY2hlKG9yX2VuX3BvY2hlKQogICAgZWxpZiBjaG9peCA9PSAiNSI6CiAgICAgICAgcHJpbnQoIkF1IHJldm9pciAhIikKICAgICAgICBicmVhawogICAgZWxzZToKICAgICAgICBwcmludCgiQ2hvaXggaW52YWxpZGUuIik=" data-file="dHAyX2pldV9jb21wbGV0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
 
         </article>
