@@ -28,6 +28,39 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Ascenseur toujours visible, y compris sur macOS avec les barres de défilement superposées */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.sidebar-scroll::-webkit-scrollbar,
+.toc-scroll::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+.sidebar-scroll::-webkit-scrollbar-track,
+.toc-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+.sidebar-scroll::-webkit-scrollbar-thumb,
+.toc-scroll::-webkit-scrollbar-thumb {
+    background: rgb(128 128 128 / 55%);
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+html,
+body,
+.sidebar-scroll,
+.toc-scroll {
+    scrollbar-width: thin;
+}
+
 /* HEADING */
 
 h1,
