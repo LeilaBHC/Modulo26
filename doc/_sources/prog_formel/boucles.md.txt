@@ -34,8 +34,6 @@ for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
     dot(80, couleur)
     write(couleur, align='center')
     forward(80)
-```
-
 ````{admonition} Exercice 23 - Somme des nombres
 :class: note
 Écrivez une boucle qui calcule la somme des nombres suivants : `2, 3, 5, 7, 11`.
@@ -176,6 +174,93 @@ while compteur < 5:
 
 Il faut vérifier que la condition finira par devenir fausse. Sinon, la boucle ne s'arrête jamais.
 
+L’instruction `while` peut aussi remplacer une répétition dont le nombre d’itérations n’est pas connu à l’avance : elle continue tant qu’une condition reste vraie.
+
+```{codeplay}
+a = 1
+while a < 100:
+    print(a)
+    a = a * 2
+print(f"Maintenant a vaut {a} !")
+```
+
+Dans cet exemple, on initialise la variable `a` à `1`. Puis, tant qu’elle est inférieure à `100`, on l’affiche à l’écran et on la double. Ainsi, `a` passe de `1` à `2`, `4`, `8`, etc. Le programme affiche toutes les puissances de deux inférieures à `100`.
+
+````{admonition} Exercice 18
+:class: note
+Modifiez ce programme pour qu’il imprime toutes les puissances de `10` inférieures ou égales à `10000`.
+
+```{codeplay}
+:file: ex_18.py
+a = 1
+while a < 100:
+    print(a)
+    a = a * 2
+print(f"Maintenant a vaut {a} !")
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_18.py
+a = 10
+while a <= 10000:
+    print(a)
+    a = a * 10
+print(f"Maintenant a vaut {a} !")
+```
+Il est possible d'arriver au même résultat en calculant une puissance de `10` avec l'opérateur `**` :
+```{codeplay}
+a = 10
+n = 1
+while n <= 4:
+    print(a ** n)
+    n = n + 1
+```
+````
+`````
+
+````{admonition} Exercice 19
+:class: note
+Écrivez un programme qui demande en boucle à l'utilisateur comment il va tant qu'il ne répond pas `"Bien merci et toi ?"`.
+
+La fonction `input()` permet de demander à l'utilisateur d'entrer du texte.
+
+**Exemple d’exécution :**
+```
+Comment tu vas ? Bien
+Comment tu vas ? Bof
+Comment tu vas ? Nickel !
+Comment tu vas ? Bien merci et toi ?
+Très bien, merci de demander !
+```
+
+```{codeplay}
+:file: ex_19.py
+...
+
+print("Très bien, merci de demander !")
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_19.py
+reponse = input("Comment tu vas ? ")
+
+while reponse != "Bien merci et toi ?":
+    reponse = input("Comment tu vas ? ")
+
+print("Très bien, merci de demander !")
+```
+⚠️ Python est sensible à la casse. `"Salut"` et `"salut"` ne sont pas égaux lors d'une comparaison avec `==`.
+````
+`````
+
 ### Sortir d'une boucle avec `break`
 
 L'instruction `break` permet d'arrêter immédiatement la boucle en cours.
@@ -201,7 +286,6 @@ while True:
         print("Bravo !")
         break
     print("Ce n'est pas le bon nombre.")
-```
 ````
 
 ## Le jeu du pendu

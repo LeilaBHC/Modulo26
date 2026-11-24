@@ -410,58 +410,6 @@ Match nul !
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnV0c19kb21pY2lsZSA9IGludChpbnB1dCgiQnV0cyBtYXJxdcOpcyBwYXIgbCfDqXF1aXBlIGRvbWljaWxlOiAiKSkKYnV0c19leHRlcmlldXIgPSBpbnQoaW5wdXQoIkJ1dHMgbWFycXXDqXMgcGFyIGwnw6lxdWlwZSBleHTDqXJpZXVyOiAiKSkKCmlmIGJ1dHNfZG9taWNpbGUgPiBidXRzX2V4dGVyaWV1cjoKICAgIHByaW50KCJMJ8OpcXVpcGUgZG9taWNpbGUgYSBnYWduw6kgISEiKQplbGlmIGJ1dHNfZXh0ZXJpZXVyID4gYnV0c19kb21pY2lsZToKICAgIHByaW50KCJMJ8OpcXVpcGUgZXh0w6lyaWV1ciBhIGdhZ27DqSAhISIpCmVsc2U6CiAgICBwcmludCgiTWF0Y2ggbnVsICEiKQ==" data-file="ZXhfMTcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
 </section>
-<section id="linstruction-while">
-<h2>L’instruction while<a class="headerlink" href="#linstruction-while" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’instruction <code class="docutils literal notranslate"><span class="pre">while</span></code> (qui signifie “tant que” en anglais) permet de <strong>répéter un bloc d’instructions tant qu’une condition est remplie</strong>.<br/>
-C’est extrêmement pratique pour réduire le nombre de lignes de code 😜</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEKd2hpbGUgYSA8IDEwMDoKCXByaW50KGEpCglhID0gYSoyCnByaW50KGYiTWFpbnRlbmFudCBhIHZhdXQge2F9ICEiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans cet exemple, on initialise la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> à 1.
-Puis, tant qu’elle est inférieure à 100, on l’affiche à l’écran et on la double.
-Ainsi, <code class="docutils literal notranslate"><span class="pre">a</span></code> passera de 1 à 2 à 4 à 8, etc.
-<strong>Le programme imprime donc toute les puissances de deux inférieures à 100</strong>.</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice 18</p>
-<p>Modifier ce programme pour qu’il imprime toutes les puissances de 10 inférieures ou égales à 10000.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEKd2hpbGUgYSA8IDEwMDoKCXByaW50KGEpCglhID0gYSoyCnByaW50KGYiTWFpbnRlbmFudCBhIHZhdXQge2F9ICEiKQ==" data-file="ZXhfMTgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<div class="admonition-solution admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEwCndoaWxlIGEgPD0gMTAwMDA6CiAgICBwcmludChhKQogICAgYSA9IGEqMTAKcHJpbnQoZiJNYWludGVuYW50IGEgdmF1dCB7YX0gISIp" data-file="ZXhfMTgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Il est tout à fait possible d’arriver au même résultat en calculant la puissance de 10 à chaque tour de boucle en utilisant l’opérateur de puissance: <code class="docutils literal notranslate"><span class="pre">**</span></code>.
-Voici un exemple:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEwCm4gPSAxCndoaWxlIG4gPD0gNDoKICAgIHByaW50KGEqKm4pCiAgICBuID0gbiArIDE=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
-<div class="note admonition">
-<p class="admonition-title">Exercice 19</p>
-<p>Ecrivez un programme qui demande en boucle à l’utilisateur comment il va tant qu’il ne répond pas “Bien merci et toi ?”.<br/>
-Rappel: la fonction <code class="docutils literal notranslate"><span class="pre">input</span></code> permet de demander à l’utilisateur d’entrer du texte.</p>
-<p><strong>Exemple d’exécution :</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Comment tu vas ? Bien
-Comment tu vas ? Bof
-Comment tu vas ? Nickel !
-Comment tu vas ? Bien merci et toi ?
-Très bien, merci de demander !
-</pre></div>
-</div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Li4uCgpwcmludCgiVHLDqHMgYmllbiwgbWVyY2kgZGUgZGVtYW5kZXIgISIp" data-file="ZXhfMTkucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<div class="admonition-solution admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cmVwb25zZSA9IGlucHV0KCJDb21tZW50IHR1IHZhcyA/ICIpCgp3aGlsZSByZXBvbnNlICE9ICJCaWVuIG1lcmNpIGV0IHRvaSA/IjoKICAgIHJlcG9uc2UgPSBpbnB1dCgiQ29tbWVudCB0dSB2YXMgPyAiKQoKcHJpbnQoIlRyw6hzIGJpZW4sIG1lcmNpIGRlIGRlbWFuZGVyICEiKQ==" data-file="ZXhfMTkucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">⚠️ Notez que Python est sensible à la casse (majuscule/minuscule) ⚠️<br/>
-Cela signifie que “Salut” et “salut” ne sont pas égaux lors d’une comparaison (<code class="docutils literal notranslate"><span class="pre">==</span></code>).</p>
-</div>
-</details></div>
-</section>
 <section id="le-module-random">
 <h2>Le module random<a class="headerlink" href="#le-module-random" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> contient plein de fonctions permettant <strong>d’ajouter de l’aléatoire à nos programmes</strong>.<br/>
@@ -581,7 +529,6 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
 </ul>
 </li>
 <li><a class="reference internal" href="#linstruction-if">L’instruction if</a></li>
-<li><a class="reference internal" href="#linstruction-while">L’instruction while</a></li>
 <li><a class="reference internal" href="#le-module-random">Le module random</a></li>
 </ul>
 </li>
