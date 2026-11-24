@@ -404,6 +404,50 @@ print("Or final :", or_en_poche)
 
 Le menu principal permet d'accéder aux différentes fonctionnalités du jeu.
 
+````{admonition} Exercice 5 — Assemblez le jeu complet
+:class: note
+Réutilise les fonctions des exercices précédents et construis le menu suivant :
+
+```text
+===== LA CHASSE AU TRÉSOR =====
+1. Voir la fiche du capitaine
+2. Prendre la mer
+3. Chercher le trésor
+4. Aller au marché
+5. Quitter
+```
+
+Crée au minimum les fonctions :
+
+- `afficher_fiche(nom, experience, or_en_poche, solidite)`
+- `prendre_la_mer(solidite)`
+- `chercher_tresor(or_en_poche)`
+- `aller_au_marche(or_en_poche)`
+- `menu_principal()`
+
+Si le navire coule, affiche le message de fin avec le grade et l'or final.
+
+```{codeplay}
+:file: tp2_jeu_complet.py
+import random
+
+nom = "Barbe-Noire"
+experience = 5
+or_en_poche = 200
+solidite = 100
+
+# Définitions des fonctions
+...
+
+# Menu principal
+while True:
+    ...
+```
+````
+
+`````{admonition} Solution
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 ```{codeplay}
 :file: tp2_jeu_complet.py
 import random
@@ -441,18 +485,15 @@ def prendre_la_mer(solidite):
 
         if jour % 3 == 0:
             solidite = reparer_navire(solidite, 15)
-            print("Réparation : solidité", solidite)
 
         if solidite <= 0:
             print(f"Le navire a sombré au jour {jour}")
             return solidite
-    else:
-        print("Terre en vue !")
-        return solidite
+    print("Terre en vue !")
+    return solidite
 
 def chercher_tresor(or_en_poche):
     ile_tresor = random.randint(1, 20)
-
     for essai in range(1, 6):
         try:
             proposition = int(input(f"Tentative {essai}/5 — île : "))
@@ -493,10 +534,7 @@ def appliquer_taxe_portuaire(total):
     return taux, total_percu
 
 def aller_au_marche(or_en_poche):
-    nombre_ventes = 0
     total_percu_escale = 0
-    meilleure_vente = 0
-
     while True:
         saisie = input("Valeur unitaire (fin pour arrêter) : ")
         if saisie.lower() == "fin":
@@ -511,17 +549,10 @@ def aller_au_marche(or_en_poche):
 
         total = calculer_valeur(valeur_unitaire, quantite)
         taux, total_percu = appliquer_taxe_portuaire(total)
-
-        nombre_ventes = nombre_ventes + 1
         total_percu_escale = total_percu_escale + total_percu
-        meilleure_vente = max(meilleure_vente, total_percu)
         print(f"Taxe : {taux}% — Perçu : {total_percu} pièces d'or")
 
-    or_en_poche = or_en_poche + total_percu_escale
-    print("Nombre de ventes :", nombre_ventes)
-    print("Total perçu :", total_percu_escale)
-    print("Meilleure vente :", meilleure_vente)
-    return or_en_poche
+    return or_en_poche + total_percu_escale
 
 while True:
     print("===== LA CHASSE AU TRÉSOR =====")
@@ -551,4 +582,6 @@ while True:
         break
     else:
         print("Choix invalide.")
+```
+````
 `````
