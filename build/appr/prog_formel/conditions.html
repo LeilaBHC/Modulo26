@@ -272,8 +272,67 @@
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a></p>
 <p>Les structures de contrôle sont un élément central de la programmation.
 <strong>Elles permettent de moduler l’exécution d’un programme selon la valeur de ses variables</strong>.<br/>
-Grâce aux structures conditionnelles, la complexité de vos programmes va pouvoir être décuplée ! 🤯<br/>
 Les structures de contrôle se retrouvent de façon presque identique dans tous les autres langages de programmation.</p>
+<section id="branchement-conditionnel-if-elif-else">
+<h2>Branchement conditionnel (<code class="docutils literal notranslate"><span class="pre">if</span></code> / <code class="docutils literal notranslate"><span class="pre">elif</span></code> / <code class="docutils literal notranslate"><span class="pre">else</span></code>)<a class="headerlink" href="#branchement-conditionnel-if-elif-else" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un branchement conditionnel permet d’exécuter du code selon une condition. La condition est généralement obtenue avec une opération de comparaison et possède donc une valeur booléenne : <code class="docutils literal notranslate"><span class="pre">True</span></code> ou <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJleHBlY3RlZCBhbiBpbmRlbnRlZCBibG9jayIsICJsaW5lIjogMywgImNvbHVtbiI6IDF9XQ==" data-code="aWYgY29uZGl0aW9uOgogICAgIyBleMOpY3V0w6kgc2kgY29uZGl0aW9uIGVzdCBUcnVlCmVsaWYgYXV0cmVfY29uZGl0aW9uOgogICAgIyBleMOpY3V0w6kgc2kgY29uZGl0aW9uIGVzdCBGYWxzZSBldCBhdXRyZV9jb25kaXRpb24gZXN0IFRydWUKZWxzZToKICAgICMgZXjDqWN1dMOpIHNpIGF1Y3VuZSBjb25kaXRpb24gbidlc3QgdnJhaWU=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans cet exemple, <code class="docutils literal notranslate"><span class="pre">elif</span></code> permet de tester une autre condition uniquement si les conditions précédentes sont fausses. Le bloc <code class="docutils literal notranslate"><span class="pre">else</span></code> est facultatif : il est exécuté lorsque aucune condition n’est vraie.</p>
+<p>⚠️ <strong>L’indentation est importante.</strong> En Python, les blocs de code appartenant à <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code> et aux fonctions sont délimités par l’indentation, généralement quatre espaces.</p>
+<section id="operateurs-de-comparaison">
+<h3>Opérateurs de comparaison<a class="headerlink" href="#operateurs-de-comparaison" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Opérateur</p></th>
+<th class="text-align:left head"><p>Signification</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td class="text-align:left"><p>égal à</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td class="text-align:left"><p>différent de</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td class="text-align:left"><p>supérieur à</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td class="text-align:left"><p>inférieur à</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td class="text-align:left"><p>supérieur ou égal à</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td class="text-align:left"><p>inférieur ou égal à</p></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="operateurs-logiques">
+<h3>Opérateurs logiques<a class="headerlink" href="#operateurs-logiques" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Opérateur</p></th>
+<th class="text-align:left head"><p>Effet</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></td>
+<td class="text-align:left"><p>vrai si les deux conditions sont vraies</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
+<td class="text-align:left"><p>vrai si au moins une condition est vraie</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">not</span></code></p></td>
+<td class="text-align:left"><p>inverse la condition</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gMTcKCmlmIDE4IDw9IGFnZSA8IDY1OgogICAgcHJpbnQoIkFkdWx0ZSBhY3RpZiIpCgppZiBhZ2UgPCAxMiBvciBhZ2UgPiA4MDoKICAgIHByaW50KCJUYXJpZiByw6lkdWl0Iik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="exemple-complet">
+<h3>Exemple complet<a class="headerlink" href="#exemple-complet" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm90ZSA9IDUKCmlmIG5vdGUgPT0gNjoKICAgIHByaW50KCJUcsOocyBiaWVuIikKZWxpZiBub3RlID49IDQ6CiAgICBwcmludCgiUGFzc2FibGUiKQplbHNlOgogICAgcHJpbnQoIkluc3VmZmlzYW50Iik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</section>
 <section id="linstruction-if">
 <h2>L’instruction if<a class="headerlink" href="#linstruction-if" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’instruction <code class="docutils literal notranslate"><span class="pre">if</span></code> (si, en anglais) permet d’<strong>effectuer une liste d’instructions uniquement si une valeur booléenne (appelée la condition) est True (vraie)</strong>.</p>
@@ -515,6 +574,12 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">5. Branchement</a><ul>
+<li><a class="reference internal" href="#branchement-conditionnel-if-elif-else">Branchement conditionnel (<code class="docutils literal notranslate"><span class="pre">if</span></code> / <code class="docutils literal notranslate"><span class="pre">elif</span></code> / <code class="docutils literal notranslate"><span class="pre">else</span></code>)</a><ul>
+<li><a class="reference internal" href="#operateurs-de-comparaison">Opérateurs de comparaison</a></li>
+<li><a class="reference internal" href="#operateurs-logiques">Opérateurs logiques</a></li>
+<li><a class="reference internal" href="#exemple-complet">Exemple complet</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#linstruction-if">L’instruction if</a></li>
 <li><a class="reference internal" href="#linstruction-while">L’instruction while</a></li>
 <li><a class="reference internal" href="#le-module-random">Le module random</a></li>

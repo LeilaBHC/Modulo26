@@ -7,8 +7,66 @@
 
 Les structures de contrôle sont un élément central de la programmation.
 **Elles permettent de moduler l’exécution d'un programme selon la valeur de ses variables**.  
-Grâce aux structures conditionnelles, la complexité de vos programmes va pouvoir être décuplée ! 🤯  
 Les structures de contrôle se retrouvent de façon presque identique dans tous les autres langages de programmation.
+
+## Branchement conditionnel (`if` / `elif` / `else`)
+
+Un branchement conditionnel permet d'exécuter du code selon une condition. La condition est généralement obtenue avec une opération de comparaison et possède donc une valeur booléenne : `True` ou `False`.
+
+```{codeplay}
+if condition:
+    # exécuté si condition est True
+elif autre_condition:
+    # exécuté si condition est False et autre_condition est True
+else:
+    # exécuté si aucune condition n'est vraie
+```
+
+Dans cet exemple, `elif` permet de tester une autre condition uniquement si les conditions précédentes sont fausses. Le bloc `else` est facultatif : il est exécuté lorsque aucune condition n'est vraie.
+
+⚠️ **L'indentation est importante.** En Python, les blocs de code appartenant à `if`, `elif`, `else` et aux fonctions sont délimités par l'indentation, généralement quatre espaces.
+
+### Opérateurs de comparaison
+
+| Opérateur | Signification |
+|:---:|:---|
+| `==` | égal à |
+| `!=` | différent de |
+| `>` | supérieur à |
+| `<` | inférieur à |
+| `>=` | supérieur ou égal à |
+| `<=` | inférieur ou égal à |
+
+### Opérateurs logiques
+
+| Opérateur | Effet |
+|:---:|:---|
+| `and` | vrai si les deux conditions sont vraies |
+| `or` | vrai si au moins une condition est vraie |
+| `not` | inverse la condition |
+
+```{codeplay}
+age = 17
+
+if 18 <= age < 65:
+    print("Adulte actif")
+
+if age < 12 or age > 80:
+    print("Tarif réduit")
+```
+
+### Exemple complet
+
+```{codeplay}
+note = 5
+
+if note == 6:
+    print("Très bien")
+elif note >= 4:
+    print("Passable")
+else:
+    print("Insuffisant")
+```
 
 ## L'instruction if
 

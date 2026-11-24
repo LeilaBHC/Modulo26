@@ -7,7 +7,6 @@
 
 Les structures de contrôle sont un élément central de la programmation.
 **Elles permettent de moduler l’exécution d'un programme selon la valeur de ses variables**.  
-Grâce aux structures conditionnelles, la complexité de vos programmes va pouvoir être décuplée ! 🤯  
 Les structures de contrôle se retrouvent de façon presque identique dans tous les autres langages de programmation.
 
 ## L'instruction if
