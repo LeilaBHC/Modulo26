@@ -7,7 +7,7 @@ Informatique au gymnase : Travaux pratiques
 Bienvenue sur la plateforme de TP d'informatique !
 
 .. toctree::
-   :caption: Programmation (parcours formel)
+   :caption: Programmation 1
    :maxdepth: 3
    :hidden:
 
@@ -21,8 +21,8 @@ Bienvenue sur la plateforme de TP d'informatique !
 
 
 .. toctree::
-    :name: mon-jeu
-    :caption: Mon jeu
+    :name: programmation-mon-premier-jeu
+    :caption: Programmation Mon premier jeu
     :maxdepth: 3
     :hidden:
 
@@ -32,8 +32,8 @@ Bienvenue sur la plateforme de TP d'informatique !
 
 
 .. toctree::
-    :name: Programmation (parcours dessin et aventure)
-    :caption: Programmation (parcours dessin et aventure)
+    :name: programmation-dessin
+    :caption: Programmation Dessin
     :maxdepth: 3
     :hidden:
 
@@ -45,11 +45,11 @@ Bienvenue sur la plateforme de TP d'informatique !
     prog_dessin/randomiser
 
 
-`Programmation (parcours formel) <prog_formel/intro.html>`_
+`Programmation 1 <prog_formel/intro.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche formelle.
 
-`Mon jeu <mon_jeu/part1.html>`_
+`Programmation Mon premier jeu <mon_jeu/part1.html>`_
 : ce parcours accompagne la création d'un jeu en Python.
 
-`Programmation (parcours dessin) <prog_dessin/dessiner.html>`_
+`Programmation Dessin <prog_dessin/dessiner.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche par le dessin (basé sur le contenu de Modulo).
