@@ -441,6 +441,18 @@ solidite = 100
 
 # Menu principal
 while True:
+    print("===== LA CHASSE AU TRÉSOR =====")
+    print("1. Voir la fiche du capitaine")
+    print("2. Prendre la mer")
+    print("3. Chercher le trésor")
+    print("4. Aller au marché")
+    print("5. Quitter")
+
+    choix = input("Votre choix : ")
+
+    if choix == "1":
+
+
     ...
 ```
 ````
