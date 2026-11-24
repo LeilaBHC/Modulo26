@@ -225,6 +225,7 @@
 <li class="toctree-l1"><a class="reference internal" href="liste.html">7. Les listes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tuples.html">8. Les tuples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="boucles.html">6. Les boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">7. Hasard et nombres aléatoires</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation Mon premier jeu</span></p>
 <ul>
@@ -349,67 +350,7 @@ Match nul !
 </summary><div class="summary-content card-body docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnV0c19kb21pY2lsZSA9IGludChpbnB1dCgiQnV0cyBtYXJxdcOpcyBwYXIgbCfDqXF1aXBlIGRvbWljaWxlOiAiKSkKYnV0c19leHRlcmlldXIgPSBpbnQoaW5wdXQoIkJ1dHMgbWFycXXDqXMgcGFyIGwnw6lxdWlwZSBleHTDqXJpZXVyOiAiKSkKCmlmIGJ1dHNfZG9taWNpbGUgPiBidXRzX2V4dGVyaWV1cjoKICAgIHByaW50KCJMJ8OpcXVpcGUgZG9taWNpbGUgYSBnYWduw6kgISEiKQplbGlmIGJ1dHNfZXh0ZXJpZXVyID4gYnV0c19kb21pY2lsZToKICAgIHByaW50KCJMJ8OpcXVpcGUgZXh0w6lyaWV1ciBhIGdhZ27DqSAhISIpCmVsc2U6CiAgICBwcmludCgiTWF0Y2ggbnVsICEiKQ==" data-file="ZXhfMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
-</section>
-<section id="le-module-random">
-<h2>Le module random<a class="headerlink" href="#le-module-random" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> contient plein de fonctions permettant <strong>d’ajouter de l’aléatoire à nos programmes</strong>.<br/>
-Par exmple, la fonction <code class="docutils literal notranslate"><span class="pre">randint(min,</span> <span class="pre">max)</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet de <strong>tirer un nombre entier aléatoire</strong> entre <code class="docutils literal notranslate"><span class="pre">min</span></code> et <code class="docutils literal notranslate"><span class="pre">max</span></code> (compris).</p>
-<p>Voici un exemple où le programme tire un nombre aléatoire entre 1 et 100.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHJhbmRvbQoKbiA9IHJhbmRvbS5yYW5kaW50KDEsIDEwMCkKcHJpbnQobik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Il est aussi possible d’afficher des objets de taille aléatoire à des emplacements aléatoires.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdmcm9tIHR1cnRsZSBpbXBvcnQgKicgdXNlZDsgdW5hYmxlIHRvIGRldGVjdCB1bmRlZmluZWQgbmFtZXMiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjI6MTogJ2Zyb20gcmFuZG9tIGltcG9ydCAqJyB1c2VkOyB1bmFibGUgdG8gZGV0ZWN0IHVuZGVmaW5lZCBuYW1lcyIsICJsaW5lIjogMiwgImNvbHVtbiI6IDB9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MzoxOiAndXAnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHJhbmRvbSwgdHVydGxlIiwgImxpbmUiOiAzLCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo3Ojk6ICdyYW5kaW50JyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiByYW5kb20sIHR1cnRsZSIsICJsaW5lIjogNywgImNvbHVtbiI6IDh9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6ODo5OiAncmFuZGludCcgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogcmFuZG9tLCB0dXJ0bGUiLCAibGluZSI6IDgsICJjb2x1bW4iOiA4fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5Ojk6OTogJ3JhbmRpbnQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHJhbmRvbSwgdHVydGxlIiwgImxpbmUiOiA5LCAiY29sdW1uIjogOH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMDo1OiAnZ290bycgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogcmFuZG9tLCB0dXJ0bGUiLCAibGluZSI6IDEwLCAiY29sdW1uIjogNH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxMTo1OiAnZG90JyBtYXkgYmUgdW5kZWZpbmVkLCBvciBkZWZpbmVkIGZyb20gc3RhciBpbXBvcnRzOiByYW5kb20sIHR1cnRsZSIsICJsaW5lIjogMTEsICJjb2x1bW4iOiA0fSwgeyJ0eXBlIjogIndhcm5pbmciLCAibWVzc2FnZSI6ICJjb2RlLnB5OjEyOjU6ICd3cml0ZScgbWF5IGJlIHVuZGVmaW5lZCwgb3IgZGVmaW5lZCBmcm9tIHN0YXIgaW1wb3J0czogcmFuZG9tLCB0dXJ0bGUiLCAibGluZSI6IDEyLCAiY29sdW1uIjogNH1d" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICogICMgSW1wb3J0ZSB0b3V0ZXMgbGVzIGZvbmN0aW9ucyBkdSBtb2R1bGUgdHVydGxlCmZyb20gcmFuZG9tIGltcG9ydCAqICAjIEltcG9ydGUgdG91dGVzIGxlcyBmb25jdGlvbnMgZHUgbW9kdWxlIHJhbmRvbQp1cCgpICAjIEzDqHZlIGxlIHN0eWxvCgppID0gMAp3aGlsZSBpIDwgMTA6CiAgICB4ID0gcmFuZGludCgtMjUwLCAyNTApICAjIFBvc2l0aW9uIGFsw6lhdG9pcmUgc3VyIGwnYXhlIHgKICAgIHkgPSByYW5kaW50KC0xNTAsIDE1MCkgICMgUG9zaXRpb24gYWzDqWF0b2lyZSBzdXIgbCdheGUgeQogICAgZCA9IHJhbmRpbnQoMSwgNSkgICMgRGlhbcOodHJlIGFsw6lhdG9pcmUgZW50cmUgMSBldCA1CiAgICBnb3RvKHgsIHkpCiAgICBkb3QoZCoxMCwgJ2N5YW4nKSAgIyBEZXNzaW5lIHVuIHJvbmQgZGUgZGlhbcOodHJlIGQqMTAKICAgIHdyaXRlKGQsIGFsaWduPSdjZW50ZXInKSAgIyBFY3JpcyBsYSB2YWxldXIgZG9ubsOpZSBlbiBhcmd1bWVudAogICAgaSA9IGkgKyAx" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
-<p class="admonition-title">Question</p>
-<div class="question-content docutils">
-<p>En Python, <code class="docutils literal notranslate"><span class="pre">random</span></code> est</p>
-<p><label class="answer correct"><input type="checkbox"/>un module</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>une condition</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>une variable aléatoire</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>un mot-clé</label></p>
-</div>
-<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
-<p>Un module est un recueil de fonctions prêtes à l’emploi que l’on peut importer dans notre code.</p>
-</div>
-</div>
-</form></div><div class="note admonition">
-<p class="admonition-title">Exercice 4 - Devine mon nombre !</p>
-<p>Ecrivez un programme qui permet de jouer à “Devine mon nombre”:</p>
-<ol class="simple">
-<li><p>Laissez le programme tirer un nombre aléatoire entre 1 et 50.</p></li>
-<li><p>Demandez à l’utilisateur de proposer un nombre tant qu’il n’a pas trouvé le bon.</p></li>
-<li><p>A chaque proposition de nombre, le programme affiche “Plus grand” ou “Plus petit” pour aider le joueur.</p></li>
-<li><p>Ajoutez un compteur de coups nécessaires pour trouver le bon nombre.</p></li>
-</ol>
-<p><strong>Exemple d’exécution :</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Devine mon nombre: 32
-Plus grand
-Devine mon nombre: 43
-Plus petit
-...
-Devine mon nombre: 38
-Gagné ! (Il vous a fallu 6 coups)
-</pre></div>
-</div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdyYW5kb20nIGltcG9ydGVkIGJ1dCB1bnVzZWQiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfV0=" data-code="aW1wb3J0IHJhbmRvbQoKbm9tYnJlX215c3RlcmUgPSAuLi4Kbm9tYnJlX3Byb3Bvc2UgPSAuLi4KY291cHMgPSAxCndoaWxlIC4uLjoKICAgIGlmIC4uLjoKICAgICAgICBwcmludCgnUGx1cyBwZXRpdCcpCiAgICBlbHNlOgogICAgICAgIHByaW50KCdQbHVzIGdyYW5kJykKICAgIC4uLgpwcmludChmJ0dhZ27DqSAhIChJbCB2b3VzIGEgZmFsbHUge2NvdXBzfSBjb3VwcyknKQ==" data-file="ZXhfNC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<!-- `````{admonition} Solution
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-```{codeplay}
-:file: ex_4.py
-import random
-
-nombre_mystere = random.randint(1, 50)
-nombre_propose = int(input('Devine mon nombre: '))
-coups = 1
-while nombre_propose != nombre_mystere:
-    if nombre_propose > nombre_mystere:
-        print('Plus petit')
-    else:
-        print('Plus grand')
-    nombre_propose = int(input('Devine mon nombre: '))
-    coups = coups + 1
-print(f'Gagné ! (Il vous a fallu {coups} coups)')
-```
-````
-````` -->
+<!-- Fin du chapitre Branchement -->
 </section>
 </section>
 
@@ -463,7 +404,6 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
             <ul>
 <li><a class="reference internal" href="#">5. Branchement</a><ul>
 <li><a class="reference internal" href="#linstruction-if">L’instruction if</a></li>
-<li><a class="reference internal" href="#le-module-random">Le module random</a></li>
 </ul>
 </li>
 </ul>

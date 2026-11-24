@@ -34,8 +34,6 @@ for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
     dot(80, couleur)
     write(couleur, align='center')
     forward(80)
-```
-
 ````{admonition} Exercice 1 - Somme des nombres
 :class: note
 Écrivez une boucle qui calcule la somme des nombres suivants : `2, 3, 5, 7, 11`.
@@ -116,6 +114,8 @@ for i in range(1, 10):
     for j in range(1, 10):
         print(f"{i} × {j} = {i * j}")
     print()
+```
+
 ````{admonition} Exercice 2 - Nombres premiers
 :class: note
 1. Écrivez une fonction `est_premier(nombre)` qui retourne `True` si le nombre est premier et `False` sinon.
@@ -284,7 +284,9 @@ while True:
         print("Bravo !")
         break
     print("Ce n'est pas le bon nombre.")
+```
 ````
+`````
 
 ## Le jeu du pendu
 
