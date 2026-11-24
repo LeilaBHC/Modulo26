@@ -61,6 +61,7 @@ language = 'fr'
 
 
 # exclude_patterns = ['prog1', 'prog2','archi','glossaire']
+exclude_patterns = ['prog_dessin/aventure.md']
 
 #root_doc = 'rep-info/index'
 
