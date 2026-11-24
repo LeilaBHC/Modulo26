@@ -32,7 +32,6 @@ Bienvenue sur la plateforme de TP d'informatique !
     prog_dessin/parametrer
     prog_dessin/parcourir
     prog_dessin/randomiser
-    prog_dessin/aventure
 
 
 .. toctree::
