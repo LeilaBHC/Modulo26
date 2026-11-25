@@ -270,13 +270,13 @@ while True:
 Avec l'instruction `continue`, nous pouvons arrêter l'itération actuelle et continuer avec la suivante :
 
 ```{codeplay}
-
+:file: ex_.py
 i = 0
 while i < 6:
-  i += 1
-  if i == 3:
-    continue
-  print(i)
+    i += 1
+    if i == 3:
+        continue
+    print(i)
 ```
 ````{admonition} Exercice 6 - calcule ta moyenne
 :class: note
