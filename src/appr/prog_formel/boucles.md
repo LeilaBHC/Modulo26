@@ -240,7 +240,7 @@ print("Très bien, merci de demander !")
 ````
 
 
-### Sortir d'une boucle avec `break`
+## Les instructions `break` et `continue`
 
 L'instruction `break` permet d'arrêter immédiatement la boucle en cours.
 
@@ -266,6 +266,38 @@ while True:
         break
     print("Ce n'est pas le bon nombre.")
 ```
+````
+Avec l'instruction `continue`, nous pouvons arrêter l'itération actuelle et continuer avec la suivante :
+
+```{codeplay}
+
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+```
+````{admonition} Exercice 6 - calcule ta moyenne
+:class: note
+Créez une boucle qui demande 3 notes valides à la personne utilisatrice pour calculer la moyenne. Si la note saisie n'est pas entre 0 et 20, elle ne comptera pas comme note.
+
+```{codeplay}
+:file: ex_6.py
+total = 0
+compteur = 0
+
+while compteur < 3:
+    note = float(input("Entrez une note entre 0 et 20 : "))
+
+    if note < 0 or note > 20:
+        print("Note invalide, ignorée.")
+        continue  # Passe directement au tour suivant sans compter la note
+
+    total += note
+    compteur += 1
+
+print("Moyenne :", total / 3)```
 ````
 
 ## Le jeu du pendu
