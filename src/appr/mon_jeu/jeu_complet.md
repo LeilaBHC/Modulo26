@@ -5,21 +5,33 @@
 Dans ce chapitre, tu vas assembler toutes les parties de ton jeu pour obtenir un programme complet.
 
 ## Assemblage du jeu sans IA
+### Menu principal
 
-Avant de terminer, vérifie que ton programme pour ce jeu contient :
+Le menu principal permet d'accéder aux différentes fonctionnalités du jeu.
 
-
-
-
-- [ ] un titre;
-- [ ] les fonctions utiles;
-- [ ] une boucle pour permettre au joueur ou à la joueuse de rejouer.
-- [ ] une condition de victoire ou de défaite ;
-- [ ] un message affiché à la fin.
-
-````{admonition} Exercice 1.1 — Assemblage 
+````{admonition}  — Assemblez le jeu complet
 :class: note
-Grace aux parties 1 et 2 écris et teste ton jeu
+Réutilise les fonctions des exercices précédents et construis le menu suivant :
+
+```text
+===== LA CHASSE AU TRÉSOR =====
+1. Voir la fiche du capitaine
+2. Prendre la mer
+3. Chercher le trésor
+4. Aller au marché
+5. Quitter
+```
+
+Crée au minimum les fonctions :
+
+- `afficher_fiche(nom, experience, or_en_poche, solidite)`
+- `prendre_la_mer(solidite)`
+- `chercher_tresor(or_en_poche)`
+- `aller_au_marche(or_en_poche)`
+- `menu_principal()`
+
+Si le navire coule, affiche le message de fin avec le grade et l'or final.
+
 ```{codeplay}
 :file: tp2_jeu_complet.py
 import random
@@ -29,13 +41,19 @@ experience = 5
 or_en_poche = 200
 solidite = 100
 
-def grade_capitaine(experience):
-    ...
-
+# Définitions des fonctions
+...
 def afficher_fiche(nom, experience, or_en_poche, solidite):
     ...
-
-
+def prendre_la_mer(solidite)
+    ...
+def chercher_tresor(or_en_poche)
+    ...
+def aller_au_marche(or_en_poche)
+    ...
+def menu_principal()
+    ...
+# Menu principal
 while True:
     print("===== LA CHASSE AU TRÉSOR =====")
     print("1. Voir la fiche du capitaine")
@@ -47,12 +65,19 @@ while True:
     choix = input("Votre choix : ")
 
     if choix == "1":
-        afficher_fiche(nom, experience, or_en_poche, solidite)
-    elif choix == "2":
-        ...
 
+
+    ...
 ```
 ````
+
+Avant de terminer, vérifie que ton programme pour ce jeu contient :
+
+- un titre;
+- les fonctions utiles;
+- une boucle pour permettre au joueur ou à la joueuse de rejouer.
+- une condition de victoire ou de défaite ;
+- un message affiché à la fin.
 
 
 `````{admonition} Solution

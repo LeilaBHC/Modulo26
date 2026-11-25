@@ -272,18 +272,38 @@
 <p>Dans ce chapitre, tu vas assembler toutes les parties de ton jeu pour obtenir un programme complet.</p>
 <section id="assemblage-du-jeu-sans-ia">
 <h2>Assemblage du jeu sans IA<a class="headerlink" href="#assemblage-du-jeu-sans-ia" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="menu-principal">
+<h3>Menu principal<a class="headerlink" href="#menu-principal" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le menu principal permet d’accéder aux différentes fonctionnalités du jeu.</p>
+<div class="note admonition">
+<p class="admonition-title">— Assemblez le jeu complet</p>
+<p>Réutilise les fonctions des exercices précédents et construis le menu suivant :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>===== LA CHASSE AU TRÉSOR =====
+1. Voir la fiche du capitaine
+2. Prendre la mer
+3. Chercher le trésor
+4. Aller au marché
+5. Quitter
+</pre></div>
+</div>
+<p>Crée au minimum les fonctions :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">afficher_fiche(nom,</span> <span class="pre">experience,</span> <span class="pre">or_en_poche,</span> <span class="pre">solidite)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prendre_la_mer(solidite)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chercher_tresor(or_en_poche)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aller_au_marche(or_en_poche)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">menu_principal()</span></code></p></li>
+</ul>
+<p>Si le navire coule, affiche le message de fin avec le grade et l’or final.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJpbnZhbGlkIHN5bnRheCIsICJsaW5lIjogMTIsICJjb2x1bW4iOiAyOX1d" data-code="aW1wb3J0IHJhbmRvbQoKbm9tID0gIkJhcmJlLU5vaXJlIgpleHBlcmllbmNlID0gNQpvcl9lbl9wb2NoZSA9IDIwMApzb2xpZGl0ZSA9IDEwMAoKIyBEw6lmaW5pdGlvbnMgZGVzIGZvbmN0aW9ucwouLi4KZGVmIGFmZmljaGVyX2ZpY2hlKG5vbSwgZXhwZXJpZW5jZSwgb3JfZW5fcG9jaGUsIHNvbGlkaXRlKToKICAgIC4uLgpkZWYgcHJlbmRyZV9sYV9tZXIoc29saWRpdGUpCiAgICAuLi4KZGVmIGNoZXJjaGVyX3RyZXNvcihvcl9lbl9wb2NoZSkKICAgIC4uLgpkZWYgYWxsZXJfYXVfbWFyY2hlKG9yX2VuX3BvY2hlKQogICAgLi4uCmRlZiBtZW51X3ByaW5jaXBhbCgpCiAgICAuLi4KIyBNZW51IHByaW5jaXBhbAp3aGlsZSBUcnVlOgogICAgcHJpbnQoIj09PT09IExBIENIQVNTRSBBVSBUUsOJU09SID09PT09IikKICAgIHByaW50KCIxLiBWb2lyIGxhIGZpY2hlIGR1IGNhcGl0YWluZSIpCiAgICBwcmludCgiMi4gUHJlbmRyZSBsYSBtZXIiKQogICAgcHJpbnQoIjMuIENoZXJjaGVyIGxlIHRyw6lzb3IiKQogICAgcHJpbnQoIjQuIEFsbGVyIGF1IG1hcmNow6kiKQogICAgcHJpbnQoIjUuIFF1aXR0ZXIiKQoKICAgIGNob2l4ID0gaW5wdXQoIlZvdHJlIGNob2l4IDogIikKCiAgICBpZiBjaG9peCA9PSAiMSI6CgoKICAgIC4uLg==" data-file="dHAyX2pldV9jb21wbGV0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <p>Avant de terminer, vérifie que ton programme pour ce jeu contient :</p>
 <ul class="simple">
-<li><p>[ ] un titre;</p></li>
-<li><p>[ ] les fonctions utiles;</p></li>
-<li><p>[ ] une boucle pour permettre au joueur ou à la joueuse de rejouer.</p></li>
-<li><p>[ ] une condition de victoire ou de défaite ;</p></li>
-<li><p>[ ] un message affiché à la fin.</p></li>
+<li><p>un titre;</p></li>
+<li><p>les fonctions utiles;</p></li>
+<li><p>une boucle pour permettre au joueur ou à la joueuse de rejouer.</p></li>
+<li><p>une condition de victoire ou de défaite ;</p></li>
+<li><p>un message affiché à la fin.</p></li>
 </ul>
-<div class="note admonition">
-<p class="admonition-title">Exercice 1.1 — Assemblage </p>
-<p>Grace aux parties 1 et 2 écris et teste ton jeu</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdyYW5kb20nIGltcG9ydGVkIGJ1dCB1bnVzZWQiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfV0=" data-code="aW1wb3J0IHJhbmRvbQoKbm9tID0gIkJhcmJlLU5vaXJlIgpleHBlcmllbmNlID0gNQpvcl9lbl9wb2NoZSA9IDIwMApzb2xpZGl0ZSA9IDEwMAoKZGVmIGdyYWRlX2NhcGl0YWluZShleHBlcmllbmNlKToKICAgIC4uLgoKZGVmIGFmZmljaGVyX2ZpY2hlKG5vbSwgZXhwZXJpZW5jZSwgb3JfZW5fcG9jaGUsIHNvbGlkaXRlKToKICAgIC4uLgoKCndoaWxlIFRydWU6CiAgICBwcmludCgiPT09PT0gTEEgQ0hBU1NFIEFVIFRSw4lTT1IgPT09PT0iKQogICAgcHJpbnQoIjEuIFZvaXIgbGEgZmljaGUgZHUgY2FwaXRhaW5lIikKICAgIHByaW50KCIyLiBQcmVuZHJlIGxhIG1lciIpCiAgICBwcmludCgiMy4gQ2hlcmNoZXIgbGUgdHLDqXNvciIpCiAgICBwcmludCgiNC4gQWxsZXIgYXUgbWFyY2jDqSIpCiAgICBwcmludCgiNS4gUXVpdHRlciIpCgogICAgY2hvaXggPSBpbnB1dCgiVm90cmUgY2hvaXggOiAiKQoKICAgIGlmIGNob2l4ID09ICIxIjoKICAgICAgICBhZmZpY2hlcl9maWNoZShub20sIGV4cGVyaWVuY2UsIG9yX2VuX3BvY2hlLCBzb2xpZGl0ZSkKICAgIGVsaWYgY2hvaXggPT0gIjIiOgogICAgICAgIC4uLg==" data-file="dHAyX2pldV9jb21wbGV0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <div class="admonition-solution admonition">
 <p class="admonition-title">Solution</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
@@ -295,6 +315,7 @@
 </summary><div class="summary-content card-body docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHJhbmRvbQoKbm9tID0gIkJhcmJlLU5vaXJlIgpleHBlcmllbmNlID0gNQpvcl9lbl9wb2NoZSA9IDIwMApzb2xpZGl0ZSA9IDEwMAoKZGVmIGdyYWRlX2NhcGl0YWluZShleHBlcmllbmNlKToKICAgIGlmIGV4cGVyaWVuY2UgPCAyOgogICAgICAgIHJldHVybiAiTW91c3NlIgogICAgaWYgZXhwZXJpZW5jZSA8PSA2OgogICAgICAgIHJldHVybiAiTWF0ZWxvdCIKICAgIGlmIGV4cGVyaWVuY2UgPD0gMTU6CiAgICAgICAgcmV0dXJuICJDYXBpdGFpbmUiCiAgICByZXR1cm4gIlNlaWduZXVyIGRlcyBtZXJzIgoKZGVmIGFmZmljaGVyX2ZpY2hlKG5vbSwgZXhwZXJpZW5jZSwgb3JfZW5fcG9jaGUsIHNvbGlkaXRlKToKICAgIHByaW50KCIqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIikKICAgIHByaW50KCJDYXBpdGFpbmUgOiIsIG5vbSkKICAgIHByaW50KCJFeHDDqXJpZW5jZSA6IiwgZXhwZXJpZW5jZSkKICAgIHByaW50KCJPciA6Iiwgb3JfZW5fcG9jaGUpCiAgICBwcmludCgiU29saWRpdMOpIDoiLCBzb2xpZGl0ZSkKICAgIHByaW50KCIqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIikKCmRlZiByZXBhcmVyX25hdmlyZShzb2xpZGl0ZV9hY3R1ZWxsZSwgcmVwYXJhdGlvbik6CiAgICByZXR1cm4gbWluKHNvbGlkaXRlX2FjdHVlbGxlICsgcmVwYXJhdGlvbiwgMTAwKQoKZGVmIHByZW5kcmVfbGFfbWVyKHNvbGlkaXRlKToKICAgIGZvciBqb3VyIGluIHJhbmdlKDEsIDExKToKICAgICAgICBkZWdhdHMgPSByYW5kb20ucmFuZGludCgwLCAxMCkKICAgICAgICBzb2xpZGl0ZSA9IG1heCgwLCBzb2xpZGl0ZSAtIGRlZ2F0cykKICAgICAgICBwcmludCgiSm91ciIsIGpvdXIsICLigJQgZMOpZ8OidHMgOiIsIGRlZ2F0cywgIuKAlCBzb2xpZGl0w6kgOiIsIHNvbGlkaXRlKQoKICAgICAgICBpZiBqb3VyICUgMyA9PSAwOgogICAgICAgICAgICBzb2xpZGl0ZSA9IHJlcGFyZXJfbmF2aXJlKHNvbGlkaXRlLCAxNSkKCiAgICAgICAgaWYgc29saWRpdGUgPD0gMDoKICAgICAgICAgICAgcHJpbnQoZiJMZSBuYXZpcmUgYSBzb21icsOpIGF1IGpvdXIge2pvdXJ9IikKICAgICAgICAgICAgcmV0dXJuIHNvbGlkaXRlCiAgICBwcmludCgiVGVycmUgZW4gdnVlICEiKQogICAgcmV0dXJuIHNvbGlkaXRlCgpkZWYgY2hlcmNoZXJfdHJlc29yKG9yX2VuX3BvY2hlKToKICAgIGlsZV90cmVzb3IgPSByYW5kb20ucmFuZGludCgxLCAyMCkKICAgIGZvciBlc3NhaSBpbiByYW5nZSgxLCA2KToKICAgICAgICB0cnk6CiAgICAgICAgICAgIHByb3Bvc2l0aW9uID0gaW50KGlucHV0KGYiVGVudGF0aXZlIHtlc3NhaX0vNSDigJQgw65sZSA6ICIpKQogICAgICAgIGV4Y2VwdCBWYWx1ZUVycm9yOgogICAgICAgICAgICBwcmludCgiRXJyZXVyIDogZW50cmV6IHVuIG5vbWJyZSBlbnRpZXIuIikKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgaWYgcHJvcG9zaXRpb24gPCAxIG9yIHByb3Bvc2l0aW9uID4gMjA6CiAgICAgICAgICAgIHByaW50KCJFcnJldXIgOiBjaG9pc2lzc2V6IHVuZSDDrmxlIGVudHJlIDEgZXQgMjAuIikKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgaWYgcHJvcG9zaXRpb24gPCBpbGVfdHJlc29yOgogICAgICAgICAgICBwcmludCgiUGx1cyBoYXV0IikKICAgICAgICBlbGlmIHByb3Bvc2l0aW9uID4gaWxlX3RyZXNvcjoKICAgICAgICAgICAgcHJpbnQoIlBsdXMgYmFzIikKICAgICAgICBlbHNlOgogICAgICAgICAgICBnYWluID0gNTAgKiAoNiAtIGVzc2FpKQogICAgICAgICAgICBvcl9lbl9wb2NoZSA9IG9yX2VuX3BvY2hlICsgZ2FpbgogICAgICAgICAgICBwcmludCgiVHLDqXNvciB0cm91dsOpICEgR2FpbiA6IiwgZ2FpbikKICAgICAgICAgICAgcmV0dXJuIG9yX2VuX3BvY2hlCgogICAgcHJpbnQoIsOJY2hlYyA6IGxlIHRyw6lzb3Igw6l0YWl0IHN1ciBsJ8OubGUiLCBpbGVfdHJlc29yKQogICAgcmV0dXJuIG9yX2VuX3BvY2hlCgpkZWYgY2FsY3VsZXJfdmFsZXVyKHZhbGV1cl91bml0YWlyZSwgcXVhbnRpdGUpOgogICAgcmV0dXJuIHZhbGV1cl91bml0YWlyZSAqIHF1YW50aXRlCgpkZWYgYXBwbGlxdWVyX3RheGVfcG9ydHVhaXJlKHRvdGFsKToKICAgIGlmIHRvdGFsID4gMjAwOgogICAgICAgIHRhdXggPSAyMAogICAgICAgIHRvdGFsX3BlcmN1ID0gdG90YWwgKiAwLjgwCiAgICBlbGlmIHRvdGFsID49IDgwOgogICAgICAgIHRhdXggPSAxMAogICAgICAgIHRvdGFsX3BlcmN1ID0gdG90YWwgKiAwLjkwCiAgICBlbHNlOgogICAgICAgIHRhdXggPSAwCiAgICAgICAgdG90YWxfcGVyY3UgPSB0b3RhbAogICAgcmV0dXJuIHRhdXgsIHRvdGFsX3BlcmN1CgpkZWYgYWxsZXJfYXVfbWFyY2hlKG9yX2VuX3BvY2hlKToKICAgIHRvdGFsX3BlcmN1X2VzY2FsZSA9IDAKICAgIHdoaWxlIFRydWU6CiAgICAgICAgc2Fpc2llID0gaW5wdXQoIlZhbGV1ciB1bml0YWlyZSAoZmluIHBvdXIgYXJyw6p0ZXIpIDogIikKICAgICAgICBpZiBzYWlzaWUubG93ZXIoKSA9PSAiZmluIjoKICAgICAgICAgICAgYnJlYWsKCiAgICAgICAgdHJ5OgogICAgICAgICAgICB2YWxldXJfdW5pdGFpcmUgPSBmbG9hdChzYWlzaWUpCiAgICAgICAgICAgIHF1YW50aXRlID0gaW50KGlucHV0KCJRdWFudGl0w6kgdmVuZHVlIDogIikpCiAgICAgICAgZXhjZXB0IFZhbHVlRXJyb3I6CiAgICAgICAgICAgIHByaW50KCJTYWlzaWUgaW52YWxpZGUuIikKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgdG90YWwgPSBjYWxjdWxlcl92YWxldXIodmFsZXVyX3VuaXRhaXJlLCBxdWFudGl0ZSkKICAgICAgICB0YXV4LCB0b3RhbF9wZXJjdSA9IGFwcGxpcXVlcl90YXhlX3BvcnR1YWlyZSh0b3RhbCkKICAgICAgICB0b3RhbF9wZXJjdV9lc2NhbGUgPSB0b3RhbF9wZXJjdV9lc2NhbGUgKyB0b3RhbF9wZXJjdQogICAgICAgIHByaW50KGYiVGF4ZSA6IHt0YXV4fSUg4oCUIFBlcsOndSA6IHt0b3RhbF9wZXJjdX0gcGnDqGNlcyBkJ29yIikKCiAgICByZXR1cm4gb3JfZW5fcG9jaGUgKyB0b3RhbF9wZXJjdV9lc2NhbGUKCndoaWxlIFRydWU6CiAgICBwcmludCgiPT09PT0gTEEgQ0hBU1NFIEFVIFRSw4lTT1IgPT09PT0iKQogICAgcHJpbnQoIjEuIFZvaXIgbGEgZmljaGUgZHUgY2FwaXRhaW5lIikKICAgIHByaW50KCIyLiBQcmVuZHJlIGxhIG1lciIpCiAgICBwcmludCgiMy4gQ2hlcmNoZXIgbGUgdHLDqXNvciIpCiAgICBwcmludCgiNC4gQWxsZXIgYXUgbWFyY2jDqSIpCiAgICBwcmludCgiNS4gUXVpdHRlciIpCgogICAgY2hvaXggPSBpbnB1dCgiVm90cmUgY2hvaXggOiAiKQoKICAgIGlmIGNob2l4ID09ICIxIjoKICAgICAgICBhZmZpY2hlcl9maWNoZShub20sIGV4cGVyaWVuY2UsIG9yX2VuX3BvY2hlLCBzb2xpZGl0ZSkKICAgIGVsaWYgY2hvaXggPT0gIjIiOgogICAgICAgIHNvbGlkaXRlID0gcHJlbmRyZV9sYV9tZXIoc29saWRpdGUpCiAgICAgICAgaWYgc29saWRpdGUgPD0gMDoKICAgICAgICAgICAgcHJpbnQoIlBhcnRpZSB0ZXJtaW7DqWUg4oCUIE5hdmlyZSBjb3Vsw6kiKQogICAgICAgICAgICBwcmludCgiR3JhZGUgOiIsIGdyYWRlX2NhcGl0YWluZShleHBlcmllbmNlKSkKICAgICAgICAgICAgcHJpbnQoIk9yIGZpbmFsIDoiLCBvcl9lbl9wb2NoZSkKICAgICAgICAgICAgYnJlYWsKICAgIGVsaWYgY2hvaXggPT0gIjMiOgogICAgICAgIG9yX2VuX3BvY2hlID0gY2hlcmNoZXJfdHJlc29yKG9yX2VuX3BvY2hlKQogICAgZWxpZiBjaG9peCA9PSAiNCI6CiAgICAgICAgb3JfZW5fcG9jaGUgPSBhbGxlcl9hdV9tYXJjaGUob3JfZW5fcG9jaGUpCiAgICBlbGlmIGNob2l4ID09ICI1IjoKICAgICAgICBwcmludCgiQXUgcmV2b2lyICEiKQogICAgICAgIGJyZWFrCiAgICBlbHNlOgogICAgICAgIHByaW50KCJDaG9peCBpbnZhbGlkZS4iKQ==" data-file="dHAyX2pldV9jb21wbGV0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
+</section>
 </section>
 <section id="creation-du-jeu-en-utilisant-lia">
 <h2>Création du jeu en utilisant l’IA<a class="headerlink" href="#creation-du-jeu-en-utilisant-lia" title="Lien permanent vers ce titre">¶</a></h2>
@@ -364,7 +385,10 @@ demande une version graphique du jeu si tu veux.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">3. Jeu complet</a><ul>
-<li><a class="reference internal" href="#assemblage-du-jeu-sans-ia">Assemblage du jeu sans IA</a></li>
+<li><a class="reference internal" href="#assemblage-du-jeu-sans-ia">Assemblage du jeu sans IA</a><ul>
+<li><a class="reference internal" href="#menu-principal">Menu principal</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#creation-du-jeu-en-utilisant-lia">Création du jeu en utilisant l’IA</a></li>
 </ul>
 </li>
